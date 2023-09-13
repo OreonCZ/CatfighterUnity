@@ -1,4 +1,4 @@
 # Catfighter
 
-<h1>Added to github</h1>
+<h3>Added to github</h3>
  Catfighter POOOOOOOOOOOOOG
