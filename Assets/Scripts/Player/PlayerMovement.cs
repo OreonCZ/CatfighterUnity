@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float movementSpeed = 1000f;
+    public float movementSpeed;
     public Rigidbody2D rb;
     bool isMoving = false;
     public Animator animator;
@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+
 
         void stopMoving()
         {
@@ -64,6 +65,7 @@ public class Movement : MonoBehaviour
         {
             stopMoving();
         }
+       
 
         Vector2 moveInput = new Vector2(moveX, moveY).normalized;
 
