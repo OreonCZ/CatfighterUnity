@@ -1,5 +1,3 @@
-![image](https://github.com/OreonCZ/CatfighterUnity/assets/115612408/41f128db-3abc-4800-864f-ce6f83f02ee6)
-
 <h1>Catfighter</h1>
 <h2>Improved HpBar | 20. 9. 2023</h2>
 Hotovo, jen musím udělat měnění obrázku (CatHead) u HpBaru
