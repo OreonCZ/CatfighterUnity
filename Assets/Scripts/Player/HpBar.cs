@@ -6,15 +6,27 @@ using UnityEngine.UI;
 public class HpBar : MonoBehaviour
 {
     public Slider slider;
+    public int maxHp = 8;
+    public int currentHp;
 
-    public void SetMaxHealth(int health)
+    void Start()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        currentHp = maxHp;
+        slider.maxValue = maxHp;
     }
-    public void SetHealth(int health)
+
+    void Update()
     {
-        slider.value = health;
+        slider.value = currentHp;
+        if (Input.GetKeyDown(KeyCode.Space))
+        { 
+            TakeDmg(1); 
+        }
     }
     
+    public void TakeDmg(int damage)
+    {
+        currentHp -= damage;
+    }
+
 }
