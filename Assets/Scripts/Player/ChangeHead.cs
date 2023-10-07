@@ -5,26 +5,32 @@ using UnityEngine.UI;
 
 public class ChangeHead : MonoBehaviour
 {
-
+    public Image head;
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
     Slider slider;
+    [SerializeField] GameObject slider2;
+
+    void Start()
+    {
+        slider = slider2.GetComponent<Slider>();
+    }
 
     void Update()
     {
-        if(slider.value >= 5)
+        if(slider.value > 5)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprite1;
+            head.sprite = sprite1;
         }
 
-       else if(slider.value < 5)
+       else if(slider.value < 5 && slider.value > 2)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprite2;
+            head.sprite = sprite2;
         }
-        else if (slider.value < 3)
+        else if (slider.value < 2)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprite3;
+            head.sprite = sprite3;
         }
     }
 }

@@ -50,3 +50,6 @@ TagManager:
   - name: Wall
     uniqueID: 4189426099
     locked: 0
+  - name: HpBar
+    uniqueID: 3226538107
+    locked: 0
