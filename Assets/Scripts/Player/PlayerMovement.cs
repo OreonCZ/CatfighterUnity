@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -65,7 +66,6 @@ public class Movement : MonoBehaviour
         {
             stopMoving();
         }
-       
 
         Vector2 moveInput = new Vector2(moveX, moveY).normalized;
 

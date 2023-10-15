@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa0ae8599c7c60540b46d50dc18a7f76
+guid: e8801a39002a4934d806f14e43cdb57b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: catHero_0
+      name: CatEnemies_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c47d86a58b503d8489c81ccd7eb731e1
-      internalID: -173526277
+      spriteID: b5f21fe494a24ba4c9b8bd3690973605
+      internalID: -1254137389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_1
+      name: CatEnemies_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edcfc775fb873564d9225dec829634d2
-      internalID: 343593072
+      spriteID: 7c1bd7a858b605146962150a43d5f34b
+      internalID: -346154012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_2
+      name: CatEnemies_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a911965222c93134aad9d8ea97c2b24e
-      internalID: 1987339435
+      spriteID: c1da7f3d4e048ba4f88dfbcb03ebee7d
+      internalID: 32754571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_3
+      name: CatEnemies_3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e07b9ca5bda31ac4498417d3c755ec1e
-      internalID: -1819173115
+      spriteID: 9a65ea654719d8e4cb51b3aae7953b51
+      internalID: -659622045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_4
+      name: CatEnemies_4
       rect:
         serializedVersion: 2
         x: 64
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dee056df98f3a44ca9027a79cd78623
-      internalID: 656832815
+      spriteID: a1ea052271eea2e489ef82fd3826ab7c
+      internalID: 531893446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_5
+      name: CatEnemies_5
       rect:
         serializedVersion: 2
         x: 80
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e269607820eeac498e78c578fc44c49
-      internalID: 1566334271
+      spriteID: 63b1d41ac80008046a48fcc9f174d344
+      internalID: 515030051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_6
+      name: CatEnemies_6
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5906ae0d8f72f724e829047f6e8daea7
-      internalID: -190272903
+      spriteID: e78fc68f9b333e4468f3afbcbc420cdf
+      internalID: 861908250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_7
+      name: CatEnemies_7
       rect:
         serializedVersion: 2
         x: 16
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd0d5409eabcbac49ba08e66c387d819
-      internalID: 1693037014
+      spriteID: 2f169034aa73f544fae7dcb4e1ce666d
+      internalID: -1658859235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_8
+      name: CatEnemies_8
       rect:
         serializedVersion: 2
         x: 32
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5135e16b86d00b04d8bd70f54b169684
-      internalID: -1603213764
+      spriteID: f6bb06757cf752e4e8a922b56428dd1a
+      internalID: -406922988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_9
+      name: CatEnemies_9
       rect:
         serializedVersion: 2
         x: 48
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3da5167c094142541b0be11c70567ff7
-      internalID: 1679160517
+      spriteID: 9d066459f4995ae4b92425a97d298142
+      internalID: 398032466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_10
+      name: CatEnemies_10
       rect:
         serializedVersion: 2
         x: 64
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9643dd26c0cd6c644bf1abff0d6a7d3a
-      internalID: -1962196435
+      spriteID: 76ffe7038c54575478c5b731a89af50f
+      internalID: 388900378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_11
+      name: CatEnemies_11
       rect:
         serializedVersion: 2
         x: 80
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42e66d418c33ff24d95250ef39938229
-      internalID: 956964910
+      spriteID: 13ed95aee72c09345a1195a8382ea4f8
+      internalID: 1521558041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_12
+      name: CatEnemies_12
       rect:
         serializedVersion: 2
         x: 0
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50feec9af2b71214283de266178085a1
-      internalID: -1056106763
+      spriteID: f57ffba5abefdd74294ce4df7bd89020
+      internalID: -1024503764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_13
+      name: CatEnemies_13
       rect:
         serializedVersion: 2
         x: 16
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c51c2566885393644b34c20bea3a529e
-      internalID: 38201678
+      spriteID: 7055eb30d2ee73c49870d1234751c72d
+      internalID: 814186879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_14
+      name: CatEnemies_14
       rect:
         serializedVersion: 2
         x: 32
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4c2c76962ed5a743bc2eb5a953b7193
-      internalID: -1967596173
+      spriteID: ead567cbc810fa54ab969478a7ca53e3
+      internalID: 1953099122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_15
+      name: CatEnemies_15
       rect:
         serializedVersion: 2
         x: 48
@@ -439,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0eb3e45b6363b241a7c251b09740fd3
-      internalID: -1359697275
+      spriteID: 56bf47d6b580f0347b83aa9785372c0b
+      internalID: -768093543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_16
+      name: CatEnemies_16
       rect:
         serializedVersion: 2
         x: 64
@@ -460,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd596fa6c1242944fa1ec26677b6c34c
-      internalID: 1492053633
+      spriteID: 33ad2452502af2541ad69e3655f2da1f
+      internalID: -1286457318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_17
+      name: CatEnemies_17
       rect:
         serializedVersion: 2
         x: 80
@@ -481,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31e8a17495087804da15b8fde35d6406
-      internalID: -2114732799
+      spriteID: 016c6a9b090c01f438278db02e0a3c4d
+      internalID: 2119112069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_18
+      name: CatEnemies_18
       rect:
         serializedVersion: 2
         x: 0
@@ -502,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ccb8121a0f6b9c45af3509977b2dfb5
-      internalID: -791478063
+      spriteID: 6a30877c817482b4391f91ad4782a01e
+      internalID: 739514749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_19
+      name: CatEnemies_19
       rect:
         serializedVersion: 2
         x: 16
@@ -523,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4039cafb495184a9b107722ba9e195
-      internalID: -1842434602
+      spriteID: 055d6674787c14942bb06b9398f5ccf7
+      internalID: 852228044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_20
+      name: CatEnemies_20
       rect:
         serializedVersion: 2
         x: 32
@@ -544,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9836a6ada9aa104185018a1bf8efda2
-      internalID: -660185088
+      spriteID: 79fad9b6565529446aedd4086279a8fa
+      internalID: -43350730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_21
+      name: CatEnemies_21
       rect:
         serializedVersion: 2
         x: 48
@@ -565,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 316bd249846fa84489598db6253d0964
-      internalID: 609625853
+      spriteID: 8f99445ddb62402489ede8fed8467f3e
+      internalID: 1275194536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_22
+      name: CatEnemies_22
       rect:
         serializedVersion: 2
         x: 64
@@ -586,14 +586,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0b95d2189d7ecc4f9f74448b305de05
-      internalID: 310081857
+      spriteID: 125490378d4b2e84998b84eb285cdb61
+      internalID: 507530698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_23
+      name: CatEnemies_23
       rect:
         serializedVersion: 2
         x: 80
@@ -607,14 +607,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2f65144adaa83a42a42b97c3fdd9ee6
-      internalID: 1253006498
+      spriteID: 3405aba155991744e9d21796fdbe8d8b
+      internalID: 1043802971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_24
+      name: CatEnemies_24
       rect:
         serializedVersion: 2
         x: 0
@@ -628,14 +628,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 941505189709d7345a54d51cc34e9aac
-      internalID: -644610663
+      spriteID: c4b0839e852516d4f9aa229024564591
+      internalID: -1471535123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_25
+      name: CatEnemies_25
       rect:
         serializedVersion: 2
         x: 16
@@ -649,14 +649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70bece1ec6e2e2f4e90e45b287b3336a
-      internalID: -863237463
+      spriteID: a276fed2adaac184cb8fe75735bc9b61
+      internalID: -495128953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_26
+      name: CatEnemies_26
       rect:
         serializedVersion: 2
         x: 32
@@ -670,14 +670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e376975afd736f4eb898aba43d7a618
-      internalID: 1956048143
+      spriteID: c4ef87c857d148f459494e953bc9fdd0
+      internalID: -940811725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catHero_27
+      name: CatEnemies_27
       rect:
         serializedVersion: 2
         x: 48
@@ -691,8 +691,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2591d4289791dc14b933bda20ad1e4ff
-      internalID: -510764132
+      spriteID: e193041ea0f2c1445948b2dded7d00bf
+      internalID: -315353429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c26530209ec6dc48b79a608fe1678d6
+      internalID: 1884466794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25021e62299a6ae4fbf5ced880530390
+      internalID: -483152077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a660dd16988f92744983fac6f383cb8e
+      internalID: -144614656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e6f13d450b70244b2d3f19eb474efc
+      internalID: 1846934612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaef3bd4256ebeb4da737caf0a2bbb97
+      internalID: 1454679513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71ad247ba9b919428f65af56438ca86
+      internalID: 463065326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462740383df4d6249b79972524b2b000
+      internalID: -706106632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEnemies_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e89cd5991efed48bd83d9a24da0ddd
+      internalID: 826854075
       vertices: []
       indices: 
       edges: []
@@ -708,34 +876,42 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      catHero_0: -173526277
-      catHero_1: 343593072
-      catHero_10: -1962196435
-      catHero_11: 956964910
-      catHero_12: -1056106763
-      catHero_13: 38201678
-      catHero_14: -1967596173
-      catHero_15: -1359697275
-      catHero_16: 1492053633
-      catHero_17: -2114732799
-      catHero_18: -791478063
-      catHero_19: -1842434602
-      catHero_2: 1987339435
-      catHero_20: -660185088
-      catHero_21: 609625853
-      catHero_22: 310081857
-      catHero_23: 1253006498
-      catHero_24: -644610663
-      catHero_25: -863237463
-      catHero_26: 1956048143
-      catHero_27: -510764132
-      catHero_3: -1819173115
-      catHero_4: 656832815
-      catHero_5: 1566334271
-      catHero_6: -190272903
-      catHero_7: 1693037014
-      catHero_8: -1603213764
-      catHero_9: 1679160517
+      CatEnemies_0: -1254137389
+      CatEnemies_1: -346154012
+      CatEnemies_10: 388900378
+      CatEnemies_11: 1521558041
+      CatEnemies_12: -1024503764
+      CatEnemies_13: 814186879
+      CatEnemies_14: 1953099122
+      CatEnemies_15: -768093543
+      CatEnemies_16: -1286457318
+      CatEnemies_17: 2119112069
+      CatEnemies_18: 739514749
+      CatEnemies_19: 852228044
+      CatEnemies_2: 32754571
+      CatEnemies_20: -43350730
+      CatEnemies_21: 1275194536
+      CatEnemies_22: 507530698
+      CatEnemies_23: 1043802971
+      CatEnemies_24: -1471535123
+      CatEnemies_25: -495128953
+      CatEnemies_26: -940811725
+      CatEnemies_27: -315353429
+      CatEnemies_28: 1884466794
+      CatEnemies_29: -483152077
+      CatEnemies_3: -659622045
+      CatEnemies_30: -144614656
+      CatEnemies_31: 1846934612
+      CatEnemies_32: 1454679513
+      CatEnemies_33: 463065326
+      CatEnemies_34: -706106632
+      CatEnemies_35: 826854075
+      CatEnemies_4: 531893446
+      CatEnemies_5: 515030051
+      CatEnemies_6: 861908250
+      CatEnemies_7: -1658859235
+      CatEnemies_8: -406922988
+      CatEnemies_9: 398032466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

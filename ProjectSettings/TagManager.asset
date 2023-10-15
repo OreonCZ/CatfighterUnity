@@ -53,3 +53,6 @@ TagManager:
   - name: HpBar
     uniqueID: 3226538107
     locked: 0
+  - name: CatHead
+    uniqueID: 2415911513
+    locked: 0
