@@ -1,4 +1,5 @@
 <h1>Catfighter</h1>
+![Screenshot](screenshot.png)
 <br>...
 
 <h2>Added combat animations | 15. 10. 2023</h2>
