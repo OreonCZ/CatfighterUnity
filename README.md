@@ -1,5 +1,6 @@
 <h1>Catfighter</h1>
-![Screenshot](screenshot.png)
+![image](https://github.com/OreonCZ/CatfighterUnity/assets/115612408/9c4c08d9-3afc-469e-a245-62a120288bdb)
+
 <br>...
 
 <h2>Added combat animations | 15. 10. 2023</h2>
