@@ -1,5 +1,4 @@
 <h1>Catfighter</h1>
-![image](https://github.com/OreonCZ/CatfighterUnity/assets/115612408/9c4c08d9-3afc-469e-a245-62a120288bdb)
 
 <br>...
 
