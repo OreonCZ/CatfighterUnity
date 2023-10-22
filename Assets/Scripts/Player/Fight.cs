@@ -1,30 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fight : MonoBehaviour
 {
     bool isFighting;
     public Animator animator;
     public float swordDelay;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool canAttack = true;
+    public Slider slider;
+    public Movement movement;
 
     // Update is called once per frame
     void Update()
     {
-        
         isFighting = Input.GetMouseButtonDown(0);
-        if (isFighting)
+        if (isFighting && canAttack && movement.currentStamina > 0)
         {
+            movement.currentStamina -= 5f;
+            Attack();
             StartCoroutine(Delay());
         }
-        
-        
     }
 
     void Attack()
@@ -49,12 +46,15 @@ public class Fight : MonoBehaviour
         {
             animator.SetBool("FightDown", true);
         }
-
     }
+
     IEnumerator Delay()
     {
-        Attack();
-
+        canAttack = false;
         yield return new WaitForSeconds(swordDelay);
+        canAttack = true;
     }
 }
+
+
+

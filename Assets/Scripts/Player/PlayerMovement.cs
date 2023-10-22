@@ -8,11 +8,11 @@ public class Movement : MonoBehaviour
     public float movementSpeed;
     public Rigidbody2D rb;
     bool isMoving = false;
+    bool isSprinting = false;
     public Animator animator;
     public Slider slider;
-    public int maxStamina = 100;
-    public int currentStamina;
-
+    public float maxStamina = 50f;
+    public float currentStamina;
 
     // Start is called before the first frame update
     void Start()
@@ -26,40 +26,47 @@ public class Movement : MonoBehaviour
     void Update()
     {
         slider.value = currentStamina;
+        isSprinting = Input.GetKey(KeyCode.LeftShift);
 
         //movement
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         Vector2 moveInput = new Vector2(moveX, moveY).normalized;
-       
-       
-         
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-            rb.velocity = moveInput * (movementSpeed * 2) * Time.fixedDeltaTime;
-            }
-             else
-            {
-            rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
-            }
-
-/*
-if(currentStamina > 0) { 
-switch (Input.GetKey(KeyCode.LeftShift))
-{
-    case true:
-        rb.velocity = moveInput * (movementSpeed * 2) * Time.fixedDeltaTime;
-        currentStamina-=1;
-        break;
-    case false:
         rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
-        currentStamina+=1;
-        break;
-}
-}
-*/
 
-void stopMoving()
+        //sprint
+        if (isSprinting)
+        {
+            if (currentStamina > 0)
+            {
+                rb.velocity = moveInput * (movementSpeed * 2) * Time.fixedDeltaTime;
+                currentStamina -= 20 * Time.deltaTime;
+            }
+        }
+        if (!isSprinting && currentStamina < maxStamina)
+        {
+            rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
+            currentStamina += 20 * Time.deltaTime;
+        }
+
+
+        /*
+        if(currentStamina > 0) { 
+        switch (Input.GetKey(KeyCode.LeftShift))
+        {
+            case true:
+                rb.velocity = moveInput * (movementSpeed * 2) * Time.fixedDeltaTime;
+                currentStamina-=1;
+                break;
+            case false:
+                rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
+                currentStamina+=1;
+                break;
+        }
+        }
+        */
+
+        void stopMoving()
         {
             animator.SetBool("WalkingRight", false);
             animator.SetBool("Walking", false);
@@ -68,6 +75,9 @@ void stopMoving()
         }
 
         //animation changer
+
+
+
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("WalkingUp", true);
@@ -89,6 +99,7 @@ void stopMoving()
             animator.SetBool("Walking", false);
             animator.SetBool("WalkingLeft", false);
             animator.SetBool("WalkingUp", false);
+            
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -105,7 +116,4 @@ void stopMoving()
 
         }
 }
-
-
-
 
