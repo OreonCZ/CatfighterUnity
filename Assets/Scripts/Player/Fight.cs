@@ -12,6 +12,7 @@ public class Fight : MonoBehaviour
     public Slider slider;
     public Movement movement;
     public float swordStaminaDrain;
+    public float slowDown;
 
     // Update is called once per frame
     void Update()
@@ -52,8 +53,10 @@ public class Fight : MonoBehaviour
     IEnumerator Delay()
     {
         canAttack = false;
+        movement.movementSpeed /= slowDown;
         yield return new WaitForSeconds(swordDelay);
         canAttack = true;
+        movement.movementSpeed *= slowDown;
     }
 }
 

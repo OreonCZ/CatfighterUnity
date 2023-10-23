@@ -470,6 +470,7 @@ MonoBehaviour:
   slider: {fileID: 127945403}
   movement: {fileID: 260788606}
   swordStaminaDrain: 10
+  slowDown: 3
 --- !u!1 &284403525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3266,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668497001}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1668497003
 Camera:
   m_ObjectHideFlags: 0
