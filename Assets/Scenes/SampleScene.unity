@@ -469,6 +469,7 @@ MonoBehaviour:
   swordDelay: 0.8
   slider: {fileID: 127945403}
   movement: {fileID: 260788606}
+  swordStaminaDrain: 10
 --- !u!1 &284403525
 GameObject:
   m_ObjectHideFlags: 0

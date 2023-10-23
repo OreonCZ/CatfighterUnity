@@ -11,6 +11,7 @@ public class Fight : MonoBehaviour
     bool canAttack = true;
     public Slider slider;
     public Movement movement;
+    public float swordStaminaDrain;
 
     // Update is called once per frame
     void Update()
@@ -18,7 +19,7 @@ public class Fight : MonoBehaviour
         isFighting = Input.GetMouseButtonDown(0);
         if (isFighting && canAttack && movement.currentStamina > 0)
         {
-            movement.currentStamina -= 5f;
+            movement.currentStamina -= swordStaminaDrain;
             Attack();
             StartCoroutine(Delay());
         }
