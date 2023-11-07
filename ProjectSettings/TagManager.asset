@@ -56,3 +56,6 @@ TagManager:
   - name: CatHead
     uniqueID: 2415911513
     locked: 0
+  - name: Attack
+    uniqueID: 1015435779
+    locked: 0
