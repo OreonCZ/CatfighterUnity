@@ -50,21 +50,6 @@ public class Movement : MonoBehaviour
         }
 
 
-        /*
-        if(currentStamina > 0) { 
-        switch (Input.GetKey(KeyCode.LeftShift))
-        {
-            case true:
-                rb.velocity = moveInput * (movementSpeed * 2) * Time.fixedDeltaTime;
-                currentStamina-=1;
-                break;
-            case false:
-                rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
-                currentStamina+=1;
-                break;
-        }
-        }
-        */
 
         void stopMoving()
         {
@@ -75,7 +60,6 @@ public class Movement : MonoBehaviour
         }
 
         //animation changer
-
 
 
         if (Input.GetKey(KeyCode.W))
@@ -112,8 +96,8 @@ public class Movement : MonoBehaviour
         else if (!isMoving)
         {
             stopMoving();
+            return;
         }
-
         }
 }
 
