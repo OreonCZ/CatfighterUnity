@@ -1,6 +1,7 @@
 <h1 style="text-align:center">Catfighter</h1>
 <img src="https://github.com/OreonCZ/CatfighterUnity/assets/115612408/ff97caeb-b91c-44d5-9209-49e5ef219e82"></img>
 <br>...
+<h2>Updated map | 22. 11. 2023</h2>
 <h2>Added portal (level) assets | 19. 11. 2023</h2>
 <h2>Sword slash radius | 7. 11. 2023</h2>
 <h2>Working stamina bar | 22. 10. 2023</h2>
@@ -12,3 +13,14 @@ Pixel art insane
 <h2>Added HpBar | 19. 9. 2023</h2>
 <h2>Added to github | datum idk</h2>
 Catfighter POOOOOOOOOOOOOG
+<br>
+<br>
+Tilemap made by this legend:
+<br>
+https://assetstore.unity.com/publishers/40001
+<br>
+https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605
+<br>
+https://cainos.itch.io/
+<br>
+https://cainos.itch.io/pixel-art-top-down-basic
