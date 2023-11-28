@@ -13,3 +13,12 @@ Pixel art insane
 <h2>Added HpBar | 19. 9. 2023</h2>
 <h2>Added to github | datum idk</h2>
 Catfighter POOOOOOOOOOOOOG
+<br>
+<br>
+<br>
+<br>
+Tilemap made by this legend:
+https://assetstore.unity.com/publishers/40001
+https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605
+https://cainos.itch.io/
+https://cainos.itch.io/pixel-art-top-down-basic
