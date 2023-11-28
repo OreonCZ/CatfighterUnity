@@ -17,16 +17,10 @@ public class HpBar : MonoBehaviour
 
     void Update()
     {
-        slider.value = currentHp;
         if (Input.GetKeyDown(KeyCode.Space))
-        { 
-            TakeDmg(1); 
+        {
+            currentHp -= 1;
         }
     }
-    
-    public void TakeDmg(int damage)
-    {
-        currentHp -= damage;
-    }
-
+   
 }

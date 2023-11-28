@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public Slider slider;
     public float maxStamina = 50f;
     public float currentStamina;
+    public GameObject sprintBar;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,15 @@ public class Movement : MonoBehaviour
         Vector2 moveInput = new Vector2(moveX, moveY).normalized;
         rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
 
+        if (slider.value < slider.maxValue)
+        {
+            sprintBar.SetActive(true);
+        }
+        else
+        {
+            sprintBar.SetActive(false);
+        }
+
         //sprint
         if (isSprinting)
         {
@@ -49,8 +59,6 @@ public class Movement : MonoBehaviour
             currentStamina += 20 * Time.deltaTime;
         }
 
-
-
         void stopMoving()
         {
             animator.SetBool("WalkingRight", false);
@@ -60,7 +68,6 @@ public class Movement : MonoBehaviour
         }
 
         //animation changer
-
 
         if (Input.GetKey(KeyCode.W))
         {
