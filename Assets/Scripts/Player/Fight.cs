@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Fight : MonoBehaviour
 {
-    bool isFighting;
+    public bool isFighting;
     public Animator animator;
     public float swordDelay;
     bool canAttack = true;
@@ -36,43 +36,33 @@ public class Fight : MonoBehaviour
         {
             animator.SetBool("FightLeft", true);
             attackLeft.SetActive(true);
-            if(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
-            {
-                attackUp.SetActive(true);
-            }
-            else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
-            {
-                attackDown.SetActive(true);
-            }
+            return;
+
         }
         else if (isFighting && Input.GetKey(KeyCode.D))
         {
             animator.SetBool("FightRight", true);
             attackRight.SetActive(true);
-            if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W))
-            {
-                attackUp.SetActive(true);
-            }
-            else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))
-            {
-                attackDown.SetActive(true);
-            }
+            return;
 
         }
         else if (isFighting && Input.GetKey(KeyCode.W))
         {
             animator.SetBool("FightUp", true);
             attackUp.SetActive(true);
+            return;
         }
         else if (isFighting && Input.GetKey(KeyCode.S))
         {
             animator.SetBool("FightDown", true);
             attackDown.SetActive(true);
+            return;
         }
         else if (isFighting)
         {
             animator.SetBool("FightDown", true);
             attackDown.SetActive(true);
+            return;
         }
     }
 

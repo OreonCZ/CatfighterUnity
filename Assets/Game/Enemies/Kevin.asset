@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc43bc1b0292b384d862460dabbc9f5b, type: 3}
+  m_Name: Kevin
+  m_EditorClassIdentifier: 
+  catName: Kevin
+  walkLeft1: {fileID: -1254137389, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkLeft2: {fileID: -346154012, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkLeft3: {fileID: 32754571, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight1: {fileID: -659622045, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight2: {fileID: 531893446, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight3: {fileID: 515030051, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  maxHP: 20
+  currentHP: 20
+  damage: 20
+  speed: 10

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc43bc1b0292b384d862460dabbc9f5b, type: 3}
+  m_Name: Oscar
+  m_EditorClassIdentifier: 
+  catName: Oscar
+  walkLeft1: {fileID: -1471535123, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkLeft2: {fileID: -495128953, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkLeft3: {fileID: -940811725, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight1: {fileID: -315353429, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight2: {fileID: 1884466794, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight3: {fileID: -483152077, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  maxHP: 30
+  currentHP: 30
+  damage: 10
+  speed: 20

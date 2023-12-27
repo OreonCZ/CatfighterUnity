@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc43bc1b0292b384d862460dabbc9f5b, type: 3}
+  m_Name: Bingus
+  m_EditorClassIdentifier: 
+  catName: Bingus
+  walkLeft1: {fileID: 739514749, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkLeft2: {fileID: 852228044, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkLeft3: {fileID: -43350730, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight1: {fileID: 1275194536, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight2: {fileID: 507530698, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  walkRight3: {fileID: 1043802971, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
+  maxHP: 15
+  currentHP: 15
+  damage: 10
+  speed: 40

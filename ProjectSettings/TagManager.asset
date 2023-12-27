@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - isHit
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -50,14 +52,14 @@ TagManager:
   - name: Buildings
     uniqueID: 925887593
     locked: 0
-  - name: Player
-    uniqueID: 4250941897
-    locked: 0
   - name: Wall
     uniqueID: 4189426099
     locked: 0
   - name: TallGrass
     uniqueID: 1919017219
+    locked: 0
+  - name: Player
+    uniqueID: 4250941897
     locked: 0
   - name: WalkableObjects
     uniqueID: 2196304533
