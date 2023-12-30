@@ -1,6 +1,7 @@
 <h1 style="text-align:center">Catfighter</h1>
 <img src="https://github.com/OreonCZ/CatfighterUnity/assets/115612408/ff97caeb-b91c-44d5-9209-49e5ef219e82"></img>
 <br>...
+<h2>Main menu image in the game | 27. 12. 2023</h2>
 <h2>Working portal and other stuff | 28. 11. 2023</h2>
 <h2>Updated map | 22. 11. 2023</h2>
 <h2>Added portal (level) assets | 19. 11. 2023</h2>
