@@ -8,7 +8,7 @@ public class Fight : MonoBehaviour
     public bool isFighting;
     public Animator animator;
     public float swordDelay;
-    bool canAttack = true;
+    public bool canAttack = true;
     public Slider slider;
     public Movement movement;
     public float swordStaminaDrain;

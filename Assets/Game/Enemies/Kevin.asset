@@ -19,7 +19,7 @@ MonoBehaviour:
   walkRight1: {fileID: -659622045, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
   walkRight2: {fileID: 531893446, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
   walkRight3: {fileID: 515030051, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  maxHP: 20
-  currentHP: 20
-  damage: 20
-  speed: 10
+  maxEnemyHP: 8
+  currentEnemyHP: 0
+  enemyDamage: 1
+  enemySpeed: 5

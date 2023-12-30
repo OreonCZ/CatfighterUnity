@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public float movementSpeed;
     public Rigidbody2D rb;
     bool isMoving = false;
+    bool isWalking;
     bool isSprinting = false;
     public Animator animator;
     public Slider slider;
@@ -28,6 +29,7 @@ public class Movement : MonoBehaviour
     {
         slider.value = currentStamina;
         isSprinting = Input.GetKey(KeyCode.LeftShift);
+        isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
 
         //movement
         float moveX = Input.GetAxisRaw("Horizontal");

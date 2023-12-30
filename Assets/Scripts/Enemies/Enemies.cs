@@ -15,8 +15,8 @@ public class Enemies : ScriptableObject
     [SerializeField] Sprite walkRight2;
     [SerializeField] Sprite walkRight3;
 
-    [SerializeField] int maxHP;
-    [SerializeField] int currentHP;
-    [SerializeField] int damage;
-    [SerializeField] int speed;
+    public int maxEnemyHp;
+    public int currentEnemyHp;
+    public int enemyDamage;
+    public int enemySpeed;
 }
