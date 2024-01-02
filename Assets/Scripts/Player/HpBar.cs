@@ -17,7 +17,8 @@ public class HpBar : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        slider.value = currentHp;
+        if (Input.GetKey(KeyCode.E))
         {
             currentHp -= 1;
         }

@@ -1827,6 +1827,7 @@ MonoBehaviour:
   attackUp: {fileID: 1989230051}
   attackLeft: {fileID: 914569730}
   attackRight: {fileID: 1723084454}
+  attackDamage: 0
 --- !u!95 &739483696
 Animator:
   serializedVersion: 5
@@ -2210,7 +2211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHit: 0
+  slider: {fileID: 0}
   fight: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!61 &914569732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12636,7 +12639,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHit: 0
+  slider: {fileID: 0}
   fight: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!61 &1194516945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23324,7 +23329,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHit: 0
+  slider: {fileID: 0}
   fight: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!61 &1723084456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23416,7 +23423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHit: 0
+  slider: {fileID: 0}
   fight: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!61 &1989230053
 BoxCollider2D:
   m_ObjectHideFlags: 0

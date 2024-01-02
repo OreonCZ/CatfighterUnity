@@ -17,6 +17,7 @@ public class Fight : MonoBehaviour
     public GameObject attackUp;
     public GameObject attackLeft;
     public GameObject attackRight;
+    public int attackDamage;
 
     // Update is called once per frame
     void Update()

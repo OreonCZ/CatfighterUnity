@@ -6,16 +6,18 @@ using UnityEngine.UI;
 public class TakingDMG : MonoBehaviour
 {
     public bool isHit;
+    public Slider slider;
     public Fight fight;
+    public Enemy enemy;
     bool hit;
-    
-    private void OnTriggerEnter2D(Collider2D collider)
+
+    void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Enemy")
         {
-            Debug.Log("gkopsjkgops");
+            enemy.currentEnemyHP -= fight.attackDamage;
+            slider.value = enemy.currentEnemyHP;
         }
-
     }
 }
 

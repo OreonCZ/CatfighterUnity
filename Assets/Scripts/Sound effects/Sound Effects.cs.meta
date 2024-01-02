@@ -3,7 +3,10 @@ guid: dd72e53317935e041a1561b5534e0748
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - audio: {instanceID: 0}
+  - swordSwing: {fileID: 8300000, guid: 0efd525e581aeda438c363d3178f1dd5, type: 3}
+  - fight: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
