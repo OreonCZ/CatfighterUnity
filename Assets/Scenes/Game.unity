@@ -1913,6 +1913,9 @@ MonoBehaviour:
   maxStamina: 50
   currentStamina: 0
   sprintBar: {fileID: 127945401}
+  rollTime: 0.1
+  rollCooldown: 1
+  rollSpeed: 12
 --- !u!50 &739483699
 Rigidbody2D:
   serializedVersion: 4

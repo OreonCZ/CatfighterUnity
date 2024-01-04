@@ -16,6 +16,14 @@ public class Movement : MonoBehaviour
     public float currentStamina;
     public GameObject sprintBar;
 
+    public float rollTime = 1f;
+    public float rollCooldown;
+    public float rollSpeed = 15;
+    bool isRolling;
+    bool canRoll = true;
+    float currentRollTime;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +38,49 @@ public class Movement : MonoBehaviour
         slider.value = currentStamina;
         isSprinting = Input.GetKey(KeyCode.LeftShift);
         isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
+
+            
+                //roll
+            if(canRoll && Input.GetKeyDown(KeyCode.Space) && currentStamina > 0)
+            {
+                if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+                {
+                StartCoroutine(Roll(new Vector2(1f, 1f)));
+                }
+                else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+                {
+                StartCoroutine(Roll(new Vector2(-1f, 1f)));
+                }
+                else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+                {
+                StartCoroutine(Roll(new Vector2(1f, -1f)));
+                }
+                else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+                {
+                StartCoroutine(Roll(new Vector2(-1f, -1f)));
+                }
+
+                else if (Input.GetKey(KeyCode.W)) {
+                    StartCoroutine(Roll(Vector2.up));
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    StartCoroutine(Roll(Vector2.down));
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    StartCoroutine(Roll(Vector2.left));
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    StartCoroutine(Roll(Vector2.right));
+                }
+                else
+                {
+                return;
+                }
+                
+            }
 
         //movement
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -107,6 +158,28 @@ public class Movement : MonoBehaviour
             stopMoving();
             return;
         }
+        
+
+        IEnumerator Roll(Vector2 direction)
+        {
+            canRoll = false;
+            currentStamina -= 20;
+            Debug.Log(canRoll);
+            isRolling = true;
+            currentRollTime = rollTime;
+            while(currentRollTime > 0f)
+            {
+                currentRollTime -= Time.deltaTime;
+
+                rb.velocity = direction * rollSpeed;
+
+                yield return null;
+            }
+            yield return new WaitForSeconds(rollCooldown);
+            rb.velocity = new Vector2(0f, 0f);
+            canRoll = true;
+            Debug.Log(canRoll);
         }
+    }
 }
 
