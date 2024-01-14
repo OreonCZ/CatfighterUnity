@@ -11,7 +11,7 @@ public class TakingDMG : MonoBehaviour
     public Enemy enemy;
     bool hit;
 
-    void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Enemy")
         {

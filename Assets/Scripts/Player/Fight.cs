@@ -11,7 +11,7 @@ public class Fight : MonoBehaviour
     public bool canAttack = true;
     public Slider slider;
     public Movement movement;
-    public float swordStaminaDrain;
+    public float swordStaminaDrain = 20;
     public float slowDown;
     public GameObject attackDown;
     public GameObject attackUp;
@@ -23,7 +23,7 @@ public class Fight : MonoBehaviour
     void Update()
     {
         isFighting = Input.GetMouseButtonDown(0);
-        if (isFighting && canAttack && movement.currentStamina > 0)
+        if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain)
         {
             movement.currentStamina -= swordStaminaDrain;
             Attack();
@@ -49,21 +49,22 @@ public class Fight : MonoBehaviour
         }
         else if (isFighting && Input.GetKey(KeyCode.W))
         {
-            animator.SetBool("FightUp", true);
+            animator.SetBool("FightBack", true);
             attackUp.SetActive(true);
             return;
         }
         else if (isFighting && Input.GetKey(KeyCode.S))
         {
-            animator.SetBool("FightDown", true);
+            animator.SetBool("Fight", true);
             attackDown.SetActive(true);
             return;
         }
         else if (isFighting)
         {
-            animator.SetBool("FightDown", true);
-            attackDown.SetActive(true);
-            return;
+            animator.SetBool("FightLeft", false);
+            animator.SetBool("FightRight", false);
+            animator.SetBool("Fight", true);
+            animator.SetBool("FightBack", false);
         }
     }
 
@@ -83,7 +84,6 @@ public class Fight : MonoBehaviour
         yield return new WaitForSeconds(swordDelay);
         AttackRangeHide();
         canAttack = true;
-        
         movement.movementSpeed *= slowDown;
     }
 }
