@@ -36230,6 +36230,11 @@ MonoBehaviour:
   slider: {fileID: 2122751695}
   maxHp: 8
   currentHp: 0
+  dedScreen: {fileID: 0}
+  gameBar: {fileID: 0}
+  enemy: {fileID: 0}
+  enemyMovement: {fileID: 0}
+  isDed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

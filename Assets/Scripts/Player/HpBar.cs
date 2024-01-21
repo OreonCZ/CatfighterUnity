@@ -8,6 +8,11 @@ public class HpBar : MonoBehaviour
     public Slider slider;
     public int maxHp = 8;
     public int currentHp;
+    public GameObject dedScreen;
+    public GameObject gameBar;
+    public GameObject enemy;
+    public EnemyMovement enemyMovement;
+    public bool isDed = false;
 
     void Start()
     {
@@ -22,6 +27,14 @@ public class HpBar : MonoBehaviour
         {
             currentHp -= 1;
         }
+
+        if(currentHp <= 0) {
+            dedScreen.SetActive(true);
+            gameBar.SetActive(false);
+            enemyMovement.enemyCanMove = false;
+            Destroy(enemy);
+            Debug.Log("ded");
+            isDed = true;
+        }
     }
-   
 }

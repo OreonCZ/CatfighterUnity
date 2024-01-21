@@ -7,8 +7,26 @@ public class TakingDmgPlayer : MonoBehaviour
 {
     public HpBar hpbar;
     public Enemies enemy;
-    void OnCollisionEnter(Collision collision)
+    public EnemyMovement enemyMovement;
+    public float enemySlow = 0f;
+    public float enemyStun = 0.5f;
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Entered collision with " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Player")
+        {
+            hpbar.currentHp -= enemy.enemyDamage;
+           
+            StartCoroutine(EnemyStop());
+
+        }
+
+        IEnumerator EnemyStop()
+        {
+            enemyMovement.enemyMovementSpeed = enemySlow;
+            yield return new WaitForSeconds(enemyStun);
+            enemyMovement.enemyMovementSpeed = enemy.enemySpeed;
+        }
     }
 }
+
+    
