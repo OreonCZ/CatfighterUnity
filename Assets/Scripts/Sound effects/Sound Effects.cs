@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SoundEffects : MonoBehaviour
 {
-    public AudioSource audio;
+    public new AudioSource audio;
     public AudioClip swordSwing;
     public Fight fight;
+    public Movement playerMovement;
 
     void Update()
     {
-            if (Input.GetMouseButtonDown(0) && fight.canAttack)
+            if (fight.isFighting && fight.fightSound && playerMovement.isWalking)
             {
                 audio.clip = swordSwing;
                 audio.Play();

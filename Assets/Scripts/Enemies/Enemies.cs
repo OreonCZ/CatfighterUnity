@@ -18,4 +18,5 @@ public class Enemies : ScriptableObject
     public int maxEnemyHp;
     public int enemyDamage;
     public int enemySpeed;
+    public float enemyAttackCooldown;
 }

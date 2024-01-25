@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class Fight : MonoBehaviour
 {
     public bool isFighting;
+    public bool fightSound = false;
     public Animator animator;
     public float swordDelay;
     public bool canAttack = true;
     public Slider slider;
     public Movement movement;
+    public SoundEffects sounds;
     public float swordStaminaDrain = 20;
     public float slowDown;
     public GameObject attackDown;
@@ -23,7 +25,7 @@ public class Fight : MonoBehaviour
     void Update()
     {
         isFighting = Input.GetMouseButtonDown(0);
-        if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain)
+        if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain && movement.isWalking)
         {
             movement.currentStamina -= swordStaminaDrain;
             Attack();
@@ -59,13 +61,6 @@ public class Fight : MonoBehaviour
             attackDown.SetActive(true);
             return;
         }
-        else if (isFighting)
-        {
-            animator.SetBool("FightLeft", false);
-            animator.SetBool("FightRight", false);
-            animator.SetBool("Fight", true);
-            animator.SetBool("FightBack", false);
-        }
     }
 
     void AttackRangeHide()
@@ -80,10 +75,12 @@ public class Fight : MonoBehaviour
     IEnumerator Delay()
     {
         canAttack = false;
+        fightSound = true;
         movement.movementSpeed /= slowDown;
         yield return new WaitForSeconds(swordDelay);
         AttackRangeHide();
         canAttack = true;
+        fightSound = false;
         movement.movementSpeed *= slowDown;
     }
 }

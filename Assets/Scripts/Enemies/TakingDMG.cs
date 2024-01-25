@@ -9,7 +9,9 @@ public class TakingDMG : MonoBehaviour
     public Slider slider;
     public Fight fight;
     public Enemy enemy;
+    public EnemyMovement enemyMovement;
     bool hit;
+    public float enemyStun = 2f;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

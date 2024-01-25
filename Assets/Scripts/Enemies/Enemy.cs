@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public Fight fight;
     public GameObject enemyObject;
     public GameObject portalBack;
+    public GameObject enemyHpBar;
     int maxEnemyHP;
     public int currentEnemyHP;
 
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(enemyObject);
             portalBack.SetActive(true);
+            enemyHpBar.SetActive(false);
         }
     }
 

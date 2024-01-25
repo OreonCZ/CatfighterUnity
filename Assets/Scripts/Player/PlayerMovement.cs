@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     public float movementSpeed;
     public Rigidbody2D rb;
     public bool isMoving = false;
-    bool isWalking;
+    public bool isWalking;
     bool isSprinting = false;
     public Animator animator;
     public Slider slider;
@@ -17,9 +17,9 @@ public class Movement : MonoBehaviour
     public GameObject sprintBar;
     public Fight fight;
 
-    public float rollTime = 1f;
-    public float rollCooldown;
-    public float rollSpeed = 15;
+    public float rollTime = 0.5f;
+    public float rollCooldown = 0.5f;
+    public float rollSpeed = 6;
     public bool isRolling = false;
     public float rollStaminaDrain = 20;
     bool canRoll = true;
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
         
 
         //roll
-        if (canRoll && Input.GetKeyDown(KeyCode.Space) && currentStamina > rollStaminaDrain)
+        if (canRoll && Input.GetKeyDown(KeyCode.Space) && currentStamina > rollStaminaDrain && fight.canAttack && isWalking)
         {
             currentStamina -= rollStaminaDrain;
 
@@ -118,6 +118,7 @@ public class Movement : MonoBehaviour
         Vector2 moveInput = new Vector2(moveX, moveY).normalized;
         rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
 
+
         if (slider.value < slider.maxValue)
         {
             sprintBar.SetActive(true);
@@ -128,7 +129,7 @@ public class Movement : MonoBehaviour
         }
 
         //sprint
-        if (isSprinting)
+        if (isSprinting && isWalking)
         {
             if (currentStamina > 0)
             {
@@ -193,8 +194,8 @@ public class Movement : MonoBehaviour
         IEnumerator Roll(Vector2 direction)
         {
             canRoll = false;
-            Debug.Log(canRoll);
             isRolling = true;
+            Debug.Log(isRolling);
             currentRollTime = rollTime;
             while(currentRollTime > 0f)
             {
@@ -208,7 +209,7 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(0f, 0f);
             canRoll = true;
             isRolling = false;
-            Debug.Log(canRoll);
+            Debug.Log(isRolling);
             Debug.Log("can attack: "+ fight.canAttack);
 
         }

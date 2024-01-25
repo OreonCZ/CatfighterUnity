@@ -158,6 +158,8 @@ MonoBehaviour:
   slider: {fileID: 32034593}
   maxHp: 8
   currentHp: 0
+  playerMovement: {fileID: 158554903}
+  berserkMode: 1
   dedScreen: {fileID: 663333576}
   gameBar: {fileID: 1057836166}
   enemy: {fileID: 1624097683}
@@ -568,6 +570,7 @@ GameObject:
   - component: {fileID: 158554902}
   - component: {fileID: 158554901}
   - component: {fileID: 158554900}
+  - component: {fileID: 158554907}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -588,12 +591,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFighting: 0
+  fightSound: 0
   animator: {fileID: 158554901}
-  swordDelay: 0.8
+  swordDelay: 0.6
   canAttack: 1
   slider: {fileID: 162293943}
   movement: {fileID: 158554903}
-  swordStaminaDrain: 20
+  sounds: {fileID: 860030841}
+  swordStaminaDrain: 25
   slowDown: 2
   attackDown: {fileID: 828189853}
   attackUp: {fileID: 1733120245}
@@ -681,6 +686,7 @@ MonoBehaviour:
   movementSpeed: 150
   rb: {fileID: 158554904}
   isMoving: 0
+  isWalking: 0
   animator: {fileID: 158554901}
   slider: {fileID: 162293943}
   maxStamina: 50
@@ -689,7 +695,7 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   rollTime: 0.5
   rollCooldown: 0.5
-  rollSpeed: 8
+  rollSpeed: 6
   isRolling: 0
   rollStaminaDrain: 20
 --- !u!50 &158554904
@@ -790,6 +796,22 @@ Transform:
   - {fileID: 1388420653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158554907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158554899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5244852be38df2d4088356e6cab39f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 32034592}
+  animator: {fileID: 158554901}
+  healMilk: 1
+  milkNumber: 3
 --- !u!1 &162293939
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +993,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 12.094294
+  MinDistance: 3.2244177
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1291,6 +1313,136 @@ MonoBehaviour:
   slider: {fileID: 1536243766}
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
+  enemyMovement: {fileID: 1624097691}
+  enemyStun: 2
+--- !u!1 &526508095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526508097}
+  - component: {fileID: 526508096}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &526508096
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526508095}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 163406dcce53b9d4793a5100f4c2c264, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.203
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &526508097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526508095}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1611642, y: 0.22927135, z: -1.9599301}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &578011396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1900,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4e8ab9fd5b3e04cbed493fb8abcc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &675932156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 675932157}
+  - component: {fileID: 675932159}
+  - component: {fileID: 675932158}
+  m_Layer: 5
+  m_Name: Milk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &675932157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675932156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1057836167}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.87700003, y: 0.786}
+  m_AnchorMax: {x: 0.98018765, y: 0.96700007}
+  m_AnchoredPosition: {x: 1.5, y: -1.4400024}
+  m_SizeDelta: {x: 3, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &675932158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675932156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1371849673, guid: 91f30e83d35473247b370f7eb1cb68a1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &675932159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675932156}
+  m_CullTransparentMesh: 1
 --- !u!1 &813791903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3264,8 @@ MonoBehaviour:
   slider: {fileID: 1536243766}
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
+  enemyMovement: {fileID: 1624097691}
+  enemyStun: 2
 --- !u!1 &860030839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,6 +3316,7 @@ MonoBehaviour:
   audio: {fileID: 272204036}
   swordSwing: {fileID: 8300000, guid: 0efd525e581aeda438c363d3178f1dd5, type: 3}
   fight: {fileID: 158554900}
+  playerMovement: {fileID: 158554903}
 --- !u!81 &860030842
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3376,6 +3606,7 @@ RectTransform:
   - {fileID: 1867649605}
   - {fileID: 162293940}
   - {fileID: 1536243767}
+  - {fileID: 675932157}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4192,6 +4423,8 @@ MonoBehaviour:
   slider: {fileID: 1536243766}
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
+  enemyMovement: {fileID: 1624097691}
+  enemyStun: 2
 --- !u!1 &1424870572
 GameObject:
   m_ObjectHideFlags: 0
@@ -4667,6 +4900,7 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemyObject: {fileID: 1624097683}
   portalBack: {fileID: 1424870572}
+  enemyHpBar: {fileID: 1536243765}
   currentEnemyHP: 0
 --- !u!114 &1624097691
 MonoBehaviour:
@@ -4682,6 +4916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: d3552ad0401bf8348b3ccc800caa1d9f, type: 2}
   player: {fileID: 158554899}
+  animator: {fileID: 1624097694}
   enemyMovementSpeed: 2
   enemyCanMove: 1
 --- !u!50 &1624097692
@@ -4709,7 +4944,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &1624097694
 Animator:
@@ -4745,8 +4980,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpbar: {fileID: 32034592}
-  enemy: {fileID: 11400000, guid: d3552ad0401bf8348b3ccc800caa1d9f, type: 2}
+  enemies: {fileID: 11400000, guid: d3552ad0401bf8348b3ccc800caa1d9f, type: 2}
   enemyMovement: {fileID: 1624097691}
+  animator: {fileID: 1624097694}
   enemySlow: 0
   enemyStun: 0.5
 --- !u!1 &1628339654
@@ -4928,6 +5164,8 @@ MonoBehaviour:
   slider: {fileID: 1536243766}
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
+  enemyMovement: {fileID: 1624097691}
+  enemyStun: 2
 --- !u!1 &1867649604
 GameObject:
   m_ObjectHideFlags: 0
@@ -23023,6 +23261,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 860030840}
+  - {fileID: 526508097}
   - {fileID: 1029197442}
   - {fileID: 82021501}
   - {fileID: 1628339656}

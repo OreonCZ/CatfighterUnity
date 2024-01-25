@@ -8,10 +8,11 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D enemyRb;
     public Enemies enemy;
     public GameObject player;
+    public Animator animator;
     private Vector3 localScale;
     private Vector3 directionToPlayer;
     public float enemyMovementSpeed;
-    public bool enemyCanMove = true;
+    public bool enemyCanMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +20,12 @@ public class EnemyMovement : MonoBehaviour
         localScale = transform.localScale;
         enemyMovementSpeed = enemy.enemySpeed;
     }
-
     
     public void MovementEnemy()
     {
-        if (enemyCanMove)
-        {
-            directionToPlayer = (player.transform.position - transform.position).normalized;
+        directionToPlayer = (player.transform.position - transform.position).normalized;
         enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemyMovementSpeed;
-    }
+
 }
     // Update is called once per frame
     void FixedUpdate()
@@ -43,12 +41,33 @@ public class EnemyMovement : MonoBehaviour
         if (enemyCanMove) { 
         if(enemyRb.velocity.x > 0)
         {
-            transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
-        }
+                MovingRight();
+            }
         if (enemyRb.velocity.x < 0)
         {
-            transform.localScale = new Vector3(localScale.x, localScale.y, localScale.z);
+                MovingLeft();
+            }
         }
-        }
+
     }
+    void MovingLeft()
+    {
+        animator.SetBool("WalkingLeft", true);
+        animator.SetBool("WalkingRight", false);
+    }
+    void MovingRight()
+    {
+        animator.SetBool("WalkingRight", true);
+        animator.SetBool("WalkingLeft", false);
+    }
+
+    public void StopAnimations()
+    {
+        animator.SetBool("isHit", true);
+    }
+    public void OnAnimations()
+    {
+        animator.SetBool("isHit", false);
+    }
+
 }

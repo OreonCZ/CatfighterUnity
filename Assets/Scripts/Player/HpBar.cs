@@ -8,6 +8,8 @@ public class HpBar : MonoBehaviour
     public Slider slider;
     public int maxHp = 8;
     public int currentHp;
+    public Movement playerMovement;
+    public float berserkMode = 1f;
     public GameObject dedScreen;
     public GameObject gameBar;
     public GameObject enemy;
@@ -23,10 +25,6 @@ public class HpBar : MonoBehaviour
     void Update()
     {
         slider.value = currentHp;
-        if (Input.GetKey(KeyCode.E))
-        {
-            currentHp -= 1;
-        }
 
         if(currentHp <= 0) {
             dedScreen.SetActive(true);
@@ -36,5 +34,6 @@ public class HpBar : MonoBehaviour
             Debug.Log("ded");
             isDed = true;
         }
+        
     }
 }
