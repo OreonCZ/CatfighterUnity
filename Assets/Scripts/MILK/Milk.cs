@@ -7,8 +7,14 @@ public class Milk : MonoBehaviour
 {
     public HpBar hpBar;
     public Animator animator;
+    public Movement playerMovement;
+    public SoundEffects sf;
+    public AudioClip drinkMilk;
     public int healMilk = 1;
     public int milkNumber = 3;
+    public int numberOfMilk = 3;
+    public int emptyMilk = 0;
+    public bool canDrink = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,18 +24,30 @@ public class Milk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i < 2; i++)
+        if (Input.GetKeyDown(KeyCode.E) && !playerMovement.isWalking && emptyMilk < milkNumber && canDrink && !playerMovement.isRolling)
         {
+            StartCoroutine(DrinkCooldown());
             Drink();
         }
     }
 
     void Drink() {
-        if (Input.GetKey(KeyCode.E) && hpBar.currentHp < hpBar.maxHp)
+        if (hpBar.currentHp < hpBar.maxHp)
         {
             hpBar.currentHp += healMilk;
+            sf.audio.clip = drinkMilk;
+            sf.audio.Play();
             animator.SetTrigger("Drink");
-            Debug.Log(hpBar.currentHp);
+            Debug.Log("Aktualni zivoty: " + hpBar.currentHp);
+            emptyMilk++;
+            Debug.Log("Vypito mlika: " + emptyMilk);
+            numberOfMilk -= 1;
         }
+    }
+    IEnumerator DrinkCooldown()
+    {
+        canDrink = false;
+        yield return new WaitForSeconds(1);
+        canDrink = true;
     }
 }

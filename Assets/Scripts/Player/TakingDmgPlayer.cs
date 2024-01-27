@@ -8,6 +8,7 @@ public class TakingDmgPlayer : MonoBehaviour
     public HpBar hpbar;
     public Enemies enemies;
     public EnemyMovement enemyMovement;
+    public Movement playerMovement;
     public Animator animator;
     public float enemySlow = 0f;
     public float enemyStun = 0.5f;
@@ -28,7 +29,9 @@ public class TakingDmgPlayer : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(DealDamage());
+            if (!playerMovement.isRolling) { 
+                StartCoroutine(DealDamage());
+                }
             StartCoroutine(EnemyStop());
         }
 
