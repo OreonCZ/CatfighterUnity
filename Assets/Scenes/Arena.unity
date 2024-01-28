@@ -813,9 +813,9 @@ MonoBehaviour:
   playerMovement: {fileID: 158554903}
   sf: {fileID: 860030841}
   drinkMilk: {fileID: 8300000, guid: 26e6eb8c652333c448101fc58a006537, type: 3}
-  healMilk: 1
-  milkNumber: 3
-  numberOfMilk: 3
+  healMilk: 2
+  milkNumber: 2
+  numberOfMilk: 2
   emptyMilk: 0
   canDrink: 1
 --- !u!1 &162293939
@@ -1940,7 +1940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.87700003, y: 0.786}
   m_AnchorMax: {x: 0.98018765, y: 0.96700007}
-  m_AnchoredPosition: {x: 1.5, y: -1.4400024}
+  m_AnchoredPosition: {x: 1.5, y: -1.4400635}
   m_SizeDelta: {x: 3, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675932158
@@ -5150,6 +5150,7 @@ MonoBehaviour:
   enemy: {fileID: 11400000, guid: d3552ad0401bf8348b3ccc800caa1d9f, type: 2}
   player: {fileID: 158554899}
   animator: {fileID: 1624097694}
+  takingDmgPlayer: {fileID: 1624097695}
   enemyMovementSpeed: 2
   enemyCanMove: 1
 --- !u!50 &1624097692
@@ -5217,6 +5218,9 @@ MonoBehaviour:
   enemyMovement: {fileID: 1624097691}
   playerMovement: {fileID: 158554903}
   animator: {fileID: 1624097694}
+  enemyTakeDmg: 0
+  enemyDamageToPL: 1
+  enemyStop: 0
   enemySlow: 0
   enemyStun: 0.5
 --- !u!1 &1628339654

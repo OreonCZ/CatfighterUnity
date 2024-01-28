@@ -10,9 +10,9 @@ public class Milk : MonoBehaviour
     public Movement playerMovement;
     public SoundEffects sf;
     public AudioClip drinkMilk;
-    public int healMilk = 1;
-    public int milkNumber = 3;
-    public int numberOfMilk = 3;
+    public int healMilk = 2;
+    public int milkNumber = 2;
+    public int numberOfMilk = 2;
     public int emptyMilk = 0;
     public bool canDrink = true;
     // Start is called before the first frame update

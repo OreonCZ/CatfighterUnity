@@ -24,11 +24,11 @@ public class ChangeHead : MonoBehaviour
             head.sprite = sprite1;
         }
 
-       else if(slider.value < 5 && slider.value > 2)
+       else if(slider.value <= 5 && slider.value >= 2)
         {
             head.sprite = sprite2;
         }
-        else if (slider.value < 2)
+        else if (slider.value <= 1)
         {
             head.sprite = sprite3;
         }

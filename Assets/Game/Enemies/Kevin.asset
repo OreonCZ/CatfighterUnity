@@ -22,4 +22,4 @@ MonoBehaviour:
   maxEnemyHp: 8
   enemyDamage: 1
   enemySpeed: 2
-  enemyAttackCooldown: 50
+  enemyAttackCooldown: 1

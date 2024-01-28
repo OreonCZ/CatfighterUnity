@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public Enemies enemy;
     public GameObject player;
     public Animator animator;
+    public TakingDmgPlayer takingDmgPlayer;
     private Vector3 localScale;
     private Vector3 directionToPlayer;
     public float enemyMovementSpeed;
@@ -39,35 +40,53 @@ public class EnemyMovement : MonoBehaviour
     private void LateUpdate()
     {
         if (enemyCanMove) { 
-        if(enemyRb.velocity.x > 0)
-        {
+            if(enemyRb.velocity.x > 0)
+            {
+                if (!takingDmgPlayer.enemyTakeDmg) { 
                 MovingRight();
+                }
+                else if (takingDmgPlayer.enemyTakeDmg)
+                {
+                    FightRight();
+                }
             }
-        if (enemyRb.velocity.x < 0)
-        {
-                MovingLeft();
+            if (enemyRb.velocity.x < 0)
+            {
+                if (!takingDmgPlayer.enemyTakeDmg)
+                {
+                    MovingLeft();
+                }
+                else if (takingDmgPlayer.enemyTakeDmg)
+                {
+                    FightLeft();
+                }
             }
         }
-
     }
     void MovingLeft()
     {
+        animator.SetBool("isHit", false);
         animator.SetBool("WalkingLeft", true);
         animator.SetBool("WalkingRight", false);
     }
     void MovingRight()
     {
+        animator.SetBool("isHit", false);
         animator.SetBool("WalkingRight", true);
         animator.SetBool("WalkingLeft", false);
     }
 
-    public void StopAnimations()
+    void FightLeft()
     {
         animator.SetBool("isHit", true);
+        animator.SetBool("WalkingLeft", true);
+        animator.SetBool("WalkingRight", false);
     }
-    public void OnAnimations()
+    void FightRight()
     {
-        animator.SetBool("isHit", false);
+        animator.SetBool("isHit", true);
+        animator.SetBool("WalkingRight", true);
+        animator.SetBool("WalkingLeft", false);
     }
 
 }
