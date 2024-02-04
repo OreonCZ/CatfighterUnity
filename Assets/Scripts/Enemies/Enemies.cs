@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 [CreateAssetMenuAttribute(fileName = "Enemy", menuName = "Enemy/Create new enemy")]
 public class Enemies : ScriptableObject
 {
-    [SerializeField] string catName;
+    public string catName;
 
     [SerializeField] Sprite walkLeft1;
     [SerializeField] Sprite walkLeft2;
@@ -17,6 +17,6 @@ public class Enemies : ScriptableObject
 
     public int maxEnemyHp;
     public int enemyDamage;
-    public int enemySpeed;
+    public float enemySpeed;
     public float enemyAttackCooldown;
 }

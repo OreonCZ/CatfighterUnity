@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Portals : MonoBehaviour
+public class PortalsOne : MonoBehaviour
 {
     public bool teleport = false;
 
@@ -16,7 +16,7 @@ public class Portals : MonoBehaviour
     {
         if (teleport)
         {
-            SceneManager.LoadScene(sceneBuildIndex:2);
+            SceneManager.LoadScene(sceneBuildIndex: 2);
         }
     }
 

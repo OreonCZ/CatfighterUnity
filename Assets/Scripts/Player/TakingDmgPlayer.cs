@@ -7,6 +7,7 @@ public class TakingDmgPlayer : MonoBehaviour
 {
     public HpBar hpbar;
     public Enemies enemies;
+    public Enemy enemy;
     public EnemyMovement enemyMovement;
     public Movement playerMovement;
     public Animator animator;
@@ -35,7 +36,7 @@ public class TakingDmgPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (!playerMovement.isRolling) {
+            if (!playerMovement.isRolling && !enemy.enemyDed) {
                 enemyTakeDmg = true;
                 Debug.Log("dmg bool: " + enemyTakeDmg);
                 enemyMovement.enemyMovementSpeed = enemySlow;
