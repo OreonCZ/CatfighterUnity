@@ -6184,6 +6184,7 @@ GameObject:
   - component: {fileID: 860030842}
   - component: {fileID: 860030841}
   - component: {fileID: 860030844}
+  - component: {fileID: 860030845}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -6296,6 +6297,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 158554906}
+--- !u!114 &860030845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860030839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa24ad7b26bb97468bfdaacc6871acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900161403
 GameObject:
   m_ObjectHideFlags: 0
@@ -7937,6 +7950,10 @@ MonoBehaviour:
   slider: {fileID: 1536243766}
   enemy: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
   fight: {fileID: 158554900}
+  takingDmgEnemy1: {fileID: 1733120249}
+  takingDmgEnemy2: {fileID: 828189857}
+  takingDmgEnemy3: {fileID: 502346208}
+  takingDmgEnemy4: {fileID: 1388420654}
   enemyDed: 0
   animator: {fileID: 1624097694}
   enemyObject: {fileID: 1624097683}

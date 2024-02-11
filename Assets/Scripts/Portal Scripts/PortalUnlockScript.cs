@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PortalUnlockScript : MonoBehaviour
 {
+    public GameObject portalOne;
     public GameObject portalTwo;
     public GameObject portalThree;
     public GameObject portalFour;
@@ -19,35 +20,49 @@ public class PortalUnlockScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerPrefs.GetInt("level") == 1)
+        if(PlayerPrefs.GetInt("KevinKilled") == 1)
         {
-            portalTwo.SetActive(true);
+            portalOne.SetActive(false);
         }
-        if (PlayerPrefs.GetInt("level") == 2)
+        if(PlayerPrefs.GetInt("level1") == 1)
         {
             portalTwo.SetActive(true);
-            portalThree.SetActive(true);
+            if(PlayerPrefs.GetInt("YukiKilled") == 1)
+            {
+                portalTwo.SetActive(false);
+            }
         }
-        if (PlayerPrefs.GetInt("level") == 3)
+        if (PlayerPrefs.GetInt("level2") == 1)
         {
-            portalTwo.SetActive(true);
             portalThree.SetActive(true);
+            if (PlayerPrefs.GetInt("MiscarKilled") == 1)
+            {
+                portalThree.SetActive(false);
+            }
+        }
+        if (PlayerPrefs.GetInt("level3") == 1)
+        {
             portalFour.SetActive(true);
+            if (PlayerPrefs.GetInt("BingusKilled") == 1)
+            {
+                portalFour.SetActive(false);
+            }
         }
-        if (PlayerPrefs.GetInt("level") == 4)
+        if (PlayerPrefs.GetInt("level4") == 1)
         {
-            portalTwo.SetActive(true);
-            portalThree.SetActive(true);
-            portalFour.SetActive(true);
             portalFive.SetActive(true);
+            if (PlayerPrefs.GetInt("OscarKilled") == 1)
+            {
+                portalFive.SetActive(false);
+            }
         }
-        if (PlayerPrefs.GetInt("level") == 5)
+        if (PlayerPrefs.GetInt("level5") == 1)
         {
-            portalTwo.SetActive(true);
-            portalThree.SetActive(true);
-            portalFour.SetActive(true);
-            portalFive.SetActive(true);
             portalSix.SetActive(true);
+            if (PlayerPrefs.GetInt("BruchaKilled") == 1)
+            {
+                portalSix.SetActive(false);
+            }
         }
     }
 }

@@ -823,6 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5311b0d8f50c0bd4ab63357098b96d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalOne: {fileID: 450203847}
   portalTwo: {fileID: 338953519}
   portalThree: {fileID: 666278249}
   portalFour: {fileID: 334510957}
@@ -1899,6 +1900,7 @@ GameObject:
   - component: {fileID: 483298795}
   - component: {fileID: 483298794}
   - component: {fileID: 483298793}
+  - component: {fileID: 483298798}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2011,6 +2013,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483298798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483298792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa24ad7b26bb97468bfdaacc6871acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &542774463
 GameObject:
   m_ObjectHideFlags: 0

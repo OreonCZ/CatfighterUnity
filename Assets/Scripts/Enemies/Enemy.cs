@@ -8,6 +8,10 @@ public class Enemy : MonoBehaviour
     public Slider slider;
     public Enemies enemy;
     public Fight fight;
+    public TakingDMG takingDmgEnemy1;
+    public TakingDMG takingDmgEnemy2;
+    public TakingDMG takingDmgEnemy3;
+    public TakingDMG takingDmgEnemy4;
     public bool enemyDed = false;
     string catEnemy1 = "Kevin";
     string catEnemy2 = "Yuki";
@@ -43,27 +47,57 @@ public class Enemy : MonoBehaviour
     public void SaveNumber()
     {
         if(catEnemy1 == enemy.catName) {
-        PlayerPrefs.SetInt("level", 1);
+        PlayerPrefs.SetInt("level1", 1);
+        PlayerPrefs.SetInt("KevinKilled", 0);
+            if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
+            {
+                PlayerPrefs.SetInt("KevinKilled", 1);
+            }
         }
         else if (catEnemy2 == enemy.catName)
         {
-            PlayerPrefs.SetInt("level", 2);
+            PlayerPrefs.SetInt("level2", 1);
+            PlayerPrefs.SetInt("YukiKilled", 0);
+            if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
+            {
+                PlayerPrefs.SetInt("YukiKilled", 1);
+            }
         }
         else if (catEnemy3 == enemy.catName)
         {
-            PlayerPrefs.SetInt("level", 3);
+            PlayerPrefs.SetInt("level3", 1);
+            PlayerPrefs.SetInt("MiscarKilled", 0);
+            if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
+            {
+                PlayerPrefs.SetInt("MiscarKilled", 1);
+            }
         }
         else if (catEnemy4 == enemy.catName)
         {
-            PlayerPrefs.SetInt("level", 4);
+            PlayerPrefs.SetInt("level4", 4);
+            PlayerPrefs.SetInt("BingusKilled", 0);
+            if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
+            {
+                PlayerPrefs.SetInt("BingusKilled", 1);
+            }
         }
         else if (catEnemy5 == enemy.catName)
         {
-            PlayerPrefs.SetInt("level", 5);
+            PlayerPrefs.SetInt("level5", 5);
+            PlayerPrefs.SetInt("OscarKilled", 0);
+            if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
+            {
+                PlayerPrefs.SetInt("OscarKilled", 1);
+            }
         }
         else if (catEnemy6 == enemy.catName)
         {
-            PlayerPrefs.SetInt("level", 6);
+            PlayerPrefs.SetInt("level6", 6);
+            PlayerPrefs.SetInt("BruchaKilled", 0);
+            if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
+            {
+                PlayerPrefs.SetInt("BruchaKilled", 1);
+            }
         }
     }
 
