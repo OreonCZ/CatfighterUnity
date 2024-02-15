@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     public GameObject enemyObject;
     public GameObject portalBack;
     public GameObject enemyHpBar;
+    public GameObject projectile;
     int maxEnemyHP;
     public int currentEnemyHP;
 

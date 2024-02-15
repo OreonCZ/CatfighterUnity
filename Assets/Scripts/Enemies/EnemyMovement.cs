@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
     public TakingDMG takingDmgEnemy3;
     public TakingDMG takingDmgEnemy4;
     private Vector3 localScale;
-    private Vector3 directionToPlayer;
+    public Vector3 directionToPlayer;
     public float enemyMovementSpeed;
     public bool enemyCanMove;
     public new AudioSource audio;

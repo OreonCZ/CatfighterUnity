@@ -6,6 +6,7 @@ TagManager:
   tags:
   - isHit
   - Enemy
+  - Border
   layers:
   - Default
   - TransparentFX
@@ -57,6 +58,9 @@ TagManager:
     locked: 0
   - name: TallGrass
     uniqueID: 1919017219
+    locked: 0
+  - name: Projectile
+    uniqueID: 3359249935
     locked: 0
   - name: Player
     uniqueID: 4250941897
