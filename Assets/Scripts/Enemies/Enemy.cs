@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public TakingDMG takingDmgEnemy4;
     public bool enemyDed = false;
     string catEnemy1 = "Kevin";
-    string catEnemy2 = "Yuki";
+    public string catEnemy2 = "Yuki";
     string catEnemy3 = "Miscar";
     string catEnemy4 = "Bingus";
     string catEnemy5 = "Oscar";
@@ -26,12 +26,20 @@ public class Enemy : MonoBehaviour
     public GameObject projectile;
     int maxEnemyHP;
     public int currentEnemyHP;
+    public int enemyRangeDMG;
+    public float enemyRangeSpeed;
+    public float destroyProjectile;
+    public float fireRate;
 
     void Start()
     {
         maxEnemyHP = enemy.maxEnemyHp;
         slider.maxValue = maxEnemyHP;
         currentEnemyHP = maxEnemyHP;
+        enemyRangeDMG = enemy.shootDamage;
+        enemyRangeSpeed = enemy.fireSpeed;
+        destroyProjectile = enemy.destroyProjectile;
+        fireRate = enemy.fireRate;
     }
     void Update()
     {

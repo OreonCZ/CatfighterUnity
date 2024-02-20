@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Kevin
   m_EditorClassIdentifier: 
   catName: Kevin
-  walkLeft1: {fileID: -1254137389, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft2: {fileID: -346154012, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft3: {fileID: 32754571, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight1: {fileID: -659622045, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight2: {fileID: 531893446, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight3: {fileID: 515030051, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  maxEnemyHp: 8
+  maxEnemyHp: 10
   enemyDamage: 1
   enemySpeed: 2
   enemyAttackCooldown: 1
+  fireRate: 0
+  shootDamage: 0
+  fireSpeed: 0
+  destroyProjectile: 0

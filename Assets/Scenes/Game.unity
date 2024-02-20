@@ -1071,7 +1071,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 692399545
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 1246879871, guid: f7476fb471215ca439bf03c56ac38642, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1207,7 +1207,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 692399545
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 62330650, guid: f7476fb471215ca439bf03c56ac38642, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1753,7 +1753,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 692399545
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 447627989, guid: f7476fb471215ca439bf03c56ac38642, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2025,6 +2025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa24ad7b26bb97468bfdaacc6871acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpbar: {fileID: 2122751698}
 --- !u!1 &542774463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,7 +2178,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 692399545
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -879184138, guid: f7476fb471215ca439bf03c56ac38642, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2285,7 +2286,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 692399545
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -1923736956, guid: f7476fb471215ca439bf03c56ac38642, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2430,6 +2431,7 @@ GameObject:
   - component: {fileID: 666278252}
   - component: {fileID: 666278251}
   - component: {fileID: 666278250}
+  - component: {fileID: 666278255}
   m_Layer: 0
   m_Name: PortalThree
   m_TagString: Untagged
@@ -2569,7 +2571,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 692399545
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -1061594966, guid: f7476fb471215ca439bf03c56ac38642, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2597,6 +2599,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &666278255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666278249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d159fb7b7756bc46abdea322a4264f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleport: 0
 --- !u!1 &723811284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +2677,7 @@ GameObject:
   - component: {fileID: 739483697}
   - component: {fileID: 739483696}
   - component: {fileID: 739483695}
+  - component: {fileID: 739483702}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2784,8 +2800,9 @@ MonoBehaviour:
   currentStamina: 0
   sprintBar: {fileID: 127945401}
   fight: {fileID: 739483695}
+  milk: {fileID: 739483702}
   rollTime: 0.5
-  rollCooldown: 0.4
+  rollCooldown: 0.3
   rollSpeed: 5
   isRolling: 0
   rollStaminaDrain: 20
@@ -2855,7 +2872,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -44025399
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -173526277, guid: aa0ae8599c7c60540b46d50dc18a7f76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2887,6 +2904,28 @@ Transform:
   - {fileID: 914569733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &739483702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739483694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5244852be38df2d4088356e6cab39f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 2122751698}
+  animator: {fileID: 739483696}
+  playerMovement: {fileID: 739483698}
+  sf: {fileID: 483298794}
+  drinkMilk: {fileID: 8300000, guid: 26e6eb8c652333c448101fc58a006537, type: 3}
+  healMilk: 2
+  milkNumber: 2
+  numberOfMilk: 2
+  emptyMilk: 0
+  canDrink: 1
 --- !u!1 &746599895
 GameObject:
   m_ObjectHideFlags: 0
@@ -35357,7 +35396,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2098662763
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -37228,7 +37267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 2122751695}
   maxHp: 8
-  currentHp: 0
+  currentHp: 8
   playerMovement: {fileID: 0}
   berserkMode: 1
   dedScreen: {fileID: 0}
@@ -37236,6 +37275,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   enemyMovement: {fileID: 0}
   isDed: 0
+  enemies: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

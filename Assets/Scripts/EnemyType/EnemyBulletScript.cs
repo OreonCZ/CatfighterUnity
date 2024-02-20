@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyYuki : MonoBehaviour
+public class EnemyBulletScript : MonoBehaviour
 {
 	public GameObject projectile;
 	public Transform playerPosition;
-	public float fireRate = 1f;
+	public float fireRate;
 	public float nextFire = 0f;
 	public HpBar hpbar;
 	public Enemies enemies;
@@ -16,7 +16,6 @@ public class EnemyYuki : MonoBehaviour
     // Use this for initialization
     void Start()
 	{
-		
 	}
 
 	// Update is called once per frame
@@ -28,7 +27,7 @@ public class EnemyYuki : MonoBehaviour
 			{
 			Fire();
 			}
-			nextFire = Time.time + 1f / fireRate;
+			nextFire = Time.time + 1f / enemy.fireRate;
 		}
 	}
 

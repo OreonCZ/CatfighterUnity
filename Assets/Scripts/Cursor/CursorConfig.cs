@@ -7,8 +7,18 @@ public class CursorConfig : MonoBehaviour
     public HpBar hpbar;
     void Start()
     {
-        if(hpbar.currentHp > 0) {
-        Cursor.visible = false;
+        
+    }
+    void Update()
+    {
+        if (hpbar.currentHp > 0)
+        {
+            Cursor.visible = false;
+            return;
+        }
+        else {
+        Cursor.visible = true;
+            return;
         }
     }
 

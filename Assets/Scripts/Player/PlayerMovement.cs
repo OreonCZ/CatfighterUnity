@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     public float currentStamina;
     public GameObject sprintBar;
     public Fight fight;
+    public Milk milk;
 
     public float rollTime = 0.5f;
     public float rollCooldown = 0.5f;
@@ -43,7 +44,6 @@ public class Movement : MonoBehaviour
         isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
 
         
-
         //roll
         if (canRoll && Input.GetKeyDown(KeyCode.Space) && currentStamina > rollStaminaDrain && fight.canAttack && isWalking)
         {
@@ -129,7 +129,7 @@ public class Movement : MonoBehaviour
         }
 
         //sprint
-        if (isSprinting && isWalking)
+        if (isSprinting && isWalking && milk.canDrink)
         {
             if (currentStamina > 0)
             {

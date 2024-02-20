@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Miscar
   m_EditorClassIdentifier: 
   catName: Miscar
-  walkLeft1: {fileID: -1024503764, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft2: {fileID: 814186879, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft3: {fileID: 1953099122, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight1: {fileID: -768093543, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight2: {fileID: -1286457318, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight3: {fileID: 2119112069, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  maxHP: 40
-  currentHP: 40
-  damage: 10
-  speed: 5
+  maxEnemyHp: 15
+  enemyDamage: 2
+  enemySpeed: 1
+  enemyAttackCooldown: 2
+  fireRate: 0.3
+  shootDamage: 4
+  fireSpeed: 5
+  destroyProjectile: 4

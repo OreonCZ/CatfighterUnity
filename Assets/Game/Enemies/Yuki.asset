@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Yuki
   m_EditorClassIdentifier: 
   catName: Yuki
-  walkLeft1: {fileID: 861908250, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft2: {fileID: -1658859235, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft3: {fileID: -406922988, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight1: {fileID: 398032466, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight2: {fileID: 388900378, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight3: {fileID: 1521558041, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  maxEnemyHp: 6
+  maxEnemyHp: 8
   enemyDamage: 1
   enemySpeed: 2.5
   enemyAttackCooldown: 0.5
+  fireRate: 1
+  shootDamage: 1
+  fireSpeed: 7
+  destroyProjectile: 2

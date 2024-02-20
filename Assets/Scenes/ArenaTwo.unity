@@ -695,8 +695,9 @@ MonoBehaviour:
   currentStamina: 0
   sprintBar: {fileID: 162293939}
   fight: {fileID: 158554900}
+  milk: {fileID: 158554907}
   rollTime: 0.5
-  rollCooldown: 0.4
+  rollCooldown: 0.3
   rollSpeed: 5
   isRolling: 0
   rollStaminaDrain: 20
@@ -766,7 +767,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -44025399
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -173526277, guid: aa0ae8599c7c60540b46d50dc18a7f76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1254,7 +1255,7 @@ GameObject:
   - component: {fileID: 502346208}
   m_Layer: 0
   m_Name: AttackRight
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6102,7 +6103,7 @@ GameObject:
   - component: {fileID: 828189857}
   m_Layer: 0
   m_Name: AttackDown
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7409,7 +7410,7 @@ GameObject:
   - component: {fileID: 1388420654}
   m_Layer: 0
   m_Name: AttackLeft
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7640,6 +7641,7 @@ GameObject:
   - component: {fileID: 1624097694}
   - component: {fileID: 1624097695}
   - component: {fileID: 1624097696}
+  - component: {fileID: 1624097697}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -7686,7 +7688,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -44025399
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1286457318, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7786,6 +7788,10 @@ MonoBehaviour:
   projectile: {fileID: 6718367768982192127, guid: 2d7b4796d569a3143a2c265430b1895a,
     type: 3}
   currentEnemyHP: 0
+  enemyRangeDMG: 0
+  enemyRangeSpeed: 0
+  destroyProjectile: 0
+  fireRate: 0
 --- !u!114 &1624097691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7905,6 +7911,20 @@ MonoBehaviour:
   enemyShoot: {fileID: 8508775605771490476, guid: 2d7b4796d569a3143a2c265430b1895a,
     type: 3}
   enemy: {fileID: 1624097690}
+--- !u!114 &1624097697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624097683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef097a44e5407544bb8df785fac1b9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1624097690}
+  enemyMovement: {fileID: 1624097691}
 --- !u!1 &1628339654
 GameObject:
   m_ObjectHideFlags: 0
@@ -8003,7 +8023,7 @@ GameObject:
   - component: {fileID: 1733120249}
   m_Layer: 0
   m_Name: AttackUp
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

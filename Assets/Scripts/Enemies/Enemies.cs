@@ -7,16 +7,12 @@ using Unity.VisualScripting;
 public class Enemies : ScriptableObject
 {
     public string catName;
-
-    [SerializeField] Sprite walkLeft1;
-    [SerializeField] Sprite walkLeft2;
-    [SerializeField] Sprite walkLeft3;
-    [SerializeField] Sprite walkRight1;
-    [SerializeField] Sprite walkRight2;
-    [SerializeField] Sprite walkRight3;
-
     public int maxEnemyHp;
     public int enemyDamage;
     public float enemySpeed;
     public float enemyAttackCooldown;
+    public float fireRate;
+    public int shootDamage;
+    public float fireSpeed;
+    public float destroyProjectile;
 }

@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-	float moveSpeed = 7f;
+	//float moveSpeed = 7f;
     public Vector2 direction;
     public bool playerHit;
     Enemy enemyScript;
+    Movement playerMScript;
+    public Enemies enemies;
 
     void Start()
     {
         GameObject enemy = GameObject.FindWithTag("Enemy");
-        enemyScript = enemy.GetComponent<Enemy>(); 
+        enemyScript = enemy.GetComponent<Enemy>();
+        GameObject player = GameObject.FindWithTag("Player");
+        playerMScript = player.GetComponent<Movement>();
     }
     void Update()
     {
@@ -23,29 +27,44 @@ public class EnemyShoot : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, enemyScript.destroyProjectile);
     }
 
     void Projectile()
     {
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+        transform.Translate(direction * enemyScript.enemyRangeSpeed * Time.deltaTime);
     }
      void PlayerHit(GameObject Player)
     {
         EnemyProjectileDMG enemyProjectileDMG = Player.GetComponent<EnemyProjectileDMG>();
         if(enemyProjectileDMG != null)
         {
-            enemyProjectileDMG.OnHitDamage(1);
+            enemyProjectileDMG.OnHitDamage(enemyScript.enemyRangeDMG);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" && !playerMScript.isRolling)
         {
+            GetComponent<Collider2D>().enabled = true;
             PlayerHit(collision.gameObject);
             Destroy(gameObject);
         }
+        else if (collision.gameObject.tag == "Player" && playerMScript.isRolling)
+        {
+            GetComponent<Collider2D>().enabled = false;
+            return;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Sword" && enemyScript.catEnemy2 == enemies.catName)
+        {
+            Debug.Log("Omg L9");
+            Destroy(gameObject);
+        }
+
     }
 }
 
