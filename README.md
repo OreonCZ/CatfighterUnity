@@ -1,6 +1,7 @@
 <h1 style="text-align:center">Catfighter</h1>
 <img src="https://github.com/OreonCZ/CatfighterUnity/assets/115612408/ff97caeb-b91c-44d5-9209-49e5ef219e82"></img>
 <br>...
+<h2>Second boss phase 2 and third boss phase 2 in progress | 20. 2. 2023</h2>
 <h2>Second boss done | 15. 2. 2023</h2>
 <h2>Portal script modified and cursor adjustements done | 11. 2. 2023</h2>
 <h2>Added enemy death animations and currently working on level 2 | 4. 2. 2023</h2>
