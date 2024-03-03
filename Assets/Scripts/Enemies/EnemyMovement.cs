@@ -17,7 +17,6 @@ public class EnemyMovement : MonoBehaviour
     public TakingDMG takingDmgEnemy4;
     private Vector3 localScale;
     public Vector3 directionToPlayer;
-    public float enemyMovementSpeed;
     public bool enemyCanMove;
     public new AudioSource audio;
     public AudioClip music;
@@ -26,13 +25,13 @@ public class EnemyMovement : MonoBehaviour
     {
         enemyRb = GetComponent<Rigidbody2D>();
         localScale = transform.localScale;
-        enemyMovementSpeed = enemy.enemySpeed;
+        enemyObject.enemyMovementSpeed = enemy.enemySpeed;
     }
     
     public void MovementEnemy()
     {
         directionToPlayer = (player.transform.position - transform.position).normalized;
-        enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemyMovementSpeed;
+        enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemyObject.enemyMovementSpeed;
 
 }
     // Update is called once per frame
@@ -71,7 +70,7 @@ public class EnemyMovement : MonoBehaviour
             if (enemyObject.enemyDed)
             {
                 animator.SetBool("isDefeated", true);
-                enemyMovementSpeed = 0;
+                enemyObject.enemyMovementSpeed = 0;
                 if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
                 {
                     animator.SetBool("isDefeated", false);

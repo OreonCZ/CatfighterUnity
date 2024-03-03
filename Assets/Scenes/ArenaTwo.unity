@@ -6687,7 +6687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yuki The Abyss Flower
+  m_Text: Yuki the Abyss Flower
 --- !u!222 &1168523334
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7781,6 +7781,8 @@ MonoBehaviour:
   takingDmgEnemy3: {fileID: 502346208}
   takingDmgEnemy4: {fileID: 1388420654}
   enemyDed: 0
+  catEnemy2: Yuki
+  catEnemy3: Miscar
   animator: {fileID: 1624097694}
   enemyObject: {fileID: 1624097683}
   portalBack: {fileID: 1812474551}
@@ -18427,7 +18429,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2098662763
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

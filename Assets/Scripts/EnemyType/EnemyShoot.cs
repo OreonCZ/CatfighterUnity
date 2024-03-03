@@ -37,10 +37,7 @@ public class EnemyShoot : MonoBehaviour
      void PlayerHit(GameObject Player)
     {
         EnemyProjectileDMG enemyProjectileDMG = Player.GetComponent<EnemyProjectileDMG>();
-        if(enemyProjectileDMG != null)
-        {
             enemyProjectileDMG.OnHitDamage(enemyScript.enemyRangeDMG);
-        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

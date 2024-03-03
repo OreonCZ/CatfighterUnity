@@ -63,11 +63,11 @@ TagManager:
   - name: Player
     uniqueID: 4250941897
     locked: 0
-  - name: Projectile
-    uniqueID: 3359249935
-    locked: 0
   - name: WalkableObjects
     uniqueID: 2196304533
+    locked: 0
+  - name: Projectile
+    uniqueID: 3359249935
     locked: 0
   - name: Portals
     uniqueID: 692399545

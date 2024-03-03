@@ -195,7 +195,6 @@ public class Movement : MonoBehaviour
         {
             canRoll = false;
             isRolling = true;
-            Debug.Log(isRolling);
             currentRollTime = rollTime;
             while(currentRollTime > 0f)
             {
@@ -209,8 +208,6 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(0f, 0f);
             canRoll = true;
             isRolling = false;
-            Debug.Log(isRolling);
-            Debug.Log("can attack: "+ fight.canAttack);
 
         }
     }

@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Bingus
   m_EditorClassIdentifier: 
   catName: Bingus
-  walkLeft1: {fileID: 739514749, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft2: {fileID: 852228044, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft3: {fileID: -43350730, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight1: {fileID: 1275194536, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight2: {fileID: 507530698, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight3: {fileID: 1043802971, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  maxHP: 15
-  currentHP: 15
-  damage: 10
-  speed: 40
+  maxEnemyHp: 10
+  enemyDamage: 1
+  enemySpeed: 2.5
+  enemyAttackCooldown: 1
+  fireRate: 0
+  shootDamage: 0
+  fireSpeed: 0
+  destroyProjectile: 0

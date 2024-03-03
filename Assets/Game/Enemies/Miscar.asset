@@ -17,7 +17,7 @@ MonoBehaviour:
   enemyDamage: 2
   enemySpeed: 1
   enemyAttackCooldown: 2
-  fireRate: 0.3
+  fireRate: 0.1
   shootDamage: 4
-  fireSpeed: 5
+  fireSpeed: 10
   destroyProjectile: 4

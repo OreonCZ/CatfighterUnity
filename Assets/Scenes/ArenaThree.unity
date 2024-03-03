@@ -767,7 +767,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -44025399
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -173526277, guid: aa0ae8599c7c60540b46d50dc18a7f76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11239,6 +11239,7 @@ GameObject:
   - component: {fileID: 1624097694}
   - component: {fileID: 1624097695}
   - component: {fileID: 1624097696}
+  - component: {fileID: 1624097697}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Enemy
@@ -11285,7 +11286,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -44025399
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1454679513, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11378,6 +11379,8 @@ MonoBehaviour:
   takingDmgEnemy3: {fileID: 502346208}
   takingDmgEnemy4: {fileID: 1388420654}
   enemyDed: 0
+  catEnemy2: Yuki
+  catEnemy3: Miscar
   animator: {fileID: 1624097694}
   enemyObject: {fileID: 1624097683}
   portalBack: {fileID: 1812474551}
@@ -11387,6 +11390,8 @@ MonoBehaviour:
   currentEnemyHP: 0
   enemyRangeDMG: 0
   enemyRangeSpeed: 0
+  destroyProjectile: 0
+  fireRate: 0
 --- !u!114 &1624097691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11506,6 +11511,22 @@ MonoBehaviour:
   enemyShoot: {fileID: 3914358059718810354, guid: f487b689b21bc5e4ab2002299cdc84c9,
     type: 3}
   enemy: {fileID: 1624097690}
+--- !u!114 &1624097697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624097683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e470dd3b21dc62545a54ab12924afd4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1624097690}
+  enemyMovement: {fileID: 1624097691}
+  secondPhase: 0
+  enemyBullet: {fileID: 1624097696}
 --- !u!1 &1628339654
 GameObject:
   m_ObjectHideFlags: 0
@@ -22378,7 +22399,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2098662763
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
