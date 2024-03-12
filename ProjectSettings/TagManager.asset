@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Border
   - Sword
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -45,6 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Dirt
+    uniqueID: 3046606747
+    locked: 0
   - name: Grass
     uniqueID: 2425651459
     locked: 0
@@ -59,6 +63,9 @@ TagManager:
     locked: 0
   - name: TallGrass
     uniqueID: 1919017219
+    locked: 0
+  - name: Attack
+    uniqueID: 1015435779
     locked: 0
   - name: Player
     uniqueID: 4250941897
@@ -77,7 +84,4 @@ TagManager:
     locked: 0
   - name: CatHead
     uniqueID: 2415911513
-    locked: 0
-  - name: Attack
-    uniqueID: 1015435779
     locked: 0

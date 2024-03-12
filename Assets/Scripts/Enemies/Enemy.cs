@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     public string catEnemy2 = "Yuki";
     public string catEnemy3 = "Miscar";
     string catEnemy4 = "Bingus";
-    string catEnemy5 = "Oscar";
+    public string catEnemy5 = "Oscar";
     string catEnemy6 = "Brucha";
     public Animator animator;
     public GameObject enemyObject;
@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
     public float fireRate;
     public int enemyDMG;
     public float enemyMovementSpeed;
+    public bool bingusSecond = false;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
         maxEnemyHP = enemy.maxEnemyHp;
         slider.maxValue = maxEnemyHP;
         currentEnemyHP = maxEnemyHP;
+        slider.value = currentEnemyHP;
         enemyRangeDMG = enemy.shootDamage;
         enemyRangeSpeed = enemy.fireSpeed;
         enemyDMG = enemy.enemyDamage;
@@ -86,7 +88,7 @@ public class Enemy : MonoBehaviour
         }
         else if (catEnemy4 == enemy.catName)
         {
-            PlayerPrefs.SetInt("level4", 4);
+            PlayerPrefs.SetInt("level4", 1);
             PlayerPrefs.SetInt("BingusKilled", 0);
             if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
             {
@@ -95,7 +97,7 @@ public class Enemy : MonoBehaviour
         }
         else if (catEnemy5 == enemy.catName)
         {
-            PlayerPrefs.SetInt("level5", 5);
+            PlayerPrefs.SetInt("level5", 1);
             PlayerPrefs.SetInt("OscarKilled", 0);
             if (takingDmgEnemy1.isKilled || takingDmgEnemy2.isKilled || takingDmgEnemy3.isKilled || takingDmgEnemy4.isKilled)
             {

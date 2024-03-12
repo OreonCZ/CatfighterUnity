@@ -5,7 +5,6 @@ using UnityEngine;
 public class Miscar : MonoBehaviour
 {
     public Enemy enemy;
-    public EnemyMovement enemyMovement;
     public EnemyBulletScript enemyBullet;
     TakingDmgPlayer takingDMGPlayer;
     // Start is called before the first frame update

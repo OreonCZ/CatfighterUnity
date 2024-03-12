@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Brucha
   m_EditorClassIdentifier: 
   catName: Brucha
-  walkLeft1: {fileID: -144614656, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft2: {fileID: 1846934612, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft3: {fileID: 1454679513, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight1: {fileID: 463065326, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight2: {fileID: -706106632, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight3: {fileID: 826854075, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  maxHP: 40
-  currentHP: 40
-  damage: 10
-  speed: 20
+  maxEnemyHp: 20
+  enemyDamage: 1
+  enemySpeed: 3
+  enemyAttackCooldown: 1
+  fireRate: 0.5
+  shootDamage: 1
+  fireSpeed: 18
+  destroyProjectile: 5

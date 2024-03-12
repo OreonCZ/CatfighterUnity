@@ -12,7 +12,6 @@ public class TakingDMG : MonoBehaviour
     public Enemy enemy;
     public Animator animator;
     public EnemyMovement enemyMovement;
-    bool hit;
     public float enemyStun = 2f;
 
     private void OnTriggerEnter2D(Collider2D collider)

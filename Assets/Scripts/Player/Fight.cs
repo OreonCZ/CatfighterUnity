@@ -20,6 +20,7 @@ public class Fight : MonoBehaviour
     public GameObject attackLeft;
     public GameObject attackRight;
     public int attackDamage;
+    public float mousePos;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +31,13 @@ public class Fight : MonoBehaviour
             movement.currentStamina -= swordStaminaDrain;
             Attack();
             StartCoroutine(Delay());
+           /* Vector3 mousePos = Input.mousePosition;
+            {
+                Debug.Log(mousePos.x);
+                Debug.Log(mousePos.y);
+                Debug.Log(player.position);
+            }
+           */
         }
     }
 
@@ -38,27 +46,27 @@ public class Fight : MonoBehaviour
         if (isFighting && Input.GetKey(KeyCode.A))
         {
             animator.SetBool("FightLeft", true);
-            attackLeft.SetActive(true);
+            StartCoroutine(WaitLeft());
             return;
 
         }
         else if (isFighting && Input.GetKey(KeyCode.D))
         {
             animator.SetBool("FightRight", true);
-            attackRight.SetActive(true);
+            StartCoroutine(WaitRight());
             return;
 
         }
         else if (isFighting && Input.GetKey(KeyCode.W))
         {
             animator.SetBool("FightBack", true);
-            attackUp.SetActive(true);
+            StartCoroutine(WaitUp());
             return;
         }
         else if (isFighting && Input.GetKey(KeyCode.S))
         {
             animator.SetBool("Fight", true);
-            attackDown.SetActive(true);
+            StartCoroutine(WaitDown());
             return;
         }
     }
@@ -82,6 +90,26 @@ public class Fight : MonoBehaviour
         canAttack = true;
         fightSound = false;
         movement.movementSpeed *= slowDown;
+    }
+    IEnumerator WaitLeft()
+    {
+        yield return new WaitForSeconds(0.2f);
+        attackLeft.SetActive(true);
+    }
+    IEnumerator WaitUp()
+    {
+        yield return new WaitForSeconds(0.2f);
+        attackUp.SetActive(true);
+    }
+    IEnumerator WaitRight()
+    {
+        yield return new WaitForSeconds(0.2f);
+        attackRight.SetActive(true);
+    }
+    IEnumerator WaitDown()
+    {
+        yield return new WaitForSeconds(0.2f);
+        attackDown.SetActive(true);
     }
 }
 

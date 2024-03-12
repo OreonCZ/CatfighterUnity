@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Oscar
   m_EditorClassIdentifier: 
   catName: Oscar
-  walkLeft1: {fileID: -1471535123, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft2: {fileID: -495128953, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkLeft3: {fileID: -940811725, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight1: {fileID: -315353429, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight2: {fileID: 1884466794, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  walkRight3: {fileID: -483152077, guid: e8801a39002a4934d806f14e43cdb57b, type: 3}
-  maxHP: 30
-  currentHP: 30
-  damage: 10
-  speed: 20
+  maxEnemyHp: 12
+  enemyDamage: 1
+  enemySpeed: 1
+  enemyAttackCooldown: 0.5
+  fireRate: 3
+  shootDamage: 0
+  fireSpeed: 0
+  destroyProjectile: 7

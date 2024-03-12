@@ -137,10 +137,12 @@ public class Movement : MonoBehaviour
                 currentStamina -= 20 * Time.deltaTime;
             }
         }
-        if (!isSprinting && currentStamina < maxStamina)
+        if (!isSprinting && currentStamina < maxStamina || !isWalking)
         {
-            rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
-            currentStamina += 20 * Time.deltaTime;
+            if (currentStamina < maxStamina) {
+                rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
+                currentStamina += 20 * Time.deltaTime;
+            }
         }
 
         void stopMoving()
