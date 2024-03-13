@@ -13,7 +13,7 @@ public class SoundEffects : MonoBehaviour
 
     void Update()
     {
-            if (fight.isFighting && fight.fightSound && playerMovement.isWalking)
+            if (fight.isFighting && fight.fightSound)
             {
                 audio.clip = swordSwing;
                 audio.Play();

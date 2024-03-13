@@ -22,8 +22,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Enemy
+  - Weapon
   - Walkable
   - Player
   - Building

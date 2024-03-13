@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 51453523}
   - component: {fileID: 51453522}
   - component: {fileID: 51453521}
+  - component: {fileID: 51453524}
   m_Layer: 0
   m_Name: AttackDownNew
   m_TagString: Untagged
@@ -373,7 +374,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &51453523
 SpriteRenderer:
@@ -428,6 +428,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &51453524
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51453519}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &73704039
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +774,7 @@ MonoBehaviour:
   isFighting: 0
   fightSound: 0
   animator: {fileID: 158554901}
-  swordDelay: 0.6
+  swordDelay: 0.5
   canAttack: 1
   slider: {fileID: 162293943}
   movement: {fileID: 158554903}
@@ -4067,6 +4094,7 @@ GameObject:
   - component: {fileID: 1336131489}
   - component: {fileID: 1336131488}
   - component: {fileID: 1336131487}
+  - component: {fileID: 1336131490}
   m_Layer: 0
   m_Name: AttackLeftNew
   m_TagString: Untagged
@@ -4152,7 +4180,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &1336131489
 SpriteRenderer:
@@ -4207,6 +4234,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1336131490
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336131485}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1365002160
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,6 +4348,7 @@ GameObject:
   - component: {fileID: 1439099015}
   - component: {fileID: 1439099014}
   - component: {fileID: 1439099013}
+  - component: {fileID: 1439099016}
   m_Layer: 0
   m_Name: AttackUpNew
   m_TagString: Untagged
@@ -4379,7 +4434,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &1439099015
 SpriteRenderer:
@@ -4434,6 +4488,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1439099016
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439099011}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1536243765
 GameObject:
   m_ObjectHideFlags: 0
@@ -5252,6 +5333,7 @@ GameObject:
   - component: {fileID: 1927975462}
   - component: {fileID: 1927975461}
   - component: {fileID: 1927975460}
+  - component: {fileID: 1927975463}
   m_Layer: 0
   m_Name: AttackRightNew
   m_TagString: Untagged
@@ -5337,7 +5419,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &1927975462
 SpriteRenderer:
@@ -5392,6 +5473,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1927975463
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927975458}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1992524249
 GameObject:
   m_ObjectHideFlags: 0

@@ -594,7 +594,7 @@ MonoBehaviour:
   isFighting: 0
   fightSound: 0
   animator: {fileID: 158554901}
-  swordDelay: 0.6
+  swordDelay: 0.5
   canAttack: 1
   slider: {fileID: 162293943}
   movement: {fileID: 158554903}
@@ -1165,9 +1165,10 @@ GameObject:
   - component: {fileID: 354068940}
   - component: {fileID: 354068938}
   - component: {fileID: 354068941}
+  - component: {fileID: 354068942}
   m_Layer: 0
   m_Name: AttackDownNew
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1206,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &354068940
 SpriteRenderer:
@@ -1305,6 +1305,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &354068942
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354068936}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &445911857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,9 +2079,10 @@ GameObject:
   - component: {fileID: 740403834}
   - component: {fileID: 740403832}
   - component: {fileID: 740403835}
+  - component: {fileID: 740403836}
   m_Layer: 0
   m_Name: AttackUpNew
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2069,7 +2097,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1.2, y: 0.79999995, z: 1}
+  m_LocalScale: {x: 1.4, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158554906}
@@ -2092,7 +2120,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &740403834
 SpriteRenderer:
@@ -2192,6 +2219,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &740403836
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740403830}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &748421865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,9 +2353,10 @@ GameObject:
   - component: {fileID: 803283415}
   - component: {fileID: 803283413}
   - component: {fileID: 803283416}
+  - component: {fileID: 803283417}
   m_Layer: 0
   m_Name: AttackLeftNew
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2339,7 +2394,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &803283415
 SpriteRenderer:
@@ -2439,6 +2493,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &803283417
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803283411}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &813791903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,7 +5263,7 @@ GameObject:
   - component: {fileID: 1624097691}
   - component: {fileID: 1624097694}
   - component: {fileID: 1624097695}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -5529,9 +5610,10 @@ GameObject:
   - component: {fileID: 1849475633}
   - component: {fileID: 1849475631}
   - component: {fileID: 1849475634}
+  - component: {fileID: 1849475635}
   m_Layer: 0
   m_Name: AttackRightNew
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5569,7 +5651,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &1849475633
 SpriteRenderer:
@@ -5669,6 +5750,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1849475635
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849475629}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1867649604
 GameObject:
   m_ObjectHideFlags: 0

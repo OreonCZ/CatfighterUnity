@@ -595,7 +595,7 @@ MonoBehaviour:
   isFighting: 0
   fightSound: 0
   animator: {fileID: 158554901}
-  swordDelay: 0.6
+  swordDelay: 0.5
   canAttack: 1
   slider: {fileID: 162293943}
   movement: {fileID: 158554903}
@@ -1180,6 +1180,7 @@ GameObject:
   - component: {fileID: 370273811}
   - component: {fileID: 370273810}
   - component: {fileID: 370273809}
+  - component: {fileID: 370273812}
   m_Layer: 0
   m_Name: AttackUpNew
   m_TagString: Sword
@@ -1265,7 +1266,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &370273811
 SpriteRenderer:
@@ -1320,6 +1320,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &370273812
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370273807}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &445911857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1434,7 @@ GameObject:
   - component: {fileID: 499673879}
   - component: {fileID: 499673878}
   - component: {fileID: 499673877}
+  - component: {fileID: 499673880}
   m_Layer: 0
   m_Name: AttackDownNew
   m_TagString: Sword
@@ -1492,7 +1520,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &499673879
 SpriteRenderer:
@@ -1547,6 +1574,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &499673880
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499673875}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &526508095
 GameObject:
   m_ObjectHideFlags: 0
@@ -5994,6 +6048,7 @@ GameObject:
   - component: {fileID: 750401892}
   - component: {fileID: 750401891}
   - component: {fileID: 750401890}
+  - component: {fileID: 750401893}
   m_Layer: 0
   m_Name: AttackRightNew
   m_TagString: Sword
@@ -6079,7 +6134,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &750401892
 SpriteRenderer:
@@ -6134,6 +6188,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &750401893
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750401888}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &813791903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11786,6 +11867,7 @@ GameObject:
   - component: {fileID: 1688761616}
   - component: {fileID: 1688761615}
   - component: {fileID: 1688761614}
+  - component: {fileID: 1688761617}
   m_Layer: 0
   m_Name: AttackLeftNew
   m_TagString: Sword
@@ -11871,7 +11953,6 @@ MonoBehaviour:
   fight: {fileID: 158554900}
   enemy: {fileID: 1624097690}
   animator: {fileID: 1624097694}
-  enemyMovement: {fileID: 1624097691}
   enemyStun: 2
 --- !u!212 &1688761616
 SpriteRenderer:
@@ -11926,6 +12007,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1688761617
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688761612}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1812474551
 GameObject:
   m_ObjectHideFlags: 0

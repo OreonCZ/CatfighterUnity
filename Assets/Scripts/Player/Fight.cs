@@ -25,8 +25,8 @@ public class Fight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isFighting = Input.GetMouseButtonDown(0);
-        if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain && movement.isWalking)
+        isFighting = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
+        if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain)
         {
             movement.currentStamina -= swordStaminaDrain;
             Attack();
@@ -43,29 +43,33 @@ public class Fight : MonoBehaviour
 
     void Attack()
     {
-        if (isFighting && Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             animator.SetBool("FightLeft", true);
+            fightSound = true;
             StartCoroutine(WaitLeft());
             return;
 
         }
-        else if (isFighting && Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             animator.SetBool("FightRight", true);
+            fightSound = true;
             StartCoroutine(WaitRight());
             return;
 
         }
-        else if (isFighting && Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
             animator.SetBool("FightBack", true);
+            fightSound = true;
             StartCoroutine(WaitUp());
             return;
         }
-        else if (isFighting && Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             animator.SetBool("Fight", true);
+            fightSound = true;
             StartCoroutine(WaitDown());
             return;
         }
@@ -77,18 +81,17 @@ public class Fight : MonoBehaviour
         attackUp.SetActive(false);
         attackRight.SetActive(false);
         attackLeft.SetActive(false);
+        fightSound = false;
     }
 
 
     IEnumerator Delay()
     {
         canAttack = false;
-        fightSound = true;
         movement.movementSpeed /= slowDown;
         yield return new WaitForSeconds(swordDelay);
         AttackRangeHide();
         canAttack = true;
-        fightSound = false;
         movement.movementSpeed *= slowDown;
     }
     IEnumerator WaitLeft()

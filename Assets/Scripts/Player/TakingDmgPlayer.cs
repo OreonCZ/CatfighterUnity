@@ -38,10 +38,17 @@ public class TakingDmgPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (!playerMovement.isRolling && !enemy.enemyDed) {
-                enemyTakeDmg = true;
+            if (!playerMovement.isRolling)
+            {
+                if (!enemy.enemyDed)
+                {
+                    enemyTakeDmg = true;
+                }
+                else if (enemy.enemyDed)
+                {
+                    enemyTakeDmg = false;
+                }
                 enemy.enemyMovementSpeed = enemySlow;
-                Debug.Log("zpomaleni: " + enemySlow);
             }
         }
     }
@@ -56,7 +63,6 @@ public class TakingDmgPlayer : MonoBehaviour
     {
          enemyDamageToPL = false;
          hpbar.currentHp -= enemy.enemyDMG;
-         Debug.Log("Zivoty: " + hpbar.currentHp);
          yield return new WaitForSeconds(enemyAttackCool);
          enemyDamageToPL = true;
     }
