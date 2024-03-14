@@ -165,7 +165,6 @@ MonoBehaviour:
   enemy: {fileID: 1624097683}
   enemyMovement: {fileID: 1624097691}
   isDed: 0
-  enemies: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
 --- !u!114 &32034593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6685,6 +6684,9 @@ GameObject:
   - component: {fileID: 1057836170}
   - component: {fileID: 1057836169}
   - component: {fileID: 1057836168}
+  - component: {fileID: 1057836173}
+  - component: {fileID: 1057836172}
+  - component: {fileID: 1057836171}
   m_Layer: 5
   m_Name: GameBar
   m_TagString: Untagged
@@ -6780,6 +6782,59 @@ Canvas:
   m_SortingLayerID: -1068429189
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1057836171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057836166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7464c42a8beb94e8652460f471f1eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 32034593}
+  uiImage: {fileID: 1057836172}
+  bloodyImage: {fileID: 21300000, guid: 5b0d393690d04854ba1164169da94803, type: 3}
+--- !u!114 &1057836172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057836166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1057836173
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057836166}
+  m_CullTransparentMesh: 1
 --- !u!1 &1060585087
 GameObject:
   m_ObjectHideFlags: 0

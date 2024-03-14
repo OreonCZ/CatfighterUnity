@@ -29,7 +29,54 @@ public class Fight : MonoBehaviour
         if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain)
         {
             movement.currentStamina -= swordStaminaDrain;
-            Attack();
+            if (Input.GetKey(KeyCode.D)){
+                if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    KickAttackLeft();
+                }
+                else
+                {
+                    Attack();
+                }
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    KickAttackRight();
+                }
+                else
+                {
+                    Attack();
+                }
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    KickAttack();
+                }
+                else
+                {
+                    Attack();
+                }
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                if (Input.GetKey(KeyCode.UpArrow)) {
+                    KickAttackBack();
+                }
+                else
+                {
+                    Attack();
+                }
+            }
+            else
+            {
+                Attack();
+            }
+
+            
             StartCoroutine(Delay());
            /* Vector3 mousePos = Input.mousePosition;
             {
@@ -73,6 +120,51 @@ public class Fight : MonoBehaviour
             StartCoroutine(WaitDown());
             return;
         }
+        
+    }
+    void KickAttackLeft()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("KickLeft", true);
+            fightSound = true;
+            StartCoroutine(WaitLeft());
+            return;
+
+        }
+    }
+    void KickAttackRight()
+    {
+        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("KickRight", true);
+            fightSound = true;
+            StartCoroutine(WaitRight());
+            return;
+
+        }
+    }
+    void KickAttack()
+    {
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.W))
+        {
+            animator.SetBool("Kick", true);
+            fightSound = true;
+            StartCoroutine(WaitDown());
+            return;
+
+        }
+    }
+    void KickAttackBack()
+    {
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("KickBack", true);
+            fightSound = true;
+            StartCoroutine(WaitUp());
+            return;
+
+        }
     }
 
     void AttackRangeHide()
@@ -114,7 +206,9 @@ public class Fight : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         attackDown.SetActive(true);
     }
-}
+    }
+        
+
 
 
 

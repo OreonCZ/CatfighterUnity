@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5651e4b185f58d84580e4d4f5870e565
+guid: deb11ecfd0b93844584220d2bb087cd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: catRoll_0
+      name: catKick_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92e5422895a784e439627dfd3365bb32
-      internalID: -1973067728
+      spriteID: 55f68da8313588541a104809845f095e
+      internalID: 106291191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_1
+      name: catKick_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 615cf770d5260df4cbf7d3c291e14e5e
-      internalID: -878624250
+      spriteID: 672be18ce22deb84c825d76640f83555
+      internalID: 1082924648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_2
+      name: catKick_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9481e0615e4ea054db4dd234be7c89e6
-      internalID: -981074142
+      spriteID: 069acaf542aa734438e1ba763906e41d
+      internalID: -501121000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_3
+      name: catKick_3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,56 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5f956158691390449faf2beee9b9482
-      internalID: -790321906
+      spriteID: 909ac1281170b6d45af655187eb4294c
+      internalID: 1748819738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c4333c13a55fd74cb8ff561a8f94f9e
-      internalID: -1905949520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d073a359a6712c049bb94ba77c26f362
-      internalID: -979863807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_6
+      name: catKick_4
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebc2ab5bafee478488b03d006a8860a5
-      internalID: -1829344142
+      spriteID: d7c5a18724bdb7f489c02eba68e065e2
+      internalID: 1915674653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_7
+      name: catKick_5
       rect:
         serializedVersion: 2
         x: 16
@@ -271,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6579309126aaf394583f502d1c6448cc
-      internalID: -11876684
+      spriteID: 78f5e8385e19ac5439f803f962980d41
+      internalID: 80560919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_8
+      name: catKick_6
       rect:
         serializedVersion: 2
         x: 32
@@ -292,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9051a265858ab48409fcd4aa1bafe21b
-      internalID: -1944851660
+      spriteID: 3b44cea43cc7e234cb04056e1b360e19
+      internalID: -1680542679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_9
+      name: catKick_7
       rect:
         serializedVersion: 2
         x: 48
@@ -313,56 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a375023329d14344a44e767a601fe09
-      internalID: -1842575223
+      spriteID: 9b6dd8fbf72732c4fb71cd16c06a1e07
+      internalID: 1273718277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 097dc3c84ca84cf499a26756290d0fce
-      internalID: 731594603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_11
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a2df2073b9bdb14fa80a1467121a9b9
-      internalID: -806812838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_12
+      name: catKick_8
       rect:
         serializedVersion: 2
         x: 0
@@ -376,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 778d72bd038be3f47b7bd110d5c65fb2
-      internalID: 2083125749
+      spriteID: 6f3aead8cd4f8d3449d41de518ef6cf9
+      internalID: -913799849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_13
+      name: catKick_9
       rect:
         serializedVersion: 2
         x: 16
@@ -397,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e25a69ffece2c4892344896f47b479
-      internalID: -1701879229
+      spriteID: 60f72f362f61d6e4dbabd0c1a105adfa
+      internalID: 903098087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_14
+      name: catKick_10
       rect:
         serializedVersion: 2
         x: 32
@@ -418,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d117dd8b041301d4c980dd9b30da70fe
-      internalID: -2058982234
+      spriteID: 9c268554b340c724bb8517ef7bd1f4ac
+      internalID: -486361570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_15
+      name: catKick_11
       rect:
         serializedVersion: 2
         x: 48
@@ -439,56 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2dca9b712e05604e8658267c39fe412
-      internalID: 248836274
+      spriteID: c5b61b7de2e7c494993366d69d2c29b7
+      internalID: 818882942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_16
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74c169b8b755e0547bf7bdc88a6d271d
-      internalID: -1022732221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_17
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b157058bcdfce6947ad07f445e9b7a01
-      internalID: 1793606117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_18
+      name: catKick_12
       rect:
         serializedVersion: 2
         x: 0
@@ -502,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c00bf033c85b54a4d837da8e53eb4cc4
-      internalID: -1007395316
+      spriteID: 5ce47288cc124524093b5b497412709c
+      internalID: 1431871842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_19
+      name: catKick_13
       rect:
         serializedVersion: 2
         x: 16
@@ -523,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b68a155a8af15c541a70e208f8765d1e
-      internalID: -407898883
+      spriteID: 7d02324832f12e348877fe4a039df05a
+      internalID: 917208720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_20
+      name: catKick_14
       rect:
         serializedVersion: 2
         x: 32
@@ -544,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b94e05945170fd34c9f21d192bcbbb58
-      internalID: -736070796
+      spriteID: 620c076401286164bbabd74a9e4db194
+      internalID: -796214320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: catRoll_21
+      name: catKick_15
       rect:
         serializedVersion: 2
         x: 48
@@ -565,50 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c18f3e51a4e4bd46a13bbd4bd08868f
-      internalID: -1141992631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_22
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 706897ef26ab62c4f8498707e7c0cc81
-      internalID: 1528089628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: catRoll_23
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6896d85fae658f940bd301a9bdbd35bd
-      internalID: -455017265
+      spriteID: 84603549f7ce2584ab999a4e1df87902
+      internalID: -686353204
       vertices: []
       indices: 
       edges: []
@@ -624,30 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      catRoll_0: -1973067728
-      catRoll_1: -878624250
-      catRoll_10: 731594603
-      catRoll_11: -806812838
-      catRoll_12: 2083125749
-      catRoll_13: -1701879229
-      catRoll_14: -2058982234
-      catRoll_15: 248836274
-      catRoll_16: -1022732221
-      catRoll_17: 1793606117
-      catRoll_18: -1007395316
-      catRoll_19: -407898883
-      catRoll_2: -981074142
-      catRoll_20: -736070796
-      catRoll_21: -1141992631
-      catRoll_22: 1528089628
-      catRoll_23: -455017265
-      catRoll_3: -790321906
-      catRoll_4: -1905949520
-      catRoll_5: -979863807
-      catRoll_6: -1829344142
-      catRoll_7: -11876684
-      catRoll_8: -1944851660
-      catRoll_9: -1842575223
+      catKick_0: 106291191
+      catKick_1: 1082924648
+      catKick_10: -486361570
+      catKick_11: 818882942
+      catKick_12: 1431871842
+      catKick_13: 917208720
+      catKick_14: -796214320
+      catKick_15: -686353204
+      catKick_2: -501121000
+      catKick_3: 1748819738
+      catKick_4: 1915674653
+      catKick_5: 80560919
+      catKick_6: -1680542679
+      catKick_7: 1273718277
+      catKick_8: -913799849
+      catKick_9: 903098087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

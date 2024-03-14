@@ -39,6 +39,9 @@ public class Oscar : MonoBehaviour
         {
             oscarBulletShoot.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             enemy.enemyRangeDMG = 2;
+            enemy.enemyRangeSpeed = 4f;
+            enemy.fireRate = 4f;
+            enemy.destroyProjectile = 5f;
         }
         if (enemy.currentEnemyHP <= 0)
         {

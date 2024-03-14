@@ -20,4 +20,4 @@ MonoBehaviour:
   fireRate: 3
   shootDamage: 0
   fireSpeed: 0
-  destroyProjectile: 7
+  destroyProjectile: 8

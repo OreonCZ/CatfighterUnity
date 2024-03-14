@@ -12,6 +12,12 @@ public class TakingDMG : MonoBehaviour
     public Enemy enemy;
     public Animator animator;
     public float enemyStun = 2f;
+    GameObject swordRadius;
+
+    void Start()
+    {
+        swordRadius = GameObject.FindWithTag("Sword");
+    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -19,6 +25,8 @@ public class TakingDMG : MonoBehaviour
         {
             enemy.currentEnemyHP -= fight.attackDamage;
             slider.value = enemy.currentEnemyHP;
+            swordRadius.SetActive(false);
+            
         }
         if (collider.gameObject.tag == "Enemy" && enemy.enemyDed)
         {

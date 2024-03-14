@@ -15,7 +15,6 @@ public class HpBar : MonoBehaviour
     public GameObject enemy;
     public EnemyMovement enemyMovement;
     public bool isDed = false;
-    public Enemies enemies;
 
     void Start()
     {

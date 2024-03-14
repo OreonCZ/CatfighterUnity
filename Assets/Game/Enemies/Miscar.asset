@@ -16,7 +16,7 @@ MonoBehaviour:
   maxEnemyHp: 15
   enemyDamage: 2
   enemySpeed: 1
-  enemyAttackCooldown: 2
+  enemyAttackCooldown: 1
   fireRate: 0.1
   shootDamage: 4
   fireSpeed: 10
