@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PortalBack : MonoBehaviour
 {
     public bool teleport = false;
+    public GameObject endTransition;
 
     void Update()
     {
@@ -15,9 +16,21 @@ public class PortalBack : MonoBehaviour
         }
     }
 
+    void DisableEndTransition()
+    {
+        endTransition.SetActive(true);
+    }
+
+    IEnumerator LevelLoading()
+    {
+        yield return new WaitForSeconds(1f);
+        teleport = true;
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
+        DisableEndTransition();
         Debug.Log("sus");
-        teleport = true;
+        StartCoroutine(LevelLoading());
     }
 }

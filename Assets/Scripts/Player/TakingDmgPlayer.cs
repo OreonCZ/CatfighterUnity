@@ -29,7 +29,7 @@ public class TakingDmgPlayer : MonoBehaviour
     {
         if (enemyTakeDmg && enemyDamageToPL)
         {
-            //StartCoroutine(DealDamage());
+            StartCoroutine(DealDamage());
            // StartCoroutine(EnemyStop());
         }
     }

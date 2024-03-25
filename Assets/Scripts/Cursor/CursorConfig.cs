@@ -5,6 +5,8 @@ using UnityEngine;
 public class CursorConfig : MonoBehaviour
 {
     public HpBar hpbar;
+    public PauseGame pause;
+
     void Start()
     {
         
@@ -13,8 +15,15 @@ public class CursorConfig : MonoBehaviour
     {
         if (hpbar.currentHp > 0)
         {
-            Cursor.visible = false;
-            return;
+            if (pause.pauseBool)
+            {
+                Cursor.visible = true;
+                return;
+            }
+            else
+            {
+                Cursor.visible = false;
+            }
         }
         else {
         Cursor.visible = true;

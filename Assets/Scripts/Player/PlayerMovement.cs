@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public bool isMoving = false;
     public bool isWalking;
+    [HideInInspector] public bool canWalk = true;
     bool isSprinting = false;
     public Animator animator;
     public Slider slider;
@@ -40,84 +41,25 @@ public class Movement : MonoBehaviour
     void Update()
     {
         slider.value = currentStamina;
+        if (!isRolling) {
         isSprinting = Input.GetKey(KeyCode.LeftShift);
+        }
         isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
 
-        
-        //roll
-        if (canRoll && Input.GetKeyDown(KeyCode.Space) && currentStamina > rollStaminaDrain && fight.canAttack && isWalking)
-        {
-            currentStamina -= rollStaminaDrain;
 
-                if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-                {
-                    StartCoroutine(Roll(new Vector2(1f, 1f)));
-                    if (!fight.isFighting) {
-                        animator.SetBool("RollingRight", true);
-                    }
-                }
-                else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-                {
-                    StartCoroutine(Roll(new Vector2(-1f, 1f)));
-                    if (!fight.isFighting) {
-                        animator.SetBool("RollingLeft", true);
-                    }
-                }
-                else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-                {
-                    StartCoroutine(Roll(new Vector2(1f, -1f)));
-                    if (!fight.isFighting)
-                    {
-                        animator.SetBool("RollingRight", true);
-                    }
-                }
-                else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-                {
-                    StartCoroutine(Roll(new Vector2(-1f, -1f)));
-                    if (!fight.isFighting)
-                    {
-                        animator.SetBool("RollingLeft", true);
-                }
-                }
-                else if (Input.GetKey(KeyCode.W)) {
-                    StartCoroutine(Roll(Vector2.up));
-                    if (!fight.isFighting)
-                    {
-                        animator.SetBool("RollingBack", true);
-                    }
-                }
-                else if (Input.GetKey(KeyCode.S))
-                {
-                    StartCoroutine(Roll(Vector2.down));
-                    if (!fight.isFighting)
-                    {
-                        animator.SetBool("Roll", true);
-                    }
-                }
-                else if (Input.GetKey(KeyCode.A))
-                {
-                    StartCoroutine(Roll(Vector2.left));
-                    if (!fight.isFighting)
-                    {
-                        animator.SetBool("RollingLeft", true);
-                    }
-                }
-                else if (Input.GetKey(KeyCode.D))
-                {
-                    StartCoroutine(Roll(Vector2.right));
-                    if (!fight.isFighting)
-                    {
-                        animator.SetBool("RollingRight", true);
-                    }
-                }
-        }
+        AnimationChanger();
+        Moving();
 
+    }
+    void Moving()
+    {
         //movement
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         Vector2 moveInput = new Vector2(moveX, moveY).normalized;
         rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
 
+        //sprint
 
         if (slider.value < slider.maxValue)
         {
@@ -127,8 +69,6 @@ public class Movement : MonoBehaviour
         {
             sprintBar.SetActive(false);
         }
-
-        //sprint
         if (isSprinting && isWalking && milk.canDrink)
         {
             if (currentStamina > 0)
@@ -139,22 +79,90 @@ public class Movement : MonoBehaviour
         }
         if (!isSprinting && currentStamina < maxStamina || !isWalking)
         {
-            if (currentStamina < maxStamina) {
+            if (currentStamina < maxStamina)
+            {
                 rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
                 currentStamina += 20 * Time.deltaTime;
             }
         }
 
-        void stopMoving()
+        //roll
+        if (canRoll && Input.GetKeyDown(KeyCode.Space) && currentStamina > rollStaminaDrain && fight.canAttack && isWalking)
         {
-            animator.SetBool("WalkingRight", false);
-            animator.SetBool("Walking", false);
-            animator.SetBool("WalkingLeft", false);
-            animator.SetBool("WalkingUp", false);
+            currentStamina -= rollStaminaDrain;
+
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+            {
+                StartCoroutine(Roll(new Vector2(1f, 1f)));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("RollingRight", true);
+                }
+            }
+            else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+            {
+                StartCoroutine(Roll(new Vector2(-1f, 1f)));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("RollingLeft", true);
+                }
+            }
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+            {
+                StartCoroutine(Roll(new Vector2(1f, -1f)));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("RollingRight", true);
+                }
+            }
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+            {
+                StartCoroutine(Roll(new Vector2(-1f, -1f)));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("RollingLeft", true);
+                }
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                StartCoroutine(Roll(Vector2.up));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("RollingBack", true);
+                }
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                StartCoroutine(Roll(Vector2.down));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("Roll", true);
+                }
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                StartCoroutine(Roll(Vector2.left));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("RollingLeft", true);
+                }
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                StartCoroutine(Roll(Vector2.right));
+                if (!fight.isFighting)
+                {
+                    animator.SetBool("RollingRight", true);
+                }
+            }
         }
+    }
 
-        //animation changer
 
+    //animation changer
+    void AnimationChanger()
+    {
+        if (canWalk) {
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("WalkingUp", true);
@@ -176,7 +184,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("Walking", false);
             animator.SetBool("WalkingLeft", false);
             animator.SetBool("WalkingUp", false);
-            
+
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -191,27 +199,34 @@ public class Movement : MonoBehaviour
             stopMoving();
             return;
         }
-        
-
-        IEnumerator Roll(Vector2 direction)
-        {
-            canRoll = false;
-            isRolling = true;
-            currentRollTime = rollTime;
-            while(currentRollTime > 0f)
-            {
-                currentRollTime -= Time.deltaTime;
-
-                rb.velocity = direction * rollSpeed;
-
-                yield return null;
-            }
-            yield return new WaitForSeconds(rollCooldown);
-            rb.velocity = new Vector2(0f, 0f);
-            canRoll = true;
-            isRolling = false;
-
         }
+    }
+    void stopMoving()
+    {
+        animator.SetBool("WalkingRight", false);
+        animator.SetBool("Walking", false);
+        animator.SetBool("WalkingLeft", false);
+        animator.SetBool("WalkingUp", false);
+    }
+
+    IEnumerator Roll(Vector2 direction)
+    {
+        canRoll = false;
+        isRolling = true;
+        currentRollTime = rollTime;
+        while (currentRollTime > 0f)
+        {
+            currentRollTime -= Time.deltaTime;
+
+            rb.velocity = direction * rollSpeed;
+
+            yield return null;
+        }
+        yield return new WaitForSeconds(rollCooldown);
+        rb.velocity = new Vector2(0f, 0f);
+        canRoll = true;
+        isRolling = false;
+
     }
 }
 

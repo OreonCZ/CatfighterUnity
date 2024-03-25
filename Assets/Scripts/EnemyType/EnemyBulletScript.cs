@@ -12,16 +12,17 @@ public class EnemyBulletScript : MonoBehaviour
 	public Enemies enemies;
     public EnemyShoot enemyShoot;
 	public Enemy enemy;
+	bool wait = false;
 
-    // Use this for initialization
     void Start()
 	{
+		StartCoroutine(WaitForTransition());
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-        if (Time.time > nextFire)
+        if (Time.time > nextFire && wait)
         {
 			if(enemy.currentEnemyHP > 0) 
 			{
@@ -30,6 +31,12 @@ public class EnemyBulletScript : MonoBehaviour
 			nextFire = Time.time + 1f / enemy.fireRate;
 		}
 	}
+
+	IEnumerator WaitForTransition()
+    {
+		yield return new WaitForSeconds(0.5f);
+		wait = true;
+    }
 
 	void Fire()
 	{

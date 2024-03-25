@@ -9,6 +9,7 @@ TagManager:
   - Border
   - Sword
   - Coin
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
@@ -70,6 +71,9 @@ TagManager:
   - name: Player
     uniqueID: 4250941897
     locked: 0
+  - name: WalkableBehindObject
+    uniqueID: 2505328437
+    locked: 0
   - name: WalkableObjects
     uniqueID: 2196304533
     locked: 0
@@ -84,4 +88,7 @@ TagManager:
     locked: 0
   - name: CatHead
     uniqueID: 2415911513
+    locked: 0
+  - name: Pause
+    uniqueID: 412912363
     locked: 0

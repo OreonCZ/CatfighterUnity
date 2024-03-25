@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 public class PortalFour : MonoBehaviour
 {
     public bool teleport = false;
+    public GameObject endTransition;
+
     // Start is called before the first frame update
+    void Start()
+    {
+
+    }
     void Update()
     {
         if (teleport)
@@ -14,11 +20,21 @@ public class PortalFour : MonoBehaviour
             SceneManager.LoadScene(sceneBuildIndex: 5);
         }
     }
+    void DisableEndTransition()
+    {
+        endTransition.SetActive(true);
+    }
+
+    IEnumerator LevelLoading()
+    {
+        yield return new WaitForSeconds(1.5f);
+        teleport = true;
+    }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        DisableEndTransition();
         Debug.Log("sus");
-        teleport = true;
-
+        StartCoroutine(LevelLoading());
     }
 }
