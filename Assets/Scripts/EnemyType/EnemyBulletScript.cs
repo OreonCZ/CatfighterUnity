@@ -34,7 +34,7 @@ public class EnemyBulletScript : MonoBehaviour
 
 	IEnumerator WaitForTransition()
     {
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1f);
 		wait = true;
     }
 

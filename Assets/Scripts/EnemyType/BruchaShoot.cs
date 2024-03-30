@@ -47,29 +47,21 @@ public class BruchaShoot : MonoBehaviour
     {
         transform.Translate(direction * enemyScript.enemyRangeSpeed * Time.deltaTime);
     }
+    /*
     void PlayerHit(GameObject Player)
     {
         EnemyProjectileDMG enemyProjectileDMG = Player.GetComponent<EnemyProjectileDMG>();
         enemyProjectileDMG.OnHitDamage(enemyScript.enemyRangeDMG);
     }
-
+    */
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !playerMScript.isRolling)
+        if (collision.gameObject.tag == "Player")
         {
             GetComponent<Collider2D>().enabled = true;
             transform.position = new Vector2(transform.position.x, transform.position.y);
-            PlayerHit(collision.gameObject);
+            //PlayerHit(collision.gameObject);
             Destroy(gameObject);
-            if(enemyScript.currentEnemyHP <= 20 && enemyScript.currentEnemyHP > 10) {
-                bruchaTransform.transform.position = new Vector2(playerTransform.transform.position.x, playerTransform.transform.position.y + 1);
-
-            }
-        }
-        else if (collision.gameObject.tag == "Player" && playerMScript.isRolling)
-        {
-            GetComponent<Collider2D>().enabled = false;
-            return;
         }
     }
 }

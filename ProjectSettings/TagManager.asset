@@ -10,6 +10,8 @@ TagManager:
   - Sword
   - Coin
   - PauseMenu
+  - BruchaSkill
+  - Bullet
   layers:
   - Default
   - TransparentFX

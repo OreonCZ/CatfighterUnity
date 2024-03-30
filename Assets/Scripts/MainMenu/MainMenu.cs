@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public PauseGame pauseGame;
+    public Slider audioSlider;
+    public AudioMixer audioMixer;
 
     public void LoadGame()
     {
@@ -13,7 +16,10 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
+        float volume = audioSlider.value;
+        audioMixer.SetFloat("master", Mathf.Log10(volume) * 20);
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetFloat("audioVolume", volume);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
