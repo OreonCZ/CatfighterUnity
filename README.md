@@ -1,6 +1,7 @@
 <h1 style="text-align:center">Catfighter</h1>
 <img src="https://github.com/OreonCZ/CatfighterUnity/assets/115612408/ff97caeb-b91c-44d5-9209-49e5ef219e82"></img>
 <br>...
+<h2>Final boss done and reworking 2nd and 3rd boss | 5. 4. 2023</h2>
 <h2>Added boss music and final boss in the works | 30. 3. 2023</h2>
 <h2>Lobby update. Pause menu in progress. Scene transition | 25. 3. 2023</h2>
 <h2>You can now kick enemy cats. New low hp UI. Unity sucks | 14. 3. 2023</h2>
