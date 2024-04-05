@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Miscar
   m_EditorClassIdentifier: 
   catName: Miscar
-  maxEnemyHp: 15
+  maxEnemyHp: 16
   enemyDamage: 2
   enemySpeed: 1
   enemyAttackCooldown: 1

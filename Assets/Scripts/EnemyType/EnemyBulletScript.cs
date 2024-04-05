@@ -6,13 +6,13 @@ public class EnemyBulletScript : MonoBehaviour
 {
 	public GameObject projectile;
 	public Transform playerPosition;
-	public float fireRate;
 	public float nextFire = 0f;
 	public HpBar hpbar;
 	public Enemies enemies;
     public EnemyShoot enemyShoot;
 	public Enemy enemy;
 	bool wait = false;
+	public Yuki yuki;
 
     void Start()
 	{
@@ -24,7 +24,7 @@ public class EnemyBulletScript : MonoBehaviour
 	{
         if (Time.time > nextFire && wait)
         {
-			if(enemy.currentEnemyHP > 0) 
+			if(enemy.currentEnemyHP > 0 && yuki.canShoot) 
 			{
 			Fire();
 			}

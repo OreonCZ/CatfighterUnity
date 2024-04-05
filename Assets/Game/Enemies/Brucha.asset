@@ -15,7 +15,7 @@ MonoBehaviour:
   catName: Brucha
   maxEnemyHp: 20
   enemyDamage: 1
-  enemySpeed: 3
+  enemySpeed: 2
   enemyAttackCooldown: 1
   fireRate: 0.5
   shootDamage: 1

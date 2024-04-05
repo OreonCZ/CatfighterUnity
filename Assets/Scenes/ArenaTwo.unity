@@ -7473,6 +7473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpbar: {fileID: 32034592}
   pause: {fileID: 82021503}
+  endBool: 0
 --- !u!1 &900161403
 GameObject:
   m_ObjectHideFlags: 0
@@ -10425,13 +10426,13 @@ MonoBehaviour:
   projectile: {fileID: 6718367768982192127, guid: 2d7b4796d569a3143a2c265430b1895a,
     type: 3}
   playerPosition: {fileID: 158554906}
-  fireRate: 1
   nextFire: 0
   hpbar: {fileID: 32034592}
   enemies: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
   enemyShoot: {fileID: 8508775605771490476, guid: 2d7b4796d569a3143a2c265430b1895a,
     type: 3}
   enemy: {fileID: 1624097690}
+  yuki: {fileID: 1624097697}
 --- !u!114 &1624097697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10446,6 +10447,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1624097690}
   enemyMovement: {fileID: 1624097691}
+  yukiShoot: 1
+  canShoot: 1
+  enemies: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
+  animator: {fileID: 1624097694}
 --- !u!1 &1628339654
 GameObject:
   m_ObjectHideFlags: 0
@@ -10799,6 +10804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleport: 0
   endTransition: {fileID: 1062892122}
+  pause: {fileID: 82021503}
 --- !u!61 &1812474553
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -7,12 +7,14 @@ public class PortalBack : MonoBehaviour
 {
     public bool teleport = false;
     public GameObject endTransition;
+    public PauseGame pause;
 
     void Update()
     {
         if (teleport)
         {
             SceneManager.LoadScene(sceneBuildIndex: 1);
+
         }
     }
 
@@ -23,6 +25,7 @@ public class PortalBack : MonoBehaviour
 
     IEnumerator LevelLoading()
     {
+        pause.canPause = false;
         yield return new WaitForSeconds(1f);
         teleport = true;
     }

@@ -12,6 +12,7 @@ TagManager:
   - PauseMenu
   - BruchaSkill
   - Bullet
+  - End
   layers:
   - Default
   - TransparentFX

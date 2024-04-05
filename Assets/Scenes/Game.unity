@@ -2053,6 +2053,7 @@ GameObject:
   - component: {fileID: 189071980}
   - component: {fileID: 189071981}
   - component: {fileID: 189071982}
+  - component: {fileID: 189071983}
   m_Layer: 0
   m_Name: LobbyManager
   m_TagString: Untagged
@@ -2147,6 +2148,22 @@ MonoBehaviour:
   gameMenu: {fileID: 1055935585}
   bruchaSkill: {fileID: 0}
   sceneTransition: {fileID: 189071981}
+--- !u!114 &189071983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189071977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e715392f316df44eb1663d3cf556487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 723811284}
+  cave: {fileID: 423767152}
+  oscarStatue: {fileID: 1086364096}
+  tDummy: {fileID: 1495988300}
 --- !u!1 &246573819
 GameObject:
   m_ObjectHideFlags: 0
@@ -3891,7 +3908,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4466,6 +4483,7 @@ GameObject:
   - component: {fileID: 559187110}
   - component: {fileID: 559187114}
   - component: {fileID: 559187113}
+  - component: {fileID: 559187115}
   m_Layer: 0
   m_Name: PortalFinal
   m_TagString: Untagged
@@ -4633,6 +4651,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8791084, y: 0.86376286}
   m_EdgeRadius: 0
+--- !u!114 &559187115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559187109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dcd0b8ec87e344b8b2499d4311b225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleport: 0
+  endTransition: {fileID: 29151125}
 --- !u!1 &563534520
 GameObject:
   m_ObjectHideFlags: 0

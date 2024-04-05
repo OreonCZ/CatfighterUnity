@@ -134,8 +134,8 @@ TextureImporter:
       name: BruchaSkill_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 64
+        y: 192
         width: 64
         height: 32
       alignment: 0
@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 160
         width: 64
         height: 32
       alignment: 0
@@ -176,8 +176,8 @@ TextureImporter:
       name: BruchaSkill_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 64
+        y: 160
         width: 64
         height: 32
       alignment: 0
@@ -198,7 +198,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 128
         width: 64
         height: 32
       alignment: 0
@@ -218,8 +218,8 @@ TextureImporter:
       name: BruchaSkill_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 64
+        y: 128
         width: 64
         height: 32
       alignment: 0
@@ -240,7 +240,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 96
         width: 64
         height: 32
       alignment: 0
@@ -252,6 +252,153 @@ TextureImporter:
       bones: []
       spriteID: 7a361fa1b452b614ca8cf03e8f9bae84
       internalID: -573277356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruchaSkill_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a550752164dc64aa683ff125905a05
+      internalID: 1567561389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruchaSkill_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f46dea5372faf4ab8df7c3de6259c7
+      internalID: -2012873487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruchaSkill_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02afe1cdb4c4c444a845d00e4d95e0c2
+      internalID: -1940677643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruchaSkill_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9053c9a3e9d514b8e2987b20ac1a2e
+      internalID: 1834533305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruchaSkill_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0640260b21b6c94c8e493104a823fbc
+      internalID: -174390081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruchaSkill_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2625384a79e05e45ae8bb5d03c3048d
+      internalID: 1872409225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruchaSkill_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8a6cb4bc4acba49ab24e9b7f1001e0
+      internalID: 243755527
       vertices: []
       indices: 
       edges: []
@@ -269,11 +416,18 @@ TextureImporter:
     nameFileIdTable:
       BruchaSkill_0: -773154900
       BruchaSkill_1: 726748936
+      BruchaSkill_10: 1834533305
+      BruchaSkill_11: -174390081
+      BruchaSkill_12: 1872409225
+      BruchaSkill_13: 243755527
       BruchaSkill_2: -10027723
       BruchaSkill_3: -2035940573
       BruchaSkill_4: -99918349
       BruchaSkill_5: -2021759118
       BruchaSkill_6: -573277356
+      BruchaSkill_7: 1567561389
+      BruchaSkill_8: -2012873487
+      BruchaSkill_9: -1940677643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

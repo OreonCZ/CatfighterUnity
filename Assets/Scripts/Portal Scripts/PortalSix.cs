@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PortalSix : MonoBehaviour
+{
+    public bool teleport = false;
+    public GameObject endTransition;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        if (teleport)
+        {
+            SceneManager.LoadScene(sceneBuildIndex: 7);
+        }
+    }
+    void DisableEndTransition()
+    {
+        endTransition.SetActive(true);
+    }
+
+    IEnumerator LevelLoading()
+    {
+        yield return new WaitForSeconds(1.5f);
+        teleport = true;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        DisableEndTransition();
+        Debug.Log("sus");
+        StartCoroutine(LevelLoading());
+    }
+
+}

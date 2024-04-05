@@ -11,10 +11,14 @@ public class BruchaSkill : MonoBehaviour
     public GameObject brucha;
     int randomNumber = 0;
     public Animator anim;
+    public Enemies enemies;
+    public SpriteRenderer spriteRenderer;
+    public HpBar hpbarPlayer;
+    public Brucha bruchaBoss;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        
     }
     // Start is called before the first frame update
     void OnCollisionEnter2D(Collision2D collision)
@@ -23,7 +27,7 @@ public class BruchaSkill : MonoBehaviour
         {
             randomNumber = Random.Range(0, 5);
             StartCoroutine(BruchaSkill());
-            if (enemy.currentEnemyHP <= 15 && enemy.currentEnemyHP > 10)
+            if (enemy.currentEnemyHP <= 15 && !hpbarPlayer.isDed)
             {
                 if(randomNumber == 1)
                 {
@@ -41,6 +45,10 @@ public class BruchaSkill : MonoBehaviour
                 {
                     brucha.transform.position = new Vector2(this.gameObject.transform.position.x + 2, this.gameObject.transform.position.y);
                 }
+                else
+                {
+                    StartCoroutine(AngryMode());
+                }
 
             }
 
@@ -55,6 +63,23 @@ public class BruchaSkill : MonoBehaviour
             }
             yield return new WaitForSeconds(0.3f);
             bruchaSkill.SetActive(false);
+        }
+        IEnumerator AngryMode()
+        {
+            enemy.enemyMovementSpeed = 5f;
+            enemy.enemyDMG = 2;
+            if(hpbarPlayer.currentHp > 0)
+            {
+                spriteRenderer.color = new Color(1f, 0.2f, 0.2f, 0.8f);
+            }
+            yield return new WaitForSeconds(0.5f);
+            enemy.enemyMovementSpeed = enemies.enemySpeed;
+            enemy.enemyDMG = enemies.enemyDamage;
+            if (hpbarPlayer.currentHp > 0)
+            {
+                spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            }
+                
         }
     }
 }

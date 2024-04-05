@@ -11345,6 +11345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpbar: {fileID: 32034592}
   pause: {fileID: 82021503}
+  endBool: 0
 --- !u!1 &900161403
 GameObject:
   m_ObjectHideFlags: 0
@@ -13445,12 +13446,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 15
+  m_MaxValue: 16
   m_WholeNumbers: 1
-  m_Value: 15
+  m_Value: 16
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1536243767
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13761,8 +13774,8 @@ GameObject:
   - component: {fileID: 1624097691}
   - component: {fileID: 1624097694}
   - component: {fileID: 1624097695}
-  - component: {fileID: 1624097696}
   - component: {fileID: 1624097697}
+  - component: {fileID: 1624097698}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Enemy
@@ -14013,28 +14026,6 @@ MonoBehaviour:
   enemyStop: 0
   enemySlow: 0
   enemyStun: 0.5
---- !u!114 &1624097696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624097683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe061c9e5cc92df499b0b2d0d23a084c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 7982444285305679576, guid: f487b689b21bc5e4ab2002299cdc84c9,
-    type: 3}
-  playerPosition: {fileID: 158554906}
-  fireRate: 0
-  nextFire: 0
-  hpbar: {fileID: 32034592}
-  enemies: {fileID: 11400000, guid: 4eb7b4fd9d46ffb40a00cda0b3e7ccd1, type: 2}
-  enemyShoot: {fileID: 3914358059718810354, guid: f487b689b21bc5e4ab2002299cdc84c9,
-    type: 3}
-  enemy: {fileID: 1624097690}
 --- !u!114 &1624097697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14048,7 +14039,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1624097690}
-  enemyBullet: {fileID: 1624097696}
+  enemyBullet: {fileID: 1624097698}
+  berserk: 0
+  random: 0
+--- !u!114 &1624097698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624097683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4679ca3886876794691ba1c25160b584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 7982444285305679576, guid: f487b689b21bc5e4ab2002299cdc84c9,
+    type: 3}
+  playerPosition: {fileID: 158554906}
+  nextFire: 0
+  hpbar: {fileID: 32034592}
+  enemies: {fileID: 11400000, guid: 4eb7b4fd9d46ffb40a00cda0b3e7ccd1, type: 2}
+  enemyShoot: {fileID: 3914358059718810354, guid: f487b689b21bc5e4ab2002299cdc84c9,
+    type: 3}
+  enemy: {fileID: 1624097690}
+  miscar: {fileID: 1624097697}
 --- !u!1 &1628339654
 GameObject:
   m_ObjectHideFlags: 0
@@ -14426,6 +14441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleport: 0
   endTransition: {fileID: 66291166}
+  pause: {fileID: 82021503}
 --- !u!61 &1812474553
 BoxCollider2D:
   m_ObjectHideFlags: 0

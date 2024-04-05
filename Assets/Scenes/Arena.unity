@@ -7297,6 +7297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleport: 0
   endTransition: {fileID: 953193964}
+  pause: {fileID: 82021503}
 --- !u!61 &1424870577
 BoxCollider2D:
   m_ObjectHideFlags: 0

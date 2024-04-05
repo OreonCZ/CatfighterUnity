@@ -12,23 +12,32 @@ public class BruchaBullet : MonoBehaviour
 	public Enemies enemies;
 	public BruchaShoot bruchaShoot;
 	public Enemy enemy;
+	public Brucha brucha;
+	bool wait;
 
 	// Use this for initialization
 	void Start()
 	{
+		StartCoroutine(WaitForTransition());
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (Time.time > nextFire)
+		if (Time.time > nextFire && wait)
 		{
-			if (enemy.currentEnemyHP > 1)
+			if (enemy.currentEnemyHP > 0 && brucha.canShoot)
 			{
 				Fire();
 			}
 			nextFire = Time.time + 1f / enemy.fireRate;
 		}
+	}
+
+	IEnumerator WaitForTransition()
+	{
+		yield return new WaitForSeconds(1f);
+		wait = true;
 	}
 
 	void Fire()

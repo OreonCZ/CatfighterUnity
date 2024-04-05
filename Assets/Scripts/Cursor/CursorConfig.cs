@@ -6,6 +6,7 @@ public class CursorConfig : MonoBehaviour
 {
     public HpBar hpbar;
     public PauseGame pause;
+    public bool endBool = false;
 
     void Start()
     {
@@ -20,11 +21,17 @@ public class CursorConfig : MonoBehaviour
                 Cursor.visible = true;
                 return;
             }
+            else if (endBool)
+            {
+                Cursor.visible = true;
+                return;
+            }
             else
             {
                 Cursor.visible = false;
             }
         }
+
         else {
         Cursor.visible = true;
             return;
