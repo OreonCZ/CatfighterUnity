@@ -10,6 +10,7 @@ public class SceneTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioListener.pause = false;
         startTransition.SetActive(true);
         StartCoroutine(DisableStartTransition());
     }
