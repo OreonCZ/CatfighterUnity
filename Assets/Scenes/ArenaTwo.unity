@@ -10159,8 +10159,8 @@ GameObject:
   - component: {fileID: 1624097691}
   - component: {fileID: 1624097694}
   - component: {fileID: 1624097695}
-  - component: {fileID: 1624097696}
   - component: {fileID: 1624097697}
+  - component: {fileID: 1624097698}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -10411,28 +10411,6 @@ MonoBehaviour:
   enemyStop: 0
   enemySlow: 0
   enemyStun: 0.5
---- !u!114 &1624097696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624097683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe061c9e5cc92df499b0b2d0d23a084c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 6718367768982192127, guid: 2d7b4796d569a3143a2c265430b1895a,
-    type: 3}
-  playerPosition: {fileID: 158554906}
-  nextFire: 0
-  hpbar: {fileID: 32034592}
-  enemies: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
-  enemyShoot: {fileID: 8508775605771490476, guid: 2d7b4796d569a3143a2c265430b1895a,
-    type: 3}
-  enemy: {fileID: 1624097690}
-  yuki: {fileID: 1624097697}
 --- !u!114 &1624097697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10451,6 +10429,28 @@ MonoBehaviour:
   canShoot: 1
   enemies: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
   animator: {fileID: 1624097694}
+--- !u!114 &1624097698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624097683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d91d6ca91e6ef04081dcd0fcb6e96ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 6718367768982192127, guid: 2d7b4796d569a3143a2c265430b1895a,
+    type: 3}
+  playerPosition: {fileID: 158554906}
+  nextFire: 0
+  hpbar: {fileID: 32034592}
+  enemies: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
+  enemyShoot: {fileID: 8508775605771490476, guid: 2d7b4796d569a3143a2c265430b1895a,
+    type: 3}
+  enemy: {fileID: 1624097690}
+  yuki: {fileID: 1624097697}
 --- !u!1 &1628339654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11442,7 +11442,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Audio
+  m_Text: Music
 --- !u!222 &1984037164
 CanvasRenderer:
   m_ObjectHideFlags: 0

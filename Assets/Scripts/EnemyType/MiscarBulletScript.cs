@@ -13,6 +13,8 @@ public class MiscarBulletScript : MonoBehaviour
 	public Enemy enemy;
 	bool wait = false;
 	public Miscar miscar;
+	public Vector2 direction;
+	public bool canShoot = true;
 
 	void Start()
 	{
@@ -22,13 +24,16 @@ public class MiscarBulletScript : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Time.time > nextFire && wait)
-		{
-			if (enemy.currentEnemyHP > 0)
+		if (canShoot)
+        {
+			if (Time.time > nextFire && wait)
 			{
-				Fire();
+				if (enemy.currentEnemyHP > 0)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemy.fireRate;
 			}
-			nextFire = Time.time + 1f / enemy.fireRate;
 		}
 	}
 
@@ -38,9 +43,9 @@ public class MiscarBulletScript : MonoBehaviour
 		wait = true;
 	}
 
-	void Fire()
+	public void Fire()
 	{
-		Vector2 direction = (playerPosition.position - transform.position).normalized;
+		direction = (playerPosition.position - transform.position).normalized;
 		GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
 		EnemyShoot bulletComponent = bullet.GetComponent<EnemyShoot>();
 		if (bulletComponent != null)

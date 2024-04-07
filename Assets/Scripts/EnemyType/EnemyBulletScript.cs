@@ -12,7 +12,6 @@ public class EnemyBulletScript : MonoBehaviour
     public EnemyShoot enemyShoot;
 	public Enemy enemy;
 	bool wait = false;
-	public Yuki yuki;
 
     void Start()
 	{
@@ -24,7 +23,7 @@ public class EnemyBulletScript : MonoBehaviour
 	{
         if (Time.time > nextFire && wait)
         {
-			if(enemy.currentEnemyHP > 0 && yuki.canShoot) 
+			if(enemy.currentEnemyHP > 0) 
 			{
 			Fire();
 			}

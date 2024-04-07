@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Projectiles
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+    - {fileID: 2800000, guid: 0a3ea6d5e0efc53448aa344126738751, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - eefe4dc5c07abde4d83962c502c39f36: 243755527
+    - eefe4dc5c07abde4d83962c502c39f36: 1872409225
+    - eefe4dc5c07abde4d83962c502c39f36: -174390081
+    - eefe4dc5c07abde4d83962c502c39f36: 1834533305
+    - eefe4dc5c07abde4d83962c502c39f36: -773154900
+    - eefe4dc5c07abde4d83962c502c39f36: 726748936
+    - eefe4dc5c07abde4d83962c502c39f36: -10027723
+    - eefe4dc5c07abde4d83962c502c39f36: -2035940573
+    - eefe4dc5c07abde4d83962c502c39f36: -99918349
+    - eefe4dc5c07abde4d83962c502c39f36: -2021759118
+    - eefe4dc5c07abde4d83962c502c39f36: -573277356
+    - eefe4dc5c07abde4d83962c502c39f36: 1567561389
+    - eefe4dc5c07abde4d83962c502c39f36: -2012873487
+    - eefe4dc5c07abde4d83962c502c39f36: -1940677643
+    - 0a3ea6d5e0efc53448aa344126738751: 966292956
+    - 0a3ea6d5e0efc53448aa344126738751: 1654405068
+    - 0a3ea6d5e0efc53448aa344126738751: 140313412
+    - 0a3ea6d5e0efc53448aa344126738751: 1477162100
+    - 0a3ea6d5e0efc53448aa344126738751: 2090878080
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 243755527, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: 1872409225, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -174390081, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: 1834533305, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -773154900, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: 726748936, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -10027723, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -2035940573, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -99918349, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -2021759118, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -573277356, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: 1567561389, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -2012873487, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: -1940677643, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  - {fileID: 966292956, guid: 0a3ea6d5e0efc53448aa344126738751, type: 3}
+  - {fileID: 1654405068, guid: 0a3ea6d5e0efc53448aa344126738751, type: 3}
+  - {fileID: 140313412, guid: 0a3ea6d5e0efc53448aa344126738751, type: 3}
+  - {fileID: 1477162100, guid: 0a3ea6d5e0efc53448aa344126738751, type: 3}
+  - {fileID: 2090878080, guid: 0a3ea6d5e0efc53448aa344126738751, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - BruchaSkill_13
+  - BruchaSkill_12
+  - BruchaSkill_11
+  - BruchaSkill_10
+  - BruchaSkill_0
+  - BruchaSkill_1
+  - BruchaSkill_2
+  - BruchaSkill_3
+  - BruchaSkill_4
+  - BruchaSkill_5
+  - BruchaSkill_6
+  - BruchaSkill_7
+  - BruchaSkill_8
+  - BruchaSkill_9
+  - ProjektillyCatfighter_2
+  - ProjektillyCatfighter_3
+  - ProjektillyCatfighter_0
+  - ProjektillyCatfighter_1
+  - ProjektillyCatfighter_4
+  m_RenderDataMap: {}
+  m_Tag: Projectiles
+  m_IsVariant: 0

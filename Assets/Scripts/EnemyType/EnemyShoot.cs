@@ -54,14 +54,5 @@ public class EnemyShoot : MonoBehaviour
             return;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.tag == "Sword" && enemyScript.catEnemy2 == enemies.catName)
-        {
-            Debug.Log("Omg L9");
-            Destroy(gameObject);
-        }
-
-    }
 }
 

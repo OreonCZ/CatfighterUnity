@@ -13,6 +13,7 @@ public class EndPortalBack : MonoBehaviour
     bool portal = false;
     public PauseGame pause;
     public GameObject endingUI;
+    public GameObject gameUI;
     public GameObject camera;
     public CursorConfig cursor;
 
@@ -26,6 +27,7 @@ public class EndPortalBack : MonoBehaviour
         if (teleport)
         {
             endingUI.SetActive(true);
+            gameUI.SetActive(false);
             endTransition.SetActive(false);
             AudioListener.pause = true;
             cursor.endBool = true;

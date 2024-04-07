@@ -4462,6 +4462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpbar: {fileID: 32034592}
   pause: {fileID: 82021503}
+  endBool: 0
 --- !u!1 &900161403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,7 +4608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Audio
+  m_Text: Music
 --- !u!222 &904935383
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6172,7 +6173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7591402439679427415, guid: 19325fe3bc2ee7e449f6987028b42190,
     type: 3}
-  playerPosition: {fileID: 1624097686}
+  playerPosition: {fileID: 158554906}
   fireRate: 0
   nextFire: 0
   hpbar: {fileID: 32034592}
@@ -7280,7 +7281,6 @@ MonoBehaviour:
   projectile: {fileID: 8673480185580603888, guid: 3d3861a530896ed4198bf5103160b75e,
     type: 3}
   playerPosition: {fileID: 158554906}
-  fireRate: 0
   nextFire: 0
   hpbar: {fileID: 32034592}
   enemies: {fileID: 11400000, guid: 77e426d0b2cdcd342ba3fc40add150cf, type: 2}

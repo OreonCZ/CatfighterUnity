@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6933521079677962207}
   - component: {fileID: -1059478011079934576}
-  - component: {fileID: 3914358059718810354}
   - component: {fileID: -4162302249884160747}
   - component: {fileID: -8069116232142479962}
+  - component: {fileID: 892392898888312117}
   m_Layer: 0
   m_Name: ProjectileMiscar
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 7982444285305679576}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -1, z: -1}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalPosition: {x: 819.0408, y: -548.8965, z: 0}
+  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3914358059718810354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7982444285305679576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0097a1c7a62dad64eaa271e2cff28da0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0}
-  playerHit: 0
-  enemies: {fileID: 11400000, guid: 4eb7b4fd9d46ffb40a00cda0b3e7ccd1, type: 2}
 --- !u!50 &-4162302249884160747
 Rigidbody2D:
   serializedVersion: 4
@@ -164,3 +149,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3777339
+--- !u!114 &892392898888312117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982444285305679576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0097a1c7a62dad64eaa271e2cff28da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0}
+  playerHit: 0
+  enemies: {fileID: 11400000, guid: 4eb7b4fd9d46ffb40a00cda0b3e7ccd1, type: 2}

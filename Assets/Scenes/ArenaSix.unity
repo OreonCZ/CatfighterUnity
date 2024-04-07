@@ -15367,7 +15367,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Audio
+  m_Text: Music
 --- !u!222 &1449367160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16946,6 +16946,7 @@ MonoBehaviour:
   portalEnd: {fileID: 1812474557}
   pause: {fileID: 138735421}
   endingUI: {fileID: 2013929594}
+  gameUI: {fileID: 1057836166}
   camera: {fileID: 860030839}
   cursor: {fileID: 860030845}
 --- !u!1 &1816573403 stripped

@@ -3978,6 +3978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpbar: {fileID: 2122751698}
   pause: {fileID: 189071982}
+  endBool: 0
 --- !u!1 &522165595
 GameObject:
   m_ObjectHideFlags: 0
@@ -45799,7 +45800,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Audio
+  m_Text: Music
 --- !u!222 &2101972005
 CanvasRenderer:
   m_ObjectHideFlags: 0

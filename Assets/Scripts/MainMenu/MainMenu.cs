@@ -10,6 +10,10 @@ public class MainMenu : MonoBehaviour
     public Slider audioSlider;
     public AudioMixer audioMixer;
 
+    void Start()
+    {
+        AudioListener.pause = false;
+    }
     public void LoadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
