@@ -21,7 +21,7 @@ public class OscarBulletShoot : MonoBehaviour
     }
     void Update()
     {
-        if (enemyScript.currentEnemyHP < 7 && enemyScript.currentEnemyHP > 0)
+        if (enemyScript.currentEnemyHP < 15 && enemyScript.currentEnemyHP > 0)
         {
             Projectile();
         }
@@ -42,17 +42,17 @@ public class OscarBulletShoot : MonoBehaviour
         enemyProjectileDMG.OnHitDamage(enemyScript.enemyRangeDMG);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && !playerMScript.isRolling)
         {
-            GetComponent<Collider2D>().enabled = true;
+            GetComponent<CircleCollider2D>().enabled = true;
             PlayerHit(collision.gameObject);
             Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "Player" && playerMScript.isRolling)
         {
-            GetComponent<Collider2D>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
             return;
         }
     }

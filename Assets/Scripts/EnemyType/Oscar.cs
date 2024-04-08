@@ -29,21 +29,31 @@ public class Oscar : MonoBehaviour
         count = coins.Length;
         //Debug.Log(count);
         CointCoins();
-        if (enemy.currentEnemyHP <= enemies.maxEnemyHp && enemy.currentEnemyHP >= 2)
+        if(enemy.currentEnemyHP < 15 && enemy.currentEnemyHP >= 10)
         {
-            oscarBulletShoot.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
             enemy.enemyRangeDMG = 1;
+            enemy.enemyRangeSpeed = 1f;
+            enemy.fireRate = 3f;
+            oscarBulletShoot.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         }
 
-        if (enemy.currentEnemyHP < 2 && enemy.currentEnemyHP > 0)
+        if (enemy.currentEnemyHP < 10 && enemy.currentEnemyHP >= 2)
+        {
+            oscarBulletShoot.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+            enemy.enemyRangeDMG = 2;
+            enemy.enemyRangeSpeed = 2f;
+            enemy.fireRate = 4f;
+        }
+
+        else if (enemy.currentEnemyHP < 2 && enemy.currentEnemyHP > 0)
         {
             oscarBulletShoot.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-            enemy.enemyRangeDMG = 2;
+            enemy.enemyRangeDMG = 3;
             enemy.enemyRangeSpeed = 4f;
             enemy.fireRate = 4f;
             enemy.destroyProjectile = 5f;
         }
-        if (enemy.currentEnemyHP <= 0)
+        else if (enemy.currentEnemyHP <= 0)
         {
             spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         }

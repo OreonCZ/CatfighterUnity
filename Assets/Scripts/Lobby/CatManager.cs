@@ -11,6 +11,7 @@ public class CatManager : MonoBehaviour
     public GameObject oscar;
     public GameObject cave;
     public GameObject statue;
+    public GameObject player;
     public Sprite brokenStatue;
     public Sprite bingus;
     //public GameObject brucha;
@@ -20,6 +21,10 @@ public class CatManager : MonoBehaviour
     {
         cave.GetComponent<SpriteRenderer>();
         statue.GetComponent<SpriteRenderer>();
+        if (PlayerPrefs.GetInt("level1") == 1)
+        {
+            player.transform.position = new Vector2(-8f, 6.6f);
+        }
     }
 
     // Update is called once per frame

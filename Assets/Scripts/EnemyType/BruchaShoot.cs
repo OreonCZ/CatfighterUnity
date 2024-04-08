@@ -58,7 +58,7 @@ public class BruchaShoot : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GetComponent<Collider2D>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
             transform.position = new Vector2(transform.position.x, transform.position.y);
             //PlayerHit(collision.gameObject);
             Destroy(gameObject);

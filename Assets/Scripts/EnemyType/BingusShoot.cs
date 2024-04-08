@@ -54,7 +54,7 @@ public class BingusShoot : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && !playerMScript.isRolling)
         {
-            GetComponent<Collider2D>().enabled = true;
+            GetComponent<CircleCollider2D>().enabled = true;
             transform.position = new Vector2(transform.position.x, transform.position.y);
             PlayerHit(collision.gameObject);
             Destroy(gameObject);
@@ -64,7 +64,7 @@ public class BingusShoot : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player" && playerMScript.isRolling)
         {
-            GetComponent<Collider2D>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
             return;
         }
     }

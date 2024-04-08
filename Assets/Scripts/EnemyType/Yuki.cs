@@ -39,6 +39,10 @@ public class Yuki : MonoBehaviour
             enemy.fireRate = 20f;
             StartCoroutine(YukiCooldown());
         }
+        else if (enemy.currentEnemyHP == 0)
+        {
+            animator.SetBool("isReloading", false);
+        }
     }
 
     IEnumerator YukiCooldown()

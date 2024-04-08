@@ -44,13 +44,13 @@ public class EnemyShoot : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && !playerMScript.isRolling)
         {
-            GetComponent<Collider2D>().enabled = true;
+            GetComponent<CircleCollider2D>().enabled = true;
             PlayerHit(collision.gameObject);
             Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "Player" && playerMScript.isRolling)
         {
-            GetComponent<Collider2D>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
             return;
         }
     }

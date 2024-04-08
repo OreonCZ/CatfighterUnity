@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Oscar
   m_EditorClassIdentifier: 
   catName: Oscar
-  maxEnemyHp: 12
+  maxEnemyHp: 18
   enemyDamage: 1
   enemySpeed: 1
   enemyAttackCooldown: 0.5

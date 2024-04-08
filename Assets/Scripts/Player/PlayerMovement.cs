@@ -18,14 +18,15 @@ public class Movement : MonoBehaviour
     public GameObject sprintBar;
     public Fight fight;
     public Milk milk;
-
-    public float rollTime = 0.5f;
+    public float rollTime = 0.3f;
     public float rollCooldown = 0.5f;
     public float rollSpeed = 6;
     public bool isRolling = false;
     public float rollStaminaDrain = 20;
     bool canRoll = true;
     float currentRollTime;
+    GameObject enemy;
+    bool ignore = false;
 
 
     // Start is called before the first frame update
@@ -35,14 +36,25 @@ public class Movement : MonoBehaviour
         currentStamina = maxStamina;
         slider.maxValue = maxStamina;
         Debug.Log(canRoll);
+        enemy = GameObject.FindWithTag("Enemy");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //enemy check
+        if (!enemy)
+        {
+            ignore = true;
+        }
+        else if (enemy)
+        {
+            ignore = false;
+        }
+
         slider.value = currentStamina;
         if (!isRolling) {
-        isSprinting = Input.GetKey(KeyCode.LeftShift);
+            isSprinting = Input.GetKey(KeyCode.LeftShift);
         }
         isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
 
@@ -213,6 +225,10 @@ public class Movement : MonoBehaviour
     {
         canRoll = false;
         isRolling = true;
+        if (!ignore)
+        {
+            enemy.GetComponent<BoxCollider2D>().enabled = false;
+        }
         currentRollTime = rollTime;
         while (currentRollTime > 0f)
         {
@@ -224,6 +240,10 @@ public class Movement : MonoBehaviour
         }
         yield return new WaitForSeconds(rollCooldown);
         rb.velocity = new Vector2(0f, 0f);
+        if (!ignore)
+        {
+            enemy.GetComponent<BoxCollider2D>().enabled = true;
+        }
         canRoll = true;
         isRolling = false;
 

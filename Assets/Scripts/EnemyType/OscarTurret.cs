@@ -23,12 +23,11 @@ public class OscarTurret : MonoBehaviour
 	{
 		if (Time.time > nextFire)
 		{
-			if (enemy.currentEnemyHP < 7 && hpbar.currentHp > 0)
+			if (enemy.currentEnemyHP < 15 && hpbar.currentHp > 0)
 			{
 				Fire();
 			}
 			nextFire = Time.time + 1f / (enemy.fireRate - 2.8f);
-			Debug.Log("INANSE");
 		}
 	}
 
