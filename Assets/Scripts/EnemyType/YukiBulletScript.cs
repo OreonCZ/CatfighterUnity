@@ -11,7 +11,7 @@ public class YukiBulletScript : MonoBehaviour
     public Enemies enemies;
     public EnemyShoot enemyShoot;
     public Enemy enemy;
-    bool wait = false;
+    public bool wait = false;
     public Yuki yuki;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class YukiBulletScript : MonoBehaviour
             nextFire = Time.time + 1f / enemy.fireRate;
         }
     }
-    IEnumerator WaitForTransition()
+    public IEnumerator WaitForTransition()
     {
         yield return new WaitForSeconds(1f);
         wait = true;

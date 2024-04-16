@@ -219,6 +219,7 @@ MonoBehaviour:
   enemy: {fileID: 1624097683}
   enemyMovement: {fileID: 1624097691}
   isDed: 0
+  pauseGame: {fileID: 82021503}
 --- !u!114 &32034593
 MonoBehaviour:
   m_ObjectHideFlags: 0

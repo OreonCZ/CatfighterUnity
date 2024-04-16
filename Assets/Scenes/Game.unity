@@ -46110,6 +46110,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   enemyMovement: {fileID: 0}
   isDed: 0
+  pauseGame: {fileID: 189071982}
 --- !u!1001 &5893427504890966459
 PrefabInstance:
   m_ObjectHideFlags: 0

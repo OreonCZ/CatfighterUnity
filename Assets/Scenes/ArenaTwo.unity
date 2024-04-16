@@ -165,6 +165,7 @@ MonoBehaviour:
   enemy: {fileID: 1624097683}
   enemyMovement: {fileID: 1624097691}
   isDed: 0
+  pauseGame: {fileID: 82021503}
 --- !u!114 &32034593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2388,7 +2389,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b69fe33bb876cc242a6a06fa7afd20b4,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: a2ea6a37ebbea3d4b9a13979eaaa446b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1eefa6a63b652114c8ed32fb4216b13c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10429,6 +10430,7 @@ MonoBehaviour:
   canShoot: 1
   enemies: {fileID: 11400000, guid: d343e27a1ece95a45af144862751a27f, type: 2}
   animator: {fileID: 1624097694}
+  yukiBulletScript: {fileID: 1624097698}
 --- !u!114 &1624097698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10450,6 +10452,7 @@ MonoBehaviour:
   enemyShoot: {fileID: 8508775605771490476, guid: 2d7b4796d569a3143a2c265430b1895a,
     type: 3}
   enemy: {fileID: 1624097690}
+  wait: 0
   yuki: {fileID: 1624097697}
 --- !u!1 &1628339654
 GameObject:

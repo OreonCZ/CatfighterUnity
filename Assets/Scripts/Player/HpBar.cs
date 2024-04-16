@@ -15,6 +15,7 @@ public class HpBar : MonoBehaviour
     public GameObject enemy;
     public EnemyMovement enemyMovement;
     public bool isDed = false;
+    public PauseGame pauseGame;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class HpBar : MonoBehaviour
             Destroy(enemy);
             Debug.Log("ded");
             isDed = true;
+            pauseGame.canPause = false;
         }
     }
 }

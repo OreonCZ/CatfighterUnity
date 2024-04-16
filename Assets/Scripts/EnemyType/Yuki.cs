@@ -8,8 +8,10 @@ public class Yuki : MonoBehaviour
     public EnemyMovement enemyMovement;
     public bool yukiShoot = false;
     public bool canShoot = true;
+    bool yukiTransform = false;
     public Enemies enemies;
     public Animator animator;
+    public YukiBulletScript yukiBulletScript;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class Yuki : MonoBehaviour
             enemy.destroyProjectile = 2f;
             enemy.enemyRangeSpeed = 8f;
             enemy.fireRate = 10f;
+            StartCoroutine(WaitYuki());
             StartCoroutine(YukiCooldown());
         }
         else if(enemy.currentEnemyHP == 1)
@@ -45,7 +48,16 @@ public class Yuki : MonoBehaviour
         }
     }
 
-    IEnumerator YukiCooldown()
+    IEnumerator WaitYuki()
+    {
+        if (!yukiTransform) {
+        yukiBulletScript.wait = false;
+        yield return new WaitForSeconds(1.5f);
+        yukiBulletScript.wait = true;
+        yukiTransform = true;
+        }
+    }
+        IEnumerator YukiCooldown()
     {
         if (yukiShoot)
         {
