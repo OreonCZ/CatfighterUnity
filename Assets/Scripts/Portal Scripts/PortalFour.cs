@@ -7,6 +7,7 @@ public class PortalFour : MonoBehaviour
 {
     public bool teleport = false;
     public GameObject endTransition;
+    public PauseGame pauseGame;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class PortalFour : MonoBehaviour
     {
         if (teleport)
         {
+            
             SceneManager.LoadScene(sceneBuildIndex: 5);
         }
     }
@@ -27,6 +29,7 @@ public class PortalFour : MonoBehaviour
 
     IEnumerator LevelLoading()
     {
+        pauseGame.canPause = false;
         yield return new WaitForSeconds(1.5f);
         teleport = true;
     }

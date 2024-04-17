@@ -7,6 +7,8 @@ public class PortalSix : MonoBehaviour
 {
     public bool teleport = false;
     public GameObject endTransition;
+    public PauseGame pauseGame;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class PortalSix : MonoBehaviour
     {
         if (teleport)
         {
+            
             SceneManager.LoadScene(sceneBuildIndex: 7);
         }
     }
@@ -27,6 +30,7 @@ public class PortalSix : MonoBehaviour
 
     IEnumerator LevelLoading()
     {
+        pauseGame.canPause = false;
         yield return new WaitForSeconds(1.5f);
         teleport = true;
     }
