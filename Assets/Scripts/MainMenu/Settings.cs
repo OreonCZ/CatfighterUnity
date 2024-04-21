@@ -23,15 +23,7 @@ public class Settings : MonoBehaviour
     {
         Application.OpenURL("https://www.youtube.com/@incompetech_kmac");
     }
-    public void PunchDeck()
-    {
-        Application.OpenURL("https://www.youtube.com/punchdeck");
-    }
 
-    public void MakaiSymphony()
-    {
-        Application.OpenURL("https://www.youtube.com/@Makai-symphony");
-    }
     public void Cainos()
     {
         Application.OpenURL("https://itch.io/profile/cainos");

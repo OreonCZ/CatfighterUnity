@@ -8,23 +8,26 @@ public class BadEnd : MonoBehaviour
     public GameObject cave;
     public GameObject oscarStatue;
     public GameObject tDummy;
+    public AudioSource audioSource;
+    public AudioClip badEnd;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(PlayerPrefs.GetInt("KevinKilled") == 1 && PlayerPrefs.GetInt("YukiKilled") == 1 && PlayerPrefs.GetInt("MiscarKilled") == 1
+        if (PlayerPrefs.GetInt("KevinKilled") == 1 && PlayerPrefs.GetInt("YukiKilled") == 1 && PlayerPrefs.GetInt("MiscarKilled") == 1
             && PlayerPrefs.GetInt("BingusKilled") == 1 && PlayerPrefs.GetInt("OscarKilled") == 1 && PlayerPrefs.GetInt("BruchaKilled") == 1)
         {
             map.SetActive(false);
             cave.SetActive(false);
             oscarStatue.SetActive(false);
             tDummy.SetActive(false);
-            AudioListener.pause = true;
+            audioSource.clip = badEnd;
+            audioSource.Play();
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

@@ -2446,7 +2446,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b69fe33bb876cc242a6a06fa7afd20b4,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1d4b4935dd9a2c64cb017a02a4bf909a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a30696bdde4f2b845a51bf66da7f4567, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3040,7 +3040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12760,7 +12760,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.16981131, g: 0.002402986, b: 0.002402986, a: 0}
+  m_BackGroundColor: {r: 0.09411765, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -16193,6 +16193,9 @@ MonoBehaviour:
   canShoot: 1
   animator: {fileID: 1624097694}
   bruchaName: {fileID: 1168523333}
+  phaseOne: {fileID: 8300000, guid: a30696bdde4f2b845a51bf66da7f4567, type: 3}
+  phaseTwo: {fileID: 8300000, guid: 14cb7d34d0013be4fbaecb4d4f800ebf, type: 3}
+  audioSource: {fileID: 526508096}
 --- !u!114 &1624097697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16950,6 +16953,9 @@ MonoBehaviour:
   gameUI: {fileID: 1057836166}
   camera: {fileID: 860030839}
   cursor: {fileID: 860030845}
+  audioSource: {fileID: 526508096}
+  mainTheme: {fileID: 8300000, guid: 8fcc240b890b1034f8b3ced9e2d0928f, type: 3}
+  enemyBrucha: {fileID: 1624097683}
 --- !u!1 &1816573403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2897396646949104847, guid: 15a96127fa24a0a469a3176da28e11a6,
@@ -23431,6 +23437,7 @@ MonoBehaviour:
   badEnding: {fileID: 21300000, guid: bc9b536cc62e50e43a85c7131a7eaee5, type: 3}
   neutralEnding: {fileID: 21300000, guid: b50365b3f5170c44493d301bf9a4e0f2, type: 3}
   endingUI: {fileID: 2013929594}
+  endPortalBack: {fileID: 1812474558}
 --- !u!114 &2013929596
 MonoBehaviour:
   m_ObjectHideFlags: 0

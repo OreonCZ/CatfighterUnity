@@ -2124,6 +2124,8 @@ MonoBehaviour:
   cave: {fileID: 423767152}
   oscarStatue: {fileID: 1086364096}
   tDummy: {fileID: 1495988300}
+  audioSource: {fileID: 1773640408}
+  badEnd: {fileID: 8300000, guid: 968ed119f890ebb49906ea2697cd1ed4, type: 3}
 --- !u!1 &246573819
 GameObject:
   m_ObjectHideFlags: 0
