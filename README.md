@@ -1,5 +1,7 @@
 <h1 style="text-align:center">Catfighter</h1>
-<img src="https://github.com/OreonCZ/CatfighterUnity/assets/115612408/ff97caeb-b91c-44d5-9209-49e5ef219e82"></img>
+<img src="https://github.com/OreonCZ/CatfighterUnity/blob/main/Assets/Art/Images/Endings/NeutralEnding.png?raw=true"></img>
+<h1>Catfighter is available on Itch.io! -> <a href="https://oreoncz.itch.io/catfighter">click :)</a></h1>
+<hr>
 <br>...
 <h2>Catfighter 1.1 (bug fixes, roll through enemies, Oscar boss updated, ...) | 8. 4. 2023</h2>
 <h2>Catfighter 1.0 | 7. 4. 2023</h2>
@@ -46,3 +48,5 @@ https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-1
 https://cainos.itch.io/
 <br>
 https://cainos.itch.io/pixel-art-top-down-basic
+Lobby music made by legendary Kevin Macleod: 
+https://www.youtube.com/@incompetech_kmac
