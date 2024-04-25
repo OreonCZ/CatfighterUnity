@@ -2,8 +2,8 @@
 <img src="https://img.itch.zone/aW1nLzE1NzA2MzUxLnBuZw==/original/l%2Fw6RI.png"></img>
 <h1>Catfighter is available on Itch.io! -> <a href="https://oreoncz.itch.io/catfighter">click :)</a></h1>
 <hr>
-<h1>Patch notes</h1>
-<br>...
+<br>
+<h1><u>Patch notes:</u></h1>
 <h2>Catfighter 1.1 (bug fixes, roll through enemies, Oscar boss updated, ...) | 8. 4. 2023</h2>
 <h2>Catfighter 1.0 | 7. 4. 2023</h2>
 <h2>Final boss done and reworking 2nd and 3rd boss | 5. 4. 2023</h2>
