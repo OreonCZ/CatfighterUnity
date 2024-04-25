@@ -1,6 +1,6 @@
 <h1 style="text-align:center">Catfighter</h1>
-<img src="https://github.com/OreonCZ/CatfighterUnity/blob/main/Assets/Art/Images/Endings/NeutralEnding.png?raw=true"></img>
-<h1 width="1920" height="1080">Catfighter is available on Itch.io! -> <a href="https://oreoncz.itch.io/catfighter">click :)</a></h1>
+<img src="https://img.itch.zone/aW1nLzE1NzA2MzUxLnBuZw==/original/l%2Fw6RI.png"></img>
+<h1>Catfighter is available on Itch.io! -> <a href="https://oreoncz.itch.io/catfighter">click :)</a></h1>
 <hr>
 <br>...
 <h2>Catfighter 1.1 (bug fixes, roll through enemies, Oscar boss updated, ...) | 8. 4. 2023</h2>
