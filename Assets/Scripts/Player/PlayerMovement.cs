@@ -233,7 +233,6 @@ public class Movement : MonoBehaviour
         while (currentRollTime > 0f)
         {
             currentRollTime -= Time.deltaTime;
-
             rb.velocity = direction * rollSpeed;
 
             yield return null;
@@ -246,7 +245,6 @@ public class Movement : MonoBehaviour
         }
         canRoll = true;
         isRolling = false;
-
     }
 }
 

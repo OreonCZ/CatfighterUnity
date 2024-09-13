@@ -23,6 +23,10 @@ public class Settings : MonoBehaviour
     {
         Application.OpenURL("https://www.youtube.com/@incompetech_kmac");
     }
+    public void Playlist()
+    {
+        Application.OpenURL("https://suno.com/playlist/923bd507-c59d-46e3-9a3b-873ee3ff0d2a");
+    }
 
     public void Cainos()
     {

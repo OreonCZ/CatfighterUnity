@@ -14,15 +14,10 @@ public class Brucha : MonoBehaviour
     public Animator animator;
     public Text bruchaName;
     string bruchaBossName;
-    public AudioClip phaseOne;
-    public AudioClip phaseTwo;
-
-    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.clip = phaseOne;
     }
 
     // Update is called once per frame
@@ -36,6 +31,7 @@ public class Brucha : MonoBehaviour
         if(enemy.currentEnemyHP <= 10)
         {
             StartCoroutine(Transformation());
+            
             bruchaBossName = "Brucha, the possessed Catfighter";
             bruchaName.text = bruchaBossName;
             bruchaBullet.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0f);
@@ -50,8 +46,8 @@ public class Brucha : MonoBehaviour
     {
         if (!transformBrucha)
         {
+            
             canShoot = false;
-            StartCoroutine(BruchaMusic());
             animator.SetBool("isTransforming", true);
             enemy.enemyMovementSpeed = 0f;
             enemy.enemyRangeSpeed = 30f;
@@ -63,16 +59,5 @@ public class Brucha : MonoBehaviour
             transformBrucha = true;
             animator.SetBool("isTransforming", false);
         }
-    }
-
-    IEnumerator BruchaMusic()
-    {
-        audioSource.Pause();
-        audioSource.clip = phaseTwo;
-        audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length);
-        audioSource.Pause();
-        audioSource.clip = phaseOne;
-        audioSource.Play();
     }
 }

@@ -2446,7 +2446,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b69fe33bb876cc242a6a06fa7afd20b4,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: a30696bdde4f2b845a51bf66da7f4567, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7521dab721506ed46bd6989637d9b521, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -16193,9 +16193,6 @@ MonoBehaviour:
   canShoot: 1
   animator: {fileID: 1624097694}
   bruchaName: {fileID: 1168523333}
-  phaseOne: {fileID: 8300000, guid: a30696bdde4f2b845a51bf66da7f4567, type: 3}
-  phaseTwo: {fileID: 8300000, guid: 14cb7d34d0013be4fbaecb4d4f800ebf, type: 3}
-  audioSource: {fileID: 526508096}
 --- !u!114 &1624097697
 MonoBehaviour:
   m_ObjectHideFlags: 0

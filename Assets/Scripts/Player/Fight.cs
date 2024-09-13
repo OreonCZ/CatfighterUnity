@@ -26,7 +26,7 @@ public class Fight : MonoBehaviour
     void Update()
     {
         isFighting = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
-        if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain)
+        if (isFighting && canAttack && movement.currentStamina > swordStaminaDrain && !movement.isRolling)
         {
             movement.currentStamina -= swordStaminaDrain;
             if (Input.GetKey(KeyCode.D)){
