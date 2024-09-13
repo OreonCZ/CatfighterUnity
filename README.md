@@ -4,6 +4,11 @@
 <hr>
 <br>
 <h1><u>Patch notes:</u></h1>
+<h2>Expansion:</h2>
+<ul>
+  <li>Working on open world (grass biome)
+</ul>
+<h2>Older version:</h2>
 <ul>
 <li>Catfighter 1.1 (bug fixes, roll through enemies, Oscar boss updated, ...) | 8. 4. 2023
 <li>Catfighter 1.0 | 7. 4. 2023</h2>
