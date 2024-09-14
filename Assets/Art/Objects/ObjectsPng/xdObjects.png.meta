@@ -3028,6 +3028,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: xdObjects_139
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d0c32669ee6314389f4ed17a7e2507
+      internalID: 614862117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xdObjects_140
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2b9021268b4644b8c8e8f63f94e5c1
+      internalID: 1846905954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3084,7 +3126,9 @@ TextureImporter:
       xdObjects_136: 591558223
       xdObjects_137: -439481146
       xdObjects_138: 1328740216
+      xdObjects_139: 614862117
       xdObjects_14: -645824475
+      xdObjects_140: 1846905954
       xdObjects_15: 897118129
       xdObjects_16: 634768273
       xdObjects_17: -1049395036
