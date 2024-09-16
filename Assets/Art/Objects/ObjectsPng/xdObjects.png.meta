@@ -3029,6 +3029,48 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: xdObjects_141
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b97fe867973fb64fb73673b587e693f
+      internalID: 837312139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xdObjects_142
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08af46a71cd660e49a8d89cd3ee4d626
+      internalID: 1501637367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: xdObjects_139
       rect:
         serializedVersion: 2
@@ -3043,7 +3085,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d0c32669ee6314389f4ed17a7e2507
+      spriteID: 791a13ea8a6dcd14cafa9cbedc0bf1cf
       internalID: 614862117
       vertices: []
       indices: 
@@ -3064,8 +3106,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c2b9021268b4644b8c8e8f63f94e5c1
+      spriteID: 322f3245ec1858a44b7e059244edadbc
       internalID: 1846905954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xdObjects_143
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8f685bfbb6acd4a95659f448bbfe1c
+      internalID: 809726784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xdObjects_144
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065153743597f6f4096c881ae7863857
+      internalID: -203942864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xdObjects_145
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5403635e7e57a9468dcc7aa86153727
+      internalID: -772561484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xdObjects_146
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1105ccf1a82fb7c43ac89bf8ede3c4f3
+      internalID: 1960286007
       vertices: []
       indices: 
       edges: []
@@ -3129,6 +3255,12 @@ TextureImporter:
       xdObjects_139: 614862117
       xdObjects_14: -645824475
       xdObjects_140: 1846905954
+      xdObjects_141: 837312139
+      xdObjects_142: 1501637367
+      xdObjects_143: 809726784
+      xdObjects_144: -203942864
+      xdObjects_145: -772561484
+      xdObjects_146: 1960286007
       xdObjects_15: 897118129
       xdObjects_16: 634768273
       xdObjects_17: -1049395036
