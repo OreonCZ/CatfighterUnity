@@ -15,7 +15,7 @@ MonoBehaviour:
   catName: Knight
   maxEnemyHp: 6
   enemyDamage: 1
-  enemySpeed: 2
+  enemySpeed: 2.5
   enemyAttackCooldown: 1
   fireRate: 0
   shootDamage: 0

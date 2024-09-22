@@ -2,6 +2,7 @@ using Assets.Scripts.EnumTypes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 public class EnemySoldierMoving : MonoBehaviour
@@ -14,6 +15,10 @@ public class EnemySoldierMoving : MonoBehaviour
     CircleCollider2D circleCollider;
     public float radiusChange = 1;
 
+    [SerializeField] Transform target;
+
+    NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,27 +26,35 @@ public class EnemySoldierMoving : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
         enemySoldier = GetComponent<EnemySoldier>();
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
     }
     void MovementEnemy()
     {
-        directionToPlayer = (player.transform.position - transform.position).normalized;
-        enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemySoldier.enemyMovementSpeed;
+        agent.speed = enemySoldier.enemyMovementSpeed;
+        // directionToPlayer = (player.transform.position - transform.position).normalized;
+        //enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemySoldier.enemyMovementSpeed;
+        agent.SetDestination(target.position);
+        agent.isStopped = false;
         //Debug.Log("pome");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(isFollowing) MovementEnemy();
+        if (isFollowing) MovementEnemy();
         else
         {
-            enemyRb.velocity = Vector2.zero;
+            //enemyRb.velocity = Vector2.zero;
+            agent.isStopped = true;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isFollowing && collision.gameObject.tag == ObjectTags.Player.ToString()){ 
+        if (!isFollowing && collision.CompareTag(ObjectTags.Player.ToString())){ 
 
             isFollowing = true;
             circleCollider.radius += radiusChange;
@@ -50,7 +63,7 @@ public class EnemySoldierMoving : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (isFollowing && collision.gameObject.tag == ObjectTags.Player.ToString()) {
+        if (isFollowing && collision.CompareTag(ObjectTags.Player.ToString())) {
             isFollowing = false;
             circleCollider.radius -= radiusChange;
             Debug.Log("Stopped following");

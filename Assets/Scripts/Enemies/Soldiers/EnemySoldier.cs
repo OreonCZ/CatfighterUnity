@@ -6,10 +6,10 @@ public class EnemySoldier : MonoBehaviour
 {
     public Enemies enemies;
     public float enemyMovementSpeed;
-    public float enemyMovementSpeedOriginal;
     public int maxEnemyHP;
     public int enemyRangeDMG;
     public float enemyRangeSpeed;
+    public float enemyAttackCooldown;
     public int enemyDMG;
     public float destroyProjectile;
     public float fireRate;
@@ -17,7 +17,6 @@ public class EnemySoldier : MonoBehaviour
     void Start()
     {
         enemyMovementSpeed = enemies.enemySpeed;
-        enemyMovementSpeedOriginal = enemyMovementSpeed;
         maxEnemyHP = enemies.maxEnemyHp;
         //slider.maxValue = maxEnemyHP;
         //currentEnemyHP = maxEnemyHP;
@@ -25,6 +24,7 @@ public class EnemySoldier : MonoBehaviour
         enemyRangeDMG = enemies.shootDamage;
         enemyRangeSpeed = enemies.fireSpeed;
         enemyDMG = enemies.enemyDamage;
+        enemyAttackCooldown = enemies.enemyAttackCooldown;
         destroyProjectile = enemies.destroyProjectile;
         fireRate = enemies.fireRate;
     }

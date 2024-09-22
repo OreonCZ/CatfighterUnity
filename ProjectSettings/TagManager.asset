@@ -14,6 +14,7 @@ TagManager:
   - Bullet
   - End
   - EnemyAttackTrigger
+  - hpbar
   layers:
   - Default
   - TransparentFX

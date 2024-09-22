@@ -14,7 +14,7 @@ public class CursorConfig : MonoBehaviour
     }
     void Update()
     {
-        if (hpbar.currentHp > 0)
+       /* if (hpbar.currentHp > 0)
         {
             if (pause.pauseBool)
             {
@@ -37,5 +37,6 @@ public class CursorConfig : MonoBehaviour
             return;
         }
     }
-
+       */
+}
 }
