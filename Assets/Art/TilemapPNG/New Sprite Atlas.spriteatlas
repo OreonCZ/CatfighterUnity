@@ -46,6 +46,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: b02cefdac6daf014e807cb49ced11c7d, type: 3}
+    - {fileID: 2800000, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -107,6 +108,22 @@ SpriteAtlas:
     - b02cefdac6daf014e807cb49ced11c7d: -749243207
     - b02cefdac6daf014e807cb49ced11c7d: -1916590981
     - b02cefdac6daf014e807cb49ced11c7d: 626124278
+    - a10e41db52830644ab25f018a7fc27c7: 1770742966
+    - a10e41db52830644ab25f018a7fc27c7: -153197553
+    - a10e41db52830644ab25f018a7fc27c7: -376967912
+    - a10e41db52830644ab25f018a7fc27c7: -200524270
+    - a10e41db52830644ab25f018a7fc27c7: 1871650319
+    - a10e41db52830644ab25f018a7fc27c7: -1039334186
+    - a10e41db52830644ab25f018a7fc27c7: -1847877674
+    - a10e41db52830644ab25f018a7fc27c7: -681577519
+    - a10e41db52830644ab25f018a7fc27c7: 16666461
+    - a10e41db52830644ab25f018a7fc27c7: -1811673981
+    - a10e41db52830644ab25f018a7fc27c7: -667954674
+    - a10e41db52830644ab25f018a7fc27c7: 1508297943
+    - a10e41db52830644ab25f018a7fc27c7: -479665766
+    - a10e41db52830644ab25f018a7fc27c7: -31694466
+    - a10e41db52830644ab25f018a7fc27c7: 165885395
+    - a10e41db52830644ab25f018a7fc27c7: 775558277
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 858186915, guid: b02cefdac6daf014e807cb49ced11c7d, type: 3}
@@ -166,6 +183,22 @@ SpriteAtlas:
   - {fileID: -749243207, guid: b02cefdac6daf014e807cb49ced11c7d, type: 3}
   - {fileID: -1916590981, guid: b02cefdac6daf014e807cb49ced11c7d, type: 3}
   - {fileID: 626124278, guid: b02cefdac6daf014e807cb49ced11c7d, type: 3}
+  - {fileID: 1770742966, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -153197553, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -376967912, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -200524270, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: 1871650319, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -1039334186, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -1847877674, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -681577519, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: 16666461, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -1811673981, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -667954674, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: 1508297943, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -479665766, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: -31694466, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: 165885395, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
+  - {fileID: 775558277, guid: a10e41db52830644ab25f018a7fc27c7, type: 3}
   m_PackedSpriteNamesToIndex:
   - catfighterTilemap_3
   - catfighterTilemap_2
@@ -224,6 +257,22 @@ SpriteAtlas:
   - catfighterTilemap_48
   - catfighterTilemap_18
   - catfighterTilemap_19
+  - tilemapPart2_7
+  - tilemapPart2_6
+  - tilemapPart2_5
+  - tilemapPart2_4
+  - tilemapPart2_3
+  - tilemapPart2_2
+  - tilemapPart2_1
+  - tilemapPart2_0
+  - tilemapPart2_9
+  - tilemapPart2_8
+  - tilemapPart2_12
+  - tilemapPart2_13
+  - tilemapPart2_10
+  - tilemapPart2_11
+  - tilemapPart2_14
+  - tilemapPart2_15
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0
