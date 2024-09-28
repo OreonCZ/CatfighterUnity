@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: halucination
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -368702832, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: 919766427, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: -923361953, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: -516322862, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: -1263179964, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: -1600454634, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: 729218202, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: 1665029370, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: 495487025, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: -651879170, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: 1393285163, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  - {fileID: 192468361, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 1
+  m_TileAnimationFlags: 0
