@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArenaSix.unity
     guid: ab495f2cc0f104e4691db6168c4fb69b
+  - enabled: 1
+    path: Assets/Scenes/Castle.unity
+    guid: f6b89aafa237f10489bbc85964746578
   m_configObjects: {}
