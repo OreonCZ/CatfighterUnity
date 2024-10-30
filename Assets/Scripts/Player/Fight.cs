@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class Fight : MonoBehaviour
 {
@@ -22,6 +23,15 @@ public class Fight : MonoBehaviour
     public int attackDamage;
     public float mousePos;
 
+    GameObject player;
+    PlayerStats playerStats;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        playerStats = player.GetComponent<PlayerStats>();
+        attackDamage = playerStats.playerDamage;
+    }
     // Update is called once per frame
     void Update()
     {

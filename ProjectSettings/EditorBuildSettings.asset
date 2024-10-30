@@ -12,6 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/FlowerBiome.unity
+    guid: 411b05f89177422428d01b2d91f38cf6
+  - enabled: 1
+    path: Assets/Scenes/Swamp.unity
+    guid: b5de10d52de02dd46867d3b391638032
+  - enabled: 1
+    path: Assets/Scenes/Battlefield.unity
+    guid: ad4731d7c37253143b8ff9f2f2b594ab
+  - enabled: 1
+    path: Assets/Scenes/MoonBiome.unity
+    guid: 36306e36ea013694886926bacac43716
+  - enabled: 1
+    path: Assets/Scenes/Castle.unity
+    guid: f6b89aafa237f10489bbc85964746578
+  - enabled: 1
+    path: Assets/Scenes/CastleInterior.unity
+    guid: 834a4e5676667fb479ce61807742dff6
+  - enabled: 1
+    path: Assets/Scenes/CastleInteriorEvil.unity
+    guid: ec9220f24b72a024896bfaf7e6346fac
+  - enabled: 1
     path: Assets/Scenes/Arena.unity
     guid: 2d3d5a1447a259e469a96a45d2795c42
   - enabled: 1
@@ -29,7 +50,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArenaSix.unity
     guid: ab495f2cc0f104e4691db6168c4fb69b
-  - enabled: 1
-    path: Assets/Scenes/Castle.unity
-    guid: f6b89aafa237f10489bbc85964746578
   m_configObjects: {}

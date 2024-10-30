@@ -7,10 +7,10 @@ public class DedScreen : MonoBehaviour
 {
     public void Respawn()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneBuildIndex: 1);
     }
     public void MainMenu()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneBuildIndex: 0);
     }
 }

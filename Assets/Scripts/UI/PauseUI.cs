@@ -7,7 +7,7 @@ public class PauseUI : MonoBehaviour
 {
     public void MainMenu()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneBuildIndex: 0);
         Time.timeScale = 1;
         AudioListener.pause = false;
     }

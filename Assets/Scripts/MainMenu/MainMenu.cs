@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void NewGame()
     {
@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
         audioMixer.SetFloat("master", Mathf.Log10(volume) * 20);
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetFloat("audioVolume", volume);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Exit()

@@ -19,7 +19,7 @@ public class SceneTransition : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         startTransition.SetActive(false);
-        pause.canPause = true;
+        PauseGame.canPause = true;
     }
 
     // Update is called once per frame

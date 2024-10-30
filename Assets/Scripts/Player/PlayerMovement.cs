@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class Movement : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Movement : MonoBehaviour
     bool isSprinting = false;
     public Animator animator;
     public Slider slider;
-    public float maxStamina = 50f;
+    public float maxStamina;
     public float currentStamina;
     public GameObject sprintBar;
     public Fight fight;
@@ -28,11 +29,18 @@ public class Movement : MonoBehaviour
     GameObject enemy;
     bool ignore = false;
 
+    GameObject player;
+    PlayerStats playerStats;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        playerStats = player.GetComponent<PlayerStats>();
+        movementSpeed = playerStats.playerMovementSpeed;
+        maxStamina = playerStats.playerMaxStamina;
+
         currentStamina = maxStamina;
         slider.maxValue = maxStamina;
         Debug.Log(canRoll);

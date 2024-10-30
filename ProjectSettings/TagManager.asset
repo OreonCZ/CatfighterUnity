@@ -15,6 +15,10 @@ TagManager:
   - End
   - EnemyAttackTrigger
   - hpbar
+  - sceneSwitch
+  - endTransition
+  - lobby
+  - mud
   layers:
   - Default
   - TransparentFX
@@ -34,7 +38,7 @@ TagManager:
   - Player
   - Building
   - TallGrass
-  - 
+  - StatusTiles
   - 
   - Layer 1
   - Layer 2

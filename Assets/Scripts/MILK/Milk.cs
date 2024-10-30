@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class Milk : MonoBehaviour
 {
@@ -11,14 +12,22 @@ public class Milk : MonoBehaviour
     public SoundEffects sf;
     public AudioClip drinkMilk;
     public int healMilk = 2;
-    public int milkNumber = 2;
-    public int numberOfMilk = 2;
+    public int milkNumber;
+    public int numberOfMilk;
     public int emptyMilk = 0;
     public bool canDrink = true;
+
+    GameObject player;
+    PlayerStats playerStats;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        playerStats = player.GetComponent<PlayerStats>();
+        playerStats.playerMilk = numberOfMilk;
+
+        numberOfMilk = milkNumber;
     }
 
     // Update is called once per frame

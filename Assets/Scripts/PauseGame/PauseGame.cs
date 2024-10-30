@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour
 {
     [HideInInspector] public bool pauseBool;
-    [HideInInspector] public bool canPause = false;
+    [HideInInspector] public static bool canPause = false;
     Fight fight;
     Movement playerMovement;
     public GameObject pauseMenu;
@@ -22,7 +22,7 @@ public class PauseGame : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         fight = player.GetComponent<Fight>();
         playerMovement = player.GetComponent<Movement>();
-        
+        canPause = true;
     }
 
     void Update()

@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class HpBar : MonoBehaviour
 {
     public Slider slider;
-    public int maxHp = 8;
+    public int maxHp;
     public int currentHp;
     public Movement playerMovement;
     public GameObject dedScreen;
@@ -16,8 +17,14 @@ public class HpBar : MonoBehaviour
     public bool isDed = false;
     public PauseGame pauseGame;
 
+    GameObject player;
+    PlayerStats playerStats;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        playerStats = player.GetComponent<PlayerStats>();
+        maxHp = playerStats.playerMaxHP;
         currentHp = maxHp;
         slider.maxValue = maxHp;
     }
@@ -33,7 +40,7 @@ public class HpBar : MonoBehaviour
             //Destroy(enemy);
             //Debug.Log("ded");
             isDed = true;
-            pauseGame.canPause = false;
+            PauseGame.canPause = false;
         }
     }
 }

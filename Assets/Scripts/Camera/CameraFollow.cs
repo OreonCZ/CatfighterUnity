@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Assets.Scripts.EnumTypes;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     private Camera camera;
     private void Start()
     {
-        activeScene = SceneManager.GetActiveScene();
+        activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         camera = GetComponent<Camera>();
         Debug.Log(activeScene.name);
         camera.fieldOfView = defaultFOV;
@@ -25,8 +26,8 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float playerY = player.position.y;
-        transform.position = new Vector3(player.position.x, playerY, -10);
+            float playerY = player.position.y;
+            transform.position = new Vector3(player.position.x, playerY, -10);
         ZoomOutAt("Battlefield", zoomOutStart, zoomOutEnd, zoomOffset);
     }
 
