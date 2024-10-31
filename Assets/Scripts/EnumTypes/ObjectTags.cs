@@ -8,6 +8,6 @@ namespace Assets.Scripts.EnumTypes
 {
     public enum ObjectTags
     {
-        Enemy, Player, Sword, MainCamera, isHit, EnemyAttackTrigger, hpbar, sceneSwitch, endTransition
+        Enemy, Player, Sword, MainCamera, isHit, EnemyAttackTrigger, hpbar, sceneSwitch, endTransition, mud, poison, fartShroom
     }
 }

@@ -5,7 +5,7 @@ using Assets.Scripts.EnumTypes;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int playerMaxHP = 8;
+    public float playerMaxHP = 9;
     public int playerDamage = 1;
     public int playerMilk = 2;
     public float playerMovementSpeed = 150f;

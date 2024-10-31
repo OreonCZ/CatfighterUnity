@@ -7,8 +7,8 @@ using Assets.Scripts.EnumTypes;
 public class HpBar : MonoBehaviour
 {
     public Slider slider;
-    public int maxHp;
-    public int currentHp;
+    public float maxHp;
+    public float currentHp;
     public Movement playerMovement;
     public GameObject dedScreen;
     public GameObject gameBar;

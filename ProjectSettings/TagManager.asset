@@ -19,6 +19,8 @@ TagManager:
   - endTransition
   - lobby
   - mud
+  - poison
+  - fartShroom
   layers:
   - Default
   - TransparentFX
