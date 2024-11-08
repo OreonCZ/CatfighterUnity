@@ -9,19 +9,18 @@ public class Fight : MonoBehaviour
     public bool isFighting;
     public bool fightSound = false;
     public Animator animator;
-    public float swordDelay;
+    float swordDelay = 0.5f;
     public bool canAttack = true;
     public Slider slider;
     public Movement movement;
     public SoundEffects sounds;
-    public float swordStaminaDrain = 20;
-    public float slowDown;
+    float swordStaminaDrain = 20;
+    float slowDown = 2f;
     public GameObject attackDown;
     public GameObject attackUp;
     public GameObject attackLeft;
     public GameObject attackRight;
-    public int attackDamage;
-    public float mousePos;
+    [HideInInspector] public int attackDamage;
 
     GameObject player;
     PlayerStats playerStats;

@@ -46,7 +46,7 @@ public class EnemySoldierAttack : MonoBehaviour
             soldierCanAttack = false;
             if (!playerParry.isParrying)
             {
-                //playerHpBar.currentHp -= parentSoldierStats.enemyDMG;
+                playerHpBar.currentHp -= parentSoldierStats.enemyDMG;
                 Debug.Log("au");
             }
         }

@@ -23,6 +23,10 @@ TagManager:
   - fartShroom
   - KnightCollider
   - staminaBorder
+  - hpBorder
+  - dedScreen
+  - lobbyManager
+  - gameUI
   layers:
   - Default
   - TransparentFX

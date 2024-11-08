@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFollowing: 0
   radiusChange: 0
-  target: {fileID: 0}
+  target: {fileID: 764501691378236676, guid: 56de2587608cd1342b4d5c40c4c4f91f, type: 3}
 --- !u!195 &7747183060067525209
 NavMeshAgent:
   m_ObjectHideFlags: 0

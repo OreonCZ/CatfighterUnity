@@ -6,16 +6,14 @@ using Assets.Scripts.EnumTypes;
 
 public class HpBar : MonoBehaviour
 {
-    public Slider slider;
+    [HideInInspector] public Slider slider;
     public float maxHp;
     public float currentHp;
-    public Movement playerMovement;
     public GameObject dedScreen;
     public GameObject gameBar;
+    GameObject hpBorder;
     //public GameObject enemy;
-    public EnemyMovement enemyMovement;
     public bool isDed = false;
-    public PauseGame pauseGame;
 
     GameObject player;
     PlayerStats playerStats;
@@ -23,7 +21,13 @@ public class HpBar : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        hpBorder = GameObject.FindGameObjectWithTag(ObjectTags.hpBorder.ToString());
+        //dedScreen = GameObject.FindGameObjectWithTag(ObjectTags.dedScreen.ToString());
+        //gameBar = GameObject.FindGameObjectWithTag(ObjectTags.gameUI.ToString());
+
         playerStats = player.GetComponent<PlayerStats>();
+        slider = hpBorder.GetComponent<Slider>();
+
         maxHp = playerStats.playerMaxHP;
         currentHp = maxHp;
         slider.maxValue = maxHp;

@@ -6,9 +6,9 @@ using Assets.Scripts.EnumTypes;
 
 public class Milk : MonoBehaviour
 {
-    public HpBar hpBar;
-    public Animator animator;
-    public Movement playerMovement;
+    HpBar hpBar;
+    Animator animator;
+    Movement playerMovement;
     public SoundEffects sf;
     public AudioClip drinkMilk;
     public int healMilk = 2;
@@ -24,6 +24,9 @@ public class Milk : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        hpBar = gameObject.GetComponent<HpBar>();
+        playerMovement = gameObject.GetComponent<Movement>();
+        hpBar = gameObject.GetComponent<HpBar>();
         playerStats = player.GetComponent<PlayerStats>();
         playerStats.playerMilk = numberOfMilk;
 
