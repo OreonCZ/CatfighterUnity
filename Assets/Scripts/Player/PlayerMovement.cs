@@ -12,21 +12,21 @@ public class Movement : MonoBehaviour
     public bool isWalking;
     [HideInInspector] public bool canWalk = true;
     bool isSprinting = false;
-    public Animator animator;
-    public Slider slider;
+    Animator animator;
+    Slider slider;
     public float maxStamina;
     public float currentStamina;
-    public GameObject sprintBar;
-    public Fight fight;
-    public Milk milk;
-    public float rollTime = 0.3f;
-    public float rollCooldown = 0.5f;
-    public float rollSpeed = 6;
+    Fight fight;
+    Milk milk;
+    private float rollTime = 0.5f;
+    private float rollCooldown = 0.3f;
+    private float rollSpeed = 5;
     public bool isRolling = false;
-    public float rollStaminaDrain = 20;
-    bool canRoll = true;
+    private float rollStaminaDrain = 20;
+    public bool canRoll = true;
     float currentRollTime;
     GameObject enemy;
+    GameObject sprintBar;
     bool ignore = false;
 
     GameObject player;
@@ -35,16 +35,23 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        sprintBar = GameObject.FindGameObjectWithTag(ObjectTags.staminaBorder.ToString());
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
+        fight = gameObject.GetComponent<Fight>();
+        milk = gameObject.GetComponent<Milk>();
+
         playerStats = player.GetComponent<PlayerStats>();
+        slider = sprintBar.GetComponent<Slider>();
+
         movementSpeed = playerStats.playerMovementSpeed;
         maxStamina = playerStats.playerMaxStamina;
-
         currentStamina = maxStamina;
         slider.maxValue = maxStamina;
-        Debug.Log(canRoll);
-        enemy = GameObject.FindWithTag("Enemy");
+
+        enemy = GameObject.FindGameObjectWithTag(ObjectTags.Enemy.ToString());
     }
 
     // Update is called once per frame

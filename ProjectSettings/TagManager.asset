@@ -21,6 +21,8 @@ TagManager:
   - mud
   - poison
   - fartShroom
+  - KnightCollider
+  - staminaBorder
   layers:
   - Default
   - TransparentFX

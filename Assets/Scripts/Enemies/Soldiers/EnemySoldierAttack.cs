@@ -10,6 +10,7 @@ public class EnemySoldierAttack : MonoBehaviour
     EnemySoldier parentSoldierStats;
     HpBar playerHpBar;
     Movement playerMovement;
+    Parry playerParry;
     public bool soldierCanAttack = true;
     public bool soldierAttacks = false;
     public float chargeSoldierBar = 0f;
@@ -22,6 +23,7 @@ public class EnemySoldierAttack : MonoBehaviour
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         playerHpBar = player.GetComponent<HpBar>();
         playerMovement = player.GetComponent<Movement>();
+        playerParry = player.GetComponent<Parry>();
     }
 
     void AttackCooldown()
@@ -42,7 +44,11 @@ public class EnemySoldierAttack : MonoBehaviour
         if (soldierCanAttack && soldierAttacks && !playerMovement.isRolling)
         {
             soldierCanAttack = false;
-            playerHpBar.currentHp -= parentSoldierStats.enemyDMG;
+            if (!playerParry.isParrying)
+            {
+                //playerHpBar.currentHp -= parentSoldierStats.enemyDMG;
+                Debug.Log("au");
+            }
         }
     }
 

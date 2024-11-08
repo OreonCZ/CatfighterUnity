@@ -49,6 +49,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: deb11ecfd0b93844584220d2bb087cd0, type: 3}
     - {fileID: 2800000, guid: 5651e4b185f58d84580e4d4f5870e565, type: 3}
     - {fileID: 2800000, guid: d7e73d625cd091c469d40ad5a963b5ad, type: 3}
+    - {fileID: 2800000, guid: d4a5e9463f414aa44b8fb4fe4391b5d4, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -81,6 +82,12 @@ SpriteAtlas:
     - d7e73d625cd091c469d40ad5a963b5ad: 1280173356
     - d7e73d625cd091c469d40ad5a963b5ad: 271274026
     - d7e73d625cd091c469d40ad5a963b5ad: 2041897846
+    - d4a5e9463f414aa44b8fb4fe4391b5d4: 1711244330
+    - d4a5e9463f414aa44b8fb4fe4391b5d4: 664050812
+    - d4a5e9463f414aa44b8fb4fe4391b5d4: 237926256
+    - d4a5e9463f414aa44b8fb4fe4391b5d4: 494919539
+    - d4a5e9463f414aa44b8fb4fe4391b5d4: -1242646470
+    - d4a5e9463f414aa44b8fb4fe4391b5d4: 812318971
     - aa0ae8599c7c60540b46d50dc18a7f76: -1603213764
     - aa0ae8599c7c60540b46d50dc18a7f76: 1679160517
     - aa0ae8599c7c60540b46d50dc18a7f76: 310081857
@@ -159,6 +166,12 @@ SpriteAtlas:
   - {fileID: 1280173356, guid: d7e73d625cd091c469d40ad5a963b5ad, type: 3}
   - {fileID: 271274026, guid: d7e73d625cd091c469d40ad5a963b5ad, type: 3}
   - {fileID: 2041897846, guid: d7e73d625cd091c469d40ad5a963b5ad, type: 3}
+  - {fileID: 1711244330, guid: d4a5e9463f414aa44b8fb4fe4391b5d4, type: 3}
+  - {fileID: 664050812, guid: d4a5e9463f414aa44b8fb4fe4391b5d4, type: 3}
+  - {fileID: 237926256, guid: d4a5e9463f414aa44b8fb4fe4391b5d4, type: 3}
+  - {fileID: 494919539, guid: d4a5e9463f414aa44b8fb4fe4391b5d4, type: 3}
+  - {fileID: -1242646470, guid: d4a5e9463f414aa44b8fb4fe4391b5d4, type: 3}
+  - {fileID: 812318971, guid: d4a5e9463f414aa44b8fb4fe4391b5d4, type: 3}
   - {fileID: -1603213764, guid: aa0ae8599c7c60540b46d50dc18a7f76, type: 3}
   - {fileID: 1679160517, guid: aa0ae8599c7c60540b46d50dc18a7f76, type: 3}
   - {fileID: 310081857, guid: aa0ae8599c7c60540b46d50dc18a7f76, type: 3}
@@ -236,6 +249,12 @@ SpriteAtlas:
   - catSlash_0
   - catSlash_3
   - catSlash_2
+  - catParry_4
+  - catParry_5
+  - catParry_0
+  - catParry_1
+  - catParry_2
+  - catParry_3
   - catHero_8
   - catHero_9
   - catHero_22

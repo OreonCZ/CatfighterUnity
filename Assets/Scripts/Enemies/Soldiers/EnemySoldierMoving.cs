@@ -1,4 +1,5 @@
 using Assets.Scripts.EnumTypes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class EnemySoldierMoving : MonoBehaviour
     GameObject player;
     Vector3 directionToPlayer;
     EnemySoldier enemySoldier;
+    SpriteRenderer enemySprite;
+    SpriteRenderer playerSprite;
     public bool isFollowing;
     CircleCollider2D circleCollider;
     public float radiusChange = 1;
@@ -26,6 +29,9 @@ public class EnemySoldierMoving : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
         enemySoldier = GetComponent<EnemySoldier>();
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        enemySprite = GetComponent<SpriteRenderer>();
+        playerSprite = player.GetComponent<SpriteRenderer>();
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -42,13 +48,29 @@ public class EnemySoldierMoving : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (isFollowing) MovementEnemy();
         else
         {
             //enemyRb.velocity = Vector2.zero;
             agent.isStopped = true;
+        }
+        OrderSortingLayers();
+    }
+
+    private void OrderSortingLayers()
+    {
+        double playerY, enemyY;
+        playerY = playerSprite.bounds.min.y;
+        enemyY = enemySprite.bounds.min.y;
+        if(playerY > enemyY)
+        {
+            enemySprite.sortingOrder = 1;
+        }
+        else
+        {
+            enemySprite.sortingOrder = -1;
         }
     }
 
