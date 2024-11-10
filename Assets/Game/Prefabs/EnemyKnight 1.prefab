@@ -156,7 +156,7 @@ CapsuleCollider2D:
     m_Bits: 65536
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32768
+    m_Bits: 36864
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -191,7 +191,7 @@ BoxCollider2D:
     m_Bits: 65536
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32768
+    m_Bits: 40960
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFollowing: 0
   radiusChange: 0
-  target: {fileID: 764501691378236676, guid: 56de2587608cd1342b4d5c40c4c4f91f, type: 3}
+  target: {fileID: 0}
 --- !u!195 &7747183060067525209
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -488,9 +488,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002341032, y: -0.17170787}
+  m_Offset: {x: 0.002341032, y: -0.05801356}
   serializedVersion: 2
-  m_Radius: 0.4239297
+  m_Radius: 0.537624
 --- !u!114 &213290475513651471
 MonoBehaviour:
   m_ObjectHideFlags: 0

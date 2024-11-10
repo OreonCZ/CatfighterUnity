@@ -6,33 +6,70 @@ using Assets.Scripts.EnumTypes;
 public class Parry : MonoBehaviour
 {
     Fight playerFight;
+    GameObject enemyCollider;
     PlayerStats catStats;
     Movement playerMovement;
     Animator catAnimations;
-    public bool isParrying = false;
+    EnemySoldierAttack enemySoldierAttack;
+    [HideInInspector] public bool isParrying = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        enemyCollider = GameObject.FindGameObjectWithTag(ObjectTags.KnightCollider.ToString());
+
         playerFight = gameObject.GetComponent<Fight>();
         playerMovement = gameObject.GetComponent<Movement>();
         catAnimations = gameObject.GetComponent<Animator>();
         catStats = gameObject.GetComponent<PlayerStats>();
+
+        enemySoldierAttack = enemyCollider.GetComponent<EnemySoldierAttack>();
     }
 
     // Update is called once per frame
     void Update()
     {
         CatParry();
+        //Debug.Log(isParrying);
     }
 
     void CatParry() {
-        if(Input.GetKeyDown(KeyCode.Q) && !playerFight.isFighting && !playerMovement.isMoving)
+        bool canParry = Input.GetKeyDown(KeyCode.Q) && !playerFight.isFighting && !playerMovement.isMoving;
+        if (canParry || isParrying)
         {
-            StartCoroutine(Idle(0.7f));
+            if (!isParrying)
+            {
+                catAnimations.SetTrigger("ParryWait");
+                StartCoroutine(ParryTimer(0.7f));
+            }
+            playerMovement.canRoll = false;
+            playerFight.canAttack = false;
+            if (enemySoldierAttack.isTouchingPlayer)
+            {
+                playerMovement.canWalk = true;
+                playerMovement.movementSpeed = catStats.playerMovementSpeed;
+            }
+            else
+            {
+                playerMovement.canWalk = false;
+                playerMovement.movementSpeed = 0f;
+            }
         }
+
     }
 
-    IEnumerator Idle(float seconds)
+    IEnumerator ParryTimer(float seconds)
+    {
+        isParrying = true;
+        yield return new WaitForSeconds(seconds);
+        isParrying = false;
+        playerMovement.canWalk = true;
+        playerFight.canAttack = true;
+        playerMovement.canRoll = true;
+        playerMovement.movementSpeed = catStats.playerMovementSpeed;
+    }
+
+    /*IEnumerator Idle(float seconds)
     {
         playerMovement.canWalk = false;
         playerMovement.canRoll = false;
@@ -47,17 +84,22 @@ public class Parry : MonoBehaviour
         isParrying = false;
         playerMovement.movementSpeed = catStats.playerMovementSpeed;
     }
+    */
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(ObjectTags.KnightCollider.ToString()) && isParrying)
+        if (collision.CompareTag(ObjectTags.KnightCollider.ToString()))
         {
-            Debug.Log("kolize");
-            catAnimations.SetTrigger("CatParry");
-            playerMovement.canWalk = true;
-            playerMovement.canRoll = true;
+            StartCoroutine(ParryTimer(0.7f));
+            //Debug.Log("kolize");
+            if (enemySoldierAttack.isTouchingPlayer && isParrying) catAnimations.SetTrigger("CatParry");
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(ObjectTags.KnightCollider.ToString()))
+        {
             isParrying = false;
-            playerMovement.movementSpeed = catStats.playerMovementSpeed;
         }
     }
 }

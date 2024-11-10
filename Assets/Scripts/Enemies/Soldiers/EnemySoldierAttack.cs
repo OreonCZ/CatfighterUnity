@@ -12,8 +12,9 @@ public class EnemySoldierAttack : MonoBehaviour
     Movement playerMovement;
     Parry playerParry;
     public bool soldierCanAttack = true;
+    [HideInInspector] public bool isTouchingPlayer = false;
     public bool soldierAttacks = false;
-    public float chargeSoldierBar = 0f;
+    private float chargeSoldierBar = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -58,8 +59,12 @@ public class EnemySoldierAttack : MonoBehaviour
         {
             parentSoldier.isFollowing = false;
             soldierAttacks = true;
+            isTouchingPlayer = true;
+            if (!playerParry.isParrying && !playerMovement.isRolling)
+            {
+                DealDamage();
+            }
             //soldierCanAttack = true;
-            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -68,6 +73,7 @@ public class EnemySoldierAttack : MonoBehaviour
         {
             parentSoldier.isFollowing = true;
             soldierAttacks = false;
+            isTouchingPlayer = false;
             //soldierCanAttack = false;
         }
     }
@@ -76,7 +82,8 @@ public class EnemySoldierAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DealDamage();
         AttackCooldown();
+        DealDamage();
+        Debug.Log(chargeSoldierBar);
     }
 }

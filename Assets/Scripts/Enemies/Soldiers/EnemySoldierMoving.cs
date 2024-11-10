@@ -18,7 +18,7 @@ public class EnemySoldierMoving : MonoBehaviour
     CircleCollider2D circleCollider;
     public float radiusChange = 1;
 
-    [SerializeField] Transform target;
+    //[SerializeField] Transform target;
 
     NavMeshAgent agent;
 
@@ -42,7 +42,7 @@ public class EnemySoldierMoving : MonoBehaviour
         agent.speed = enemySoldier.enemyMovementSpeed;
         // directionToPlayer = (player.transform.position - transform.position).normalized;
         //enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemySoldier.enemyMovementSpeed;
-        agent.SetDestination(target.position);
+        agent.SetDestination(player.transform.position);
         agent.isStopped = false;
         //Debug.Log("pome");
     }
@@ -50,6 +50,7 @@ public class EnemySoldierMoving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(agent.destination);
         if (isFollowing) MovementEnemy();
         else
         {
