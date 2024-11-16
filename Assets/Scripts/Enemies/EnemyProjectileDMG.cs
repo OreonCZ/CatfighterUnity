@@ -7,7 +7,7 @@ public class EnemyProjectileDMG : MonoBehaviour
     public HpBar hpbar;
     public Movement playerMovement;
 
-    public void OnHitDamage(int damage)
+    public void OnHitDamage(float damage)
     {
         if (!playerMovement.isRolling) {
         hpbar.currentHp -= damage;

@@ -20,7 +20,7 @@ public class Fight : MonoBehaviour
     public GameObject attackUp;
     public GameObject attackLeft;
     public GameObject attackRight;
-    [HideInInspector] public int attackDamage;
+    [HideInInspector] public float attackDamage;
 
     GameObject player;
     PlayerStats playerStats;

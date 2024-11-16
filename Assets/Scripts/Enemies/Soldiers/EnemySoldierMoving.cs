@@ -81,7 +81,7 @@ public class EnemySoldierMoving : MonoBehaviour
 
             isFollowing = true;
             circleCollider.radius += radiusChange;
-            Debug.Log("Started following");
+            //Debug.Log("Started following");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -89,7 +89,7 @@ public class EnemySoldierMoving : MonoBehaviour
         if (isFollowing && collision.CompareTag(ObjectTags.Player.ToString())) {
             isFollowing = false;
             circleCollider.radius -= radiusChange;
-            Debug.Log("Stopped following");
+            //Debug.Log("Stopped following");
         }
     }
 

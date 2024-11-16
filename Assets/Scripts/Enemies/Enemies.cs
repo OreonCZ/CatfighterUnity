@@ -7,12 +7,12 @@ using Unity.VisualScripting;
 public class Enemies : ScriptableObject
 {
     public string catName;
-    public int maxEnemyHp;
-    public int enemyDamage;
+    public float maxEnemyHp;
+    public float enemyDamage;
     public float enemySpeed;
     public float enemyAttackCooldown;
     public float fireRate;
-    public int shootDamage;
+    public float shootDamage;
     public float fireSpeed;
     public float destroyProjectile;
 }

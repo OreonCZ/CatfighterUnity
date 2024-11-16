@@ -31,6 +31,7 @@ public class Movement : MonoBehaviour
 
     GameObject player;
     PlayerStats playerStats;
+    Parry parry;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class Movement : MonoBehaviour
 
         playerStats = player.GetComponent<PlayerStats>();
         slider = sprintBar.GetComponent<Slider>();
+        parry = player.GetComponent<Parry>();
 
         movementSpeed = playerStats.playerMovementSpeed;
         maxStamina = playerStats.playerMaxStamina;
@@ -96,7 +98,7 @@ public class Movement : MonoBehaviour
         {
             sprintBar.SetActive(false);
         }
-        if (isSprinting && isWalking && milk.canDrink)
+        if (isSprinting && isWalking && milk.canDrink && !parry.isParrying)
         {
             if (currentStamina > 0)
             {
@@ -104,7 +106,7 @@ public class Movement : MonoBehaviour
                 currentStamina -= 20 * Time.deltaTime;
             }
         }
-        if (!isSprinting && currentStamina < maxStamina || !isWalking)
+        if (!isSprinting && currentStamina < maxStamina || !isWalking || parry.isParrying)
         {
             if (currentStamina < maxStamina)
             {

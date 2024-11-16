@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 913937934266000143}
   - component: {fileID: 6963184992336783188}
   - component: {fileID: 6802947882867279959}
-  m_Layer: 15
+  m_Layer: 19
   m_Name: AttackUpNew
   m_TagString: Sword
   m_Icon: {fileID: 0}
@@ -98,13 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773bb769eb609aa45a366bfd22cbcd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHit: 0
   isKilled: 0
-  slider: {fileID: 0}
-  fight: {fileID: 0}
-  enemy: {fileID: 0}
-  animator: {fileID: 0}
-  enemyStun: 2
 --- !u!61 &6802947882867279959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,7 +156,7 @@ GameObject:
   - component: {fileID: 7107432637507167960}
   - component: {fileID: 1180395993295497891}
   - component: {fileID: 1521023227952128460}
-  m_Layer: 15
+  m_Layer: 19
   m_Name: AttackLeftNew
   m_TagString: Sword
   m_Icon: {fileID: 0}
@@ -248,13 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773bb769eb609aa45a366bfd22cbcd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHit: 0
   isKilled: 0
-  slider: {fileID: 0}
-  fight: {fileID: 0}
-  enemy: {fileID: 0}
-  animator: {fileID: 0}
-  enemyStun: 2
 --- !u!61 &1521023227952128460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -463,7 +451,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 131072
+    m_Bits: 393216
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -508,7 +496,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 196608
+    m_Bits: 458752
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -663,6 +651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isParrying: 0
+  canParry: 1
+  parryBar: 0
 --- !u!61 &3263919722993393197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -720,7 +710,7 @@ GameObject:
   - component: {fileID: 1780621853935449723}
   - component: {fileID: 5586969382071378874}
   - component: {fileID: 7284263568908040360}
-  m_Layer: 15
+  m_Layer: 19
   m_Name: AttackRightNew
   m_TagString: Sword
   m_Icon: {fileID: 0}
@@ -806,13 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773bb769eb609aa45a366bfd22cbcd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHit: 0
   isKilled: 0
-  slider: {fileID: 0}
-  fight: {fileID: 0}
-  enemy: {fileID: 0}
-  animator: {fileID: 0}
-  enemyStun: 2
 --- !u!61 &7284263568908040360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -870,7 +854,7 @@ GameObject:
   - component: {fileID: 5495868230119149860}
   - component: {fileID: 9171396464412170695}
   - component: {fileID: 7374455036671900759}
-  m_Layer: 15
+  m_Layer: 19
   m_Name: AttackDownNew
   m_TagString: Sword
   m_Icon: {fileID: 0}
@@ -956,13 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773bb769eb609aa45a366bfd22cbcd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHit: 0
   isKilled: 0
-  slider: {fileID: 0}
-  fight: {fileID: 0}
-  enemy: {fileID: 0}
-  animator: {fileID: 0}
-  enemyStun: 2
 --- !u!61 &7374455036671900759
 BoxCollider2D:
   m_ObjectHideFlags: 0

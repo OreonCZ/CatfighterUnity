@@ -5,21 +5,20 @@ using UnityEngine;
 public class EnemySoldier : MonoBehaviour
 {
     public Enemies enemies;
-    public float enemyMovementSpeed;
-    public int maxEnemyHP;
-    public int enemyRangeDMG;
-    public float enemyRangeSpeed;
-    public float enemyAttackCooldown;
-    public int enemyDMG;
-    public float destroyProjectile;
-    public float fireRate;
+    [HideInInspector] public float enemyMovementSpeed;
+    [HideInInspector] public float maxEnemyHP;
+    [HideInInspector] public float enemyRangeDMG;
+    [HideInInspector] public float enemyRangeSpeed;
+    [HideInInspector] public float enemyAttackCooldown;
+    [HideInInspector] public float enemyDMG;
+    [HideInInspector] public float destroyProjectile;
+    [HideInInspector] public float fireRate;
     // Start is called before the first frame update
     void Start()
     {
         enemyMovementSpeed = enemies.enemySpeed;
         maxEnemyHP = enemies.maxEnemyHp;
         //slider.maxValue = maxEnemyHP;
-        //currentEnemyHP = maxEnemyHP;
         //slider.value = currentEnemyHP;
         enemyRangeDMG = enemies.shootDamage;
         enemyRangeSpeed = enemies.fireSpeed;

@@ -23,13 +23,13 @@ public class Enemy : MonoBehaviour
     public GameObject enemyObject;
     public GameObject portalBack;
     public GameObject enemyHpBar;
-    int maxEnemyHP;
-    public int currentEnemyHP;
-    public int enemyRangeDMG;
+    float maxEnemyHP;
+    public float currentEnemyHP;
+    public float enemyRangeDMG;
     public float enemyRangeSpeed;
     public float destroyProjectile;
     public float fireRate;
-    public int enemyDMG;
+    public float enemyDMG;
     public float enemyMovementSpeed;
     public bool bingusSecond = false;
 

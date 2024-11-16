@@ -48,7 +48,7 @@ public class EnemySoldierAttack : MonoBehaviour
             if (!playerParry.isParrying)
             {
                 playerHpBar.currentHp -= parentSoldierStats.enemyDMG;
-                Debug.Log("au");
+                //Debug.Log("au");
             }
         }
     }
@@ -84,6 +84,6 @@ public class EnemySoldierAttack : MonoBehaviour
     {
         AttackCooldown();
         DealDamage();
-        Debug.Log(chargeSoldierBar);
+        //Debug.Log(chargeSoldierBar);
     }
 }

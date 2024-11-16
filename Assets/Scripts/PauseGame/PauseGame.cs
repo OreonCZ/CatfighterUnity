@@ -14,7 +14,7 @@ public class PauseGame : MonoBehaviour
     public GameObject gameMenu;
     public GameObject bruchaSkill;
     public SceneTransition sceneTransition;
-    
+    Parry parry;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class PauseGame : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         fight = player.GetComponent<Fight>();
         playerMovement = player.GetComponent<Movement>();
+        parry = player.GetComponent<Parry>();
         canPause = true;
     }
 
@@ -40,6 +41,7 @@ public class PauseGame : MonoBehaviour
         {
             Time.timeScale = 0f;
             fight.canAttack = false;
+            parry.canParry = false;
             playerMovement.canWalk = false;
             pauseMenu.SetActive(true);
             pauseMenuFirst.SetActive(true);
@@ -50,6 +52,7 @@ public class PauseGame : MonoBehaviour
         {
             Time.timeScale = 1;
             fight.canAttack = true;
+            parry.canParry = true;
             playerMovement.canWalk = true;
             pauseMenu.SetActive(false);
             gameMenu.SetActive(true);

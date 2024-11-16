@@ -6,45 +6,47 @@ using Assets.Scripts.EnumTypes;
 public class Parry : MonoBehaviour
 {
     Fight playerFight;
-    GameObject enemyCollider;
     PlayerStats catStats;
     Movement playerMovement;
     Animator catAnimations;
-    EnemySoldierAttack enemySoldierAttack;
     [HideInInspector] public bool isParrying = false;
+    [HideInInspector] public bool canParry = true;
+    [HideInInspector] public float parryBar = 0f;
+    private List<EnemySoldierAttack> activeEnemies = new List<EnemySoldierAttack>();
 
-    // Start is called before the first frame update
     void Start()
     {
-        enemyCollider = GameObject.FindGameObjectWithTag(ObjectTags.KnightCollider.ToString());
-
         playerFight = gameObject.GetComponent<Fight>();
         playerMovement = gameObject.GetComponent<Movement>();
         catAnimations = gameObject.GetComponent<Animator>();
         catStats = gameObject.GetComponent<PlayerStats>();
-
-        enemySoldierAttack = enemyCollider.GetComponent<EnemySoldierAttack>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        CatParry();
-        //Debug.Log(isParrying);
+        //Debug.Log(parryBar);
+        parryBar = Mathf.Lerp(parryBar, parryBar + 1f, Time.deltaTime);
+        if (parryBar >= 1f)
+        {
+            parryBar = 1f;
+            CatParry();
+        } 
     }
 
-    void CatParry() {
-        bool canParry = Input.GetKeyDown(KeyCode.Q) && !playerFight.isFighting && !playerMovement.isMoving;
-        if (canParry || isParrying)
+    void CatParry()
+    {
+        bool parry = Input.GetKeyDown(KeyCode.Q) && !playerFight.isFighting && !playerMovement.isMoving;
+        if (parry && canParry)
         {
+            parryBar = 0f;
             if (!isParrying)
             {
-                catAnimations.SetTrigger("ParryWait");
                 StartCoroutine(ParryTimer(0.7f));
             }
             playerMovement.canRoll = false;
             playerFight.canAttack = false;
-            if (enemySoldierAttack.isTouchingPlayer)
+
+            if (activeEnemies.Exists(enemy => enemy.isTouchingPlayer))
             {
                 playerMovement.canWalk = true;
                 playerMovement.movementSpeed = catStats.playerMovementSpeed;
@@ -55,11 +57,11 @@ public class Parry : MonoBehaviour
                 playerMovement.movementSpeed = 0f;
             }
         }
-
     }
 
     IEnumerator ParryTimer(float seconds)
     {
+        catAnimations.SetBool("ParryWait", true);
         isParrying = true;
         yield return new WaitForSeconds(seconds);
         isParrying = false;
@@ -67,39 +69,52 @@ public class Parry : MonoBehaviour
         playerFight.canAttack = true;
         playerMovement.canRoll = true;
         playerMovement.movementSpeed = catStats.playerMovementSpeed;
+        catAnimations.SetBool("ParryWait", false);
     }
 
-    /*IEnumerator Idle(float seconds)
+    IEnumerator ParrySpark(float seconds)
     {
-        playerMovement.canWalk = false;
-        playerMovement.canRoll = false;
-        playerFight.canAttack = false;
-        isParrying = true;
-        playerMovement.movementSpeed = 0f;
-        catAnimations.SetTrigger("ParryWait");
-        yield return new WaitForSeconds(seconds);
         playerMovement.canWalk = true;
-        playerFight.canAttack = true;
-        playerMovement.canRoll = true;
-        isParrying = false;
         playerMovement.movementSpeed = catStats.playerMovementSpeed;
+        catAnimations.SetBool("ParryWait", false);
+        catAnimations.SetBool("CatParry", true);
+        yield return new WaitForSeconds(seconds);
+        catAnimations.SetBool("CatParry", false);
     }
-    */
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(ObjectTags.KnightCollider.ToString()))
         {
-            StartCoroutine(ParryTimer(0.7f));
-            //Debug.Log("kolize");
-            if (enemySoldierAttack.isTouchingPlayer && isParrying) catAnimations.SetTrigger("CatParry");
+            EnemySoldierAttack enemy = collision.GetComponent<EnemySoldierAttack>();
+            if (enemy != null && !activeEnemies.Contains(enemy))
+            {
+                activeEnemies.Add(enemy);
+                if (isParrying)
+                {
+                    StartCoroutine(ParrySpark(0.5f));
+                }
+                canParry = false;
+            }
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(ObjectTags.KnightCollider.ToString()))
         {
-            isParrying = false;
+            EnemySoldierAttack enemy = collision.GetComponent<EnemySoldierAttack>();
+            if (enemy != null)
+            {
+                activeEnemies.Remove(enemy);
+            }
+
+            if (activeEnemies.Count == 0)
+            {
+                canParry = true;
+            }
         }
     }
 }
+
+

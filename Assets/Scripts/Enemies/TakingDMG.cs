@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class TakingDMG : MonoBehaviour
 {
-    public bool isHit;
-    public bool isKilled = false;
-    public Slider slider;
-    public Fight fight;
-    public Enemy enemy;
-    public Animator animator;
-    public float enemyStun = 2f;
+    [HideInInspector] public bool isKilled = false;
+    Fight fight;
     GameObject swordRadius;
+    EnemySoldierHP enemySoldierHp;
+    GameObject enemySoldier;
+    GameObject player;
 
     void Start()
     {
         swordRadius = GameObject.FindWithTag("Sword");
+        enemySoldier = GameObject.FindGameObjectWithTag(ObjectTags.Enemy.ToString());
+        enemySoldierHp = enemySoldier.GetComponent<EnemySoldierHP>();
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        fight = player.GetComponent<Fight>();
     }
 
     void Update()
@@ -27,14 +30,8 @@ public class TakingDMG : MonoBehaviour
     {
         if (collider.gameObject.tag == "Enemy")
         {
-            enemy.currentEnemyHP -= fight.attackDamage;
-            slider.value = enemy.currentEnemyHP;
+            enemySoldierHp.currentSoldierHp -= fight.attackDamage;
             swordRadius.SetActive(false);
-            
-        }
-        if (collider.gameObject.tag == "Enemy" && enemy.enemyDed)
-        {
-            isKilled = true;
         }
     }
 }

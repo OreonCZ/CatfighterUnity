@@ -42,7 +42,7 @@ public class tileEffects : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag(ObjectTags.Player.ToString()) && gameObject.CompareTag(ObjectTags.mud.ToString()))
         {

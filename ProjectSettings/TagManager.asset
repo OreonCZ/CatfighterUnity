@@ -27,6 +27,7 @@ TagManager:
   - dedScreen
   - lobbyManager
   - gameUI
+  - enemyHpBar
   layers:
   - Default
   - TransparentFX
@@ -47,7 +48,7 @@ TagManager:
   - Building
   - TallGrass
   - StatusTiles
-  - 
+  - Swords
   - Layer 1
   - Layer 2
   - Layer 3
