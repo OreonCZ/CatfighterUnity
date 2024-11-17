@@ -15,6 +15,7 @@ public class EnemySoldierAttack : MonoBehaviour
     [HideInInspector] public bool isTouchingPlayer = false;
     public bool soldierAttacks = false;
     private float chargeSoldierBar = 0f;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class EnemySoldierAttack : MonoBehaviour
         playerHpBar = player.GetComponent<HpBar>();
         playerMovement = player.GetComponent<Movement>();
         playerParry = player.GetComponent<Parry>();
+        animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
+        animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
     }
 
     void AttackCooldown()
@@ -60,9 +63,20 @@ public class EnemySoldierAttack : MonoBehaviour
             parentSoldier.isFollowing = false;
             soldierAttacks = true;
             isTouchingPlayer = true;
+            animator.SetBool("Idle", false);
+            if (parentSoldier.agent.velocity.x > 0)
+            {
+                animator.SetBool("FightRight", true);
+                animator.SetBool("FightLeft", false);
+            }
+            if (parentSoldier.agent.velocity.x < 0)
+            {
+                animator.SetBool("FightRight", false);
+                animator.SetBool("FightLeft", true);
+            }
             if (!playerParry.isParrying && !playerMovement.isRolling)
             {
-                DealDamage();
+                DealDamage();   
             }
             //soldierCanAttack = true;
         }
@@ -74,6 +88,8 @@ public class EnemySoldierAttack : MonoBehaviour
             parentSoldier.isFollowing = true;
             soldierAttacks = false;
             isTouchingPlayer = false;
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
             //soldierCanAttack = false;
         }
     }

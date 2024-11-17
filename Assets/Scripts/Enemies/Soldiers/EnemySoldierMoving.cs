@@ -17,10 +17,11 @@ public class EnemySoldierMoving : MonoBehaviour
     public bool isFollowing;
     CircleCollider2D circleCollider;
     public float radiusChange = 1;
+    public Animator animator;
 
     //[SerializeField] Transform target;
 
-    NavMeshAgent agent;
+    [HideInInspector] public NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
@@ -35,15 +36,30 @@ public class EnemySoldierMoving : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
     }
     void MovementEnemy()
     {
+        animator.SetBool("Idle", false);
+        animator.SetBool("FightRight", false);
+        animator.SetBool("FightLeft", false);
         agent.speed = enemySoldier.enemyMovementSpeed;
-        // directionToPlayer = (player.transform.position - transform.position).normalized;
-        //enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemySoldier.enemyMovementSpeed;
+        
+        //directionToPlayer = (player.transform.position - transform.position);
+        //enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y);
         agent.SetDestination(player.transform.position);
+
         agent.isStopped = false;
+
+        if(agent.velocity.x > 0)
+        {
+            animator.SetBool("WalkingRight", true);
+            animator.SetBool("WalkingLeft", false);
+        }
+        if(agent.velocity.x < 0)
+        {
+            animator.SetBool("WalkingRight", false);
+            animator.SetBool("WalkingLeft", true);
+        }
         //Debug.Log("pome");
     }
 
@@ -56,6 +72,8 @@ public class EnemySoldierMoving : MonoBehaviour
         {
             //enemyRb.velocity = Vector2.zero;
             agent.isStopped = true;
+            animator.SetBool("WalkingLeft", false);
+            animator.SetBool("WalkingRight", false);
         }
         OrderSortingLayers();
     }
@@ -78,7 +96,6 @@ public class EnemySoldierMoving : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isFollowing && collision.CompareTag(ObjectTags.Player.ToString())){ 
-
             isFollowing = true;
             circleCollider.radius += radiusChange;
             //Debug.Log("Started following");
@@ -88,6 +105,7 @@ public class EnemySoldierMoving : MonoBehaviour
     {
         if (isFollowing && collision.CompareTag(ObjectTags.Player.ToString())) {
             isFollowing = false;
+            animator.SetBool("Idle", true);
             circleCollider.radius -= radiusChange;
             //Debug.Log("Stopped following");
         }

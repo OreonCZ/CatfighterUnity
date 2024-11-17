@@ -14,7 +14,7 @@ public class EnemySoldier : MonoBehaviour
     [HideInInspector] public float destroyProjectile;
     [HideInInspector] public float fireRate;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         enemyMovementSpeed = enemies.enemySpeed;
         maxEnemyHP = enemies.maxEnemyHp;
