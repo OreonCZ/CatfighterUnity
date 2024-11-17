@@ -41,11 +41,9 @@ public class Parry : MonoBehaviour
             parryBar = 0f;
             if (!isParrying)
             {
-                StartCoroutine(ParryTimer(0.7f));
+                StartCoroutine(ParryTimer(0.5f));
             }
             playerMovement.canRoll = false;
-            playerFight.canAttack = false;
-
             if (activeEnemies.Exists(enemy => enemy.isTouchingPlayer))
             {
                 playerMovement.canWalk = true;
@@ -63,6 +61,7 @@ public class Parry : MonoBehaviour
     {
         catAnimations.SetBool("ParryWait", true);
         isParrying = true;
+        playerFight.canAttack = false;
         yield return new WaitForSeconds(seconds);
         isParrying = false;
         playerMovement.canWalk = true;

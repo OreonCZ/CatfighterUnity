@@ -15,22 +15,23 @@ public class EnemySoldierHP : MonoBehaviour
     void Start()
     {
         enemySoldier = GetComponent<EnemySoldier>();
-        enemyHpBar = GameObject.FindGameObjectWithTag(ObjectTags.enemyHpBar.ToString());
-        enemyHpSlider = enemyHpBar.GetComponent<Slider>();
+        enemyHpBar = transform.Find("EnemyBar").gameObject;
+        enemyHpSlider = enemyHpBar.GetComponentInChildren<Slider>();
 
         currentSoldierHp = enemySoldier.maxEnemyHP;
-
-        enemyHpSlider.maxValue = enemySoldier.maxEnemyHP;
-        enemyHpSlider.value = enemySoldier.maxEnemyHP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentSoldierHp);
+        if (enemyHpSlider != null)
+        {
+            enemyHpSlider.value = currentSoldierHp;
+        }
+        Debug.Log(enemySoldier.maxEnemyHP);
         if (currentSoldierHp <= 0)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

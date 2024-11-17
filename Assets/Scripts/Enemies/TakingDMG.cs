@@ -9,15 +9,14 @@ public class TakingDMG : MonoBehaviour
     [HideInInspector] public bool isKilled = false;
     Fight fight;
     GameObject swordRadius;
-    EnemySoldierHP enemySoldierHp;
+    //EnemySoldierHP enemySoldierHp;
     GameObject enemySoldier;
     GameObject player;
 
     void Start()
     {
-        swordRadius = GameObject.FindWithTag("Sword");
+        swordRadius = GameObject.FindWithTag(ObjectTags.Sword.ToString());
         enemySoldier = GameObject.FindGameObjectWithTag(ObjectTags.Enemy.ToString());
-        enemySoldierHp = enemySoldier.GetComponent<EnemySoldierHP>();
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         fight = player.GetComponent<Fight>();
     }
@@ -30,8 +29,12 @@ public class TakingDMG : MonoBehaviour
     {
         if (collider.gameObject.tag == "Enemy")
         {
-            enemySoldierHp.currentSoldierHp -= fight.attackDamage;
-            swordRadius.SetActive(false);
+            EnemySoldierHP enemySoldierHp = collider.gameObject.GetComponent<EnemySoldierHP>();
+            if (enemySoldierHp != null)
+            {
+                enemySoldierHp.currentSoldierHp -= fight.attackDamage;
+                swordRadius.SetActive(false);
+            }
         }
     }
 }
