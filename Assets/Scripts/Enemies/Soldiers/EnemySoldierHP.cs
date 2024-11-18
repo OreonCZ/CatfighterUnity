@@ -45,6 +45,9 @@ public class EnemySoldierHP : MonoBehaviour
             enemySoldierMoving.agent.isStopped = true;
             isDefeated = true;
             animator.SetBool("Ko", true);
+            animator.SetBool("WalkingLeft", false);
+            animator.SetBool("WalkingRight", false);
+            enemySoldier.EnemyNameCompare();
         }
     }
 }

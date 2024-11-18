@@ -37,11 +37,11 @@ public class EnemySoldierMoving : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
+
     void MovementEnemy()
     {
-        animator.SetBool("Idle", false);
-        animator.SetBool("FightRight", false);
-        animator.SetBool("FightLeft", false);
+        enemySoldier.EnemyNameCompare();
+
         agent.speed = enemySoldier.enemyMovementSpeed;
         
         //directionToPlayer = (player.transform.position - transform.position);

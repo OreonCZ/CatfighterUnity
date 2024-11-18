@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemySoldier : MonoBehaviour
 {
     public Enemies enemies;
+    public Animator animator;
+    [HideInInspector] public string catName;
     [HideInInspector] public float enemyMovementSpeed;
     [HideInInspector] public float maxEnemyHP;
     [HideInInspector] public float enemyRangeDMG;
@@ -16,6 +18,7 @@ public class EnemySoldier : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        catName = enemies.catName;
         enemyMovementSpeed = enemies.enemySpeed;
         maxEnemyHP = enemies.maxEnemyHp;
         //slider.maxValue = maxEnemyHP;
@@ -26,6 +29,25 @@ public class EnemySoldier : MonoBehaviour
         enemyAttackCooldown = enemies.enemyAttackCooldown;
         destroyProjectile = enemies.destroyProjectile;
         fireRate = enemies.fireRate;
+    }
+
+    private enum CatNames
+    {
+        Knight, Ranger
+    }
+    public void EnemyNameCompare()
+    {
+        if (CatNames.Knight.ToString() == catName)
+        {
+            animator.SetBool("Idle", false);
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Ranger.ToString() == catName)
+        {
+            animator.SetBool("Idle", false);
+            animator.SetBool("Fight", false);
+        }
     }
 
     // Update is called once per frame

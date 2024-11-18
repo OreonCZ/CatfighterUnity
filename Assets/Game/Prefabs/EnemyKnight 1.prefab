@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: {fileID: 11400000, guid: 1ab0e108480e06644804717bc999ba92, type: 2}
+  animator: {fileID: 2291485175748690641}
+  catName: 
   enemyMovementSpeed: 0
   maxEnemyHP: 0
   enemyRangeDMG: 0
