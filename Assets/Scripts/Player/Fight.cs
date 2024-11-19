@@ -14,7 +14,7 @@ public class Fight : MonoBehaviour
     public Slider slider;
     public Movement movement;
     public SoundEffects sounds;
-    float swordStaminaDrain = 20;
+    float swordStaminaDrain = 30;
     float slowDown = 2f;
     public GameObject attackDown;
     public GameObject attackUp;

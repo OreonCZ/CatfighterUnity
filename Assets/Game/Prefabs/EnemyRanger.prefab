@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 7784055621292080}
   - component: {fileID: 398710050015402389}
   - component: {fileID: 5652364690809297875}
+  - component: {fileID: 8693398038094062112}
   m_Layer: 12
   m_Name: EnemyRanger
   m_TagString: Enemy
@@ -393,6 +394,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8693398038094062112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2706342523978547562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea4092dd5e1f9f4980ec7781127d59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySoldierAttack: {fileID: 0}
+  enemyRangerAttack: {fileID: 0}
+  enemyHpBar: {fileID: 0}
+  enemyHpSlider: {fileID: 0}
+  currentSoldierHp: 0
 --- !u!1 &5940773434461847709
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +497,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 6
   m_WholeNumbers: 0
-  m_Value: 6
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -531,9 +549,10 @@ GameObject:
   - component: {fileID: 4431077706513831910}
   - component: {fileID: 19785288367559404}
   - component: {fileID: 3124410145331769292}
+  - component: {fileID: 2697952563214784993}
   m_Layer: 12
   m_Name: AttackColliderTrigger
-  m_TagString: Untagged
+  m_TagString: KnightCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,6 +687,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2697952563214784993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186365893864744501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4909596ebf024304c8088539039afbd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soldierCanAttack: 1
+  isTouchingPlayer: 0
+  soldierAttacks: 0
 --- !u!1 &6600046252332425747
 GameObject:
   m_ObjectHideFlags: 0

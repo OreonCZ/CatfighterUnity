@@ -27,7 +27,7 @@ public class TakingDMG : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Enemy")
+        if (collider.CompareTag(ObjectTags.Enemy.ToString()))
         {
             EnemySoldierHP enemySoldierHp = collider.gameObject.GetComponent<EnemySoldierHP>();
             if (enemySoldierHp != null)

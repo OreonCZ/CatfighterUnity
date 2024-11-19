@@ -50,6 +50,18 @@ public class EnemySoldier : MonoBehaviour
         }
     }
 
+    public void EnemyAttackDiff(EnemySoldierAttack enemySoldierAttack, EnemyRangerAttack enemyRangerAttack)
+    {
+        if (CatNames.Knight.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+        }
+        if (CatNames.Ranger.ToString() == catName)
+        {
+            enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

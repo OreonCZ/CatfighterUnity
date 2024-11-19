@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class EnemySoldierHP : MonoBehaviour
 {
     EnemySoldier enemySoldier;
-    public EnemySoldierAttack enemySoldierAttack;
+    [HideInInspector] public EnemySoldierAttack enemySoldierAttack;
+    [HideInInspector] public EnemyRangerAttack enemyRangerAttack;
     [HideInInspector] public GameObject enemyHpBar;
     [HideInInspector] public Slider enemyHpSlider;
     [HideInInspector] public float currentSoldierHp;
@@ -27,6 +28,8 @@ public class EnemySoldierHP : MonoBehaviour
         enemyHpSlider = enemyHpBar.GetComponentInChildren<Slider>();
 
         currentSoldierHp = enemySoldier.maxEnemyHP;
+
+        enemySoldier.EnemyAttackDiff(enemySoldierAttack, enemyRangerAttack);
     }
 
     // Update is called once per frame
@@ -40,14 +43,29 @@ public class EnemySoldierHP : MonoBehaviour
         //Debug.Log(currentSoldierHp);
         if (currentSoldierHp <= 0)
         {
-            enemySoldierAttack.soldierCanAttack = false;
-            enemySoldierAttack.soldierAttacks = false;
+            DiffCat();
             enemySoldierMoving.agent.isStopped = true;
+            enemySoldierMoving.isFollowing = false;
             isDefeated = true;
             animator.SetBool("Ko", true);
             animator.SetBool("WalkingLeft", false);
             animator.SetBool("WalkingRight", false);
             enemySoldier.EnemyNameCompare();
+            enemyHpBar.SetActive(false);
+        }
+    }
+    private void DiffCat()
+    {
+        if("Knight" == enemySoldier.catName)
+        {
+            enemySoldierAttack.soldierCanAttack = false;
+            enemySoldierAttack.soldierAttacks = false;
+        }
+        if("Ranger" == enemySoldier.catName)
+        {
+            //enemyRangerAttack.soldierAttacks = false;
+            //enemyRangerAttack.soldierCanAttack = false;
         }
     }
 }
+
