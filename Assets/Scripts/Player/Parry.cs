@@ -24,7 +24,7 @@ public class Parry : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(parryBar);
+        Debug.Log(canParry);
         parryBar = Mathf.Lerp(parryBar, parryBar + 1f, Time.deltaTime);
         if (parryBar >= 1f)
         {
@@ -94,6 +94,12 @@ public class Parry : MonoBehaviour
                     StartCoroutine(ParrySpark(0.5f));
                 }
                 canParry = false;
+            }
+        }
+        if (collision.CompareTag(ObjectTags.Bullet.ToString())){
+            if (isParrying)
+            {
+                StartCoroutine(ParrySpark(0.5f));
             }
         }
     }

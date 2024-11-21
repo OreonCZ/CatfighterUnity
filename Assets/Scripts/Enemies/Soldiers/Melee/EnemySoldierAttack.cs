@@ -27,7 +27,7 @@ public class EnemySoldierAttack : MonoBehaviour
         playerMovement = player.GetComponent<Movement>();
         playerParry = player.GetComponent<Parry>();
         animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
-        animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
+        //animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
     }
 
     void AttackCooldown()

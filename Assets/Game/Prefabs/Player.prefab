@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 913937934266000143}
   - component: {fileID: 6963184992336783188}
   - component: {fileID: 6802947882867279959}
+  - component: {fileID: 4106868704271220328}
   m_Layer: 19
   m_Name: AttackUpNew
   m_TagString: Sword
@@ -144,6 +145,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &4106868704271220328
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860358175579651801}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &984610036075784271
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +184,7 @@ GameObject:
   - component: {fileID: 7107432637507167960}
   - component: {fileID: 1180395993295497891}
   - component: {fileID: 1521023227952128460}
+  - component: {fileID: 5923382617052766629}
   m_Layer: 19
   m_Name: AttackLeftNew
   m_TagString: Sword
@@ -288,6 +317,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &5923382617052766629
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984610036075784271}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3964005282743932459
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +366,7 @@ GameObject:
   - component: {fileID: 7161574820854610839}
   - component: {fileID: 4991573536886364861}
   - component: {fileID: 3263919722993393197}
+  - component: {fileID: 5091797845306670424}
   m_Layer: 15
   m_Name: Player
   m_TagString: Player
@@ -698,6 +755,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25317588, y: 0.012372017}
   m_EdgeRadius: 0
+--- !u!114 &5091797845306670424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964005282743932459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b9b441b52dc324e876096bdb6af5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpbar: {fileID: 463176302745743351}
 --- !u!1 &4503905970711936029
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +780,7 @@ GameObject:
   - component: {fileID: 1780621853935449723}
   - component: {fileID: 5586969382071378874}
   - component: {fileID: 7284263568908040360}
+  - component: {fileID: 5921665326539337985}
   m_Layer: 19
   m_Name: AttackRightNew
   m_TagString: Sword
@@ -842,6 +913,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &5921665326539337985
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4503905970711936029}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4696988639944483108
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +952,7 @@ GameObject:
   - component: {fileID: 5495868230119149860}
   - component: {fileID: 9171396464412170695}
   - component: {fileID: 7374455036671900759}
+  - component: {fileID: 4005711277094465482}
   m_Layer: 19
   m_Name: AttackDownNew
   m_TagString: Sword
@@ -986,3 +1085,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &4005711277094465482
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4696988639944483108}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -5,14 +5,17 @@ using UnityEngine;
 public class EnemyProjectileDMG : MonoBehaviour
 {
     public HpBar hpbar;
-    public Movement playerMovement;
+    Movement playerMovement;
+    private void Start()
+    {
+        //hpbar = GetComponent<HpBar>();
+        //playerMovement = GetComponent<Movement>();
+    }
 
     public void OnHitDamage(float damage)
     {
-        if (!playerMovement.isRolling) {
         hpbar.currentHp -= damage;
         hpbar.slider.value -= damage;
         Debug.Log("hp: " + hpbar.currentHp);
-        }
     }
 }

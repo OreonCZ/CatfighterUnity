@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.EnumTypes;
 
 public class EnemyBulletScript : MonoBehaviour
 {
 	public GameObject projectile;
-	public Transform playerPosition;
+	Transform playerPosition;
 	public float nextFire = 0f;
 	public HpBar hpbar;
 	public Enemies enemies;
@@ -15,6 +16,8 @@ public class EnemyBulletScript : MonoBehaviour
 
     void Start()
 	{
+		GameObject player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+		hpbar = player.GetComponent<HpBar>();
 		StartCoroutine(WaitForTransition());
 	}
 

@@ -8,7 +8,7 @@ public class EnemyRangerAttack : MonoBehaviour
     GameObject player;
     EnemySoldierMoving parentSoldier;
     EnemySoldier parentSoldierStats;
-    HpBar playerHpBar;
+    //HpBar playerHpBar;
     Movement playerMovement;
     Parry playerParry;
     public bool soldierCanAttack = true;
@@ -16,6 +16,7 @@ public class EnemyRangerAttack : MonoBehaviour
     public bool soldierAttacks = false;
     private float chargeSoldierBar = 0f;
     Animator animator;
+    public bool isShooting;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +24,11 @@ public class EnemyRangerAttack : MonoBehaviour
         parentSoldier = gameObject.transform.parent.gameObject.GetComponent<EnemySoldierMoving>();
         parentSoldierStats = gameObject.transform.parent.gameObject.GetComponent<EnemySoldier>();
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
-        playerHpBar = player.GetComponent<HpBar>();
-        playerMovement = player.GetComponent<Movement>();
+        //playerHpBar = player.GetComponent<HpBar>();
+        //playerMovement = player.GetComponent<Movement>();
         playerParry = player.GetComponent<Parry>();
         animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
-        animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
+        //animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
     }
 
     void AttackCooldown()
@@ -45,7 +46,7 @@ public class EnemyRangerAttack : MonoBehaviour
     }
     void DealDamage()
     {
-        Debug.Log("bludimir");
+        //Debug.Log("bludimir");
         /*
         if (soldierCanAttack && soldierAttacks && !playerMovement.isRolling)
         {
@@ -68,6 +69,7 @@ public class EnemyRangerAttack : MonoBehaviour
             isTouchingPlayer = true;
             animator.SetBool("Idle", false);
             animator.SetBool("Fight", true);
+            isShooting = true;
             
             //DealDamage();
          
@@ -82,6 +84,7 @@ public class EnemyRangerAttack : MonoBehaviour
             soldierAttacks = false;
             isTouchingPlayer = false;
             animator.SetBool("Fight", false);
+            isShooting = false;
             //soldierCanAttack = false;
         }
     }

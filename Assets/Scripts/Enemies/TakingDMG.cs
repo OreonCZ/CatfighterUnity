@@ -17,6 +17,7 @@ public class TakingDMG : MonoBehaviour
     {
         swordRadius = GameObject.FindWithTag(ObjectTags.Sword.ToString());
         enemySoldier = GameObject.FindGameObjectWithTag(ObjectTags.Enemy.ToString());
+        //enemySoldierHp = enemySoldier.GetComponent<EnemySoldierHP>();
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         fight = player.GetComponent<Fight>();
     }
@@ -29,6 +30,7 @@ public class TakingDMG : MonoBehaviour
     {
         if (collider.CompareTag(ObjectTags.Enemy.ToString()))
         {
+            Debug.Log("enemy hit");
             EnemySoldierHP enemySoldierHp = collider.gameObject.GetComponent<EnemySoldierHP>();
             if (enemySoldierHp != null)
             {
