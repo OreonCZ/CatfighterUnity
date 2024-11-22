@@ -16,7 +16,6 @@ public class EnemyRangerAttack : MonoBehaviour
     public bool soldierAttacks = false;
     private float chargeSoldierBar = 0f;
     Animator animator;
-    public bool isShooting;
 
     // Start is called before the first frame update
     void Start()
@@ -69,7 +68,6 @@ public class EnemyRangerAttack : MonoBehaviour
             isTouchingPlayer = true;
             animator.SetBool("Idle", false);
             animator.SetBool("Fight", true);
-            isShooting = true;
             
             //DealDamage();
          
@@ -84,7 +82,6 @@ public class EnemyRangerAttack : MonoBehaviour
             soldierAttacks = false;
             isTouchingPlayer = false;
             animator.SetBool("Fight", false);
-            isShooting = false;
             //soldierCanAttack = false;
         }
     }

@@ -12,3 +12,4 @@ public class PlayerStats : MonoBehaviour
     public float playerMaxStamina = 50f;
     public int currentMoney = 0;
 }
+

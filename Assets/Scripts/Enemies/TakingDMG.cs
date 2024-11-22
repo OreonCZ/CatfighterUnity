@@ -24,7 +24,7 @@ public class TakingDMG : MonoBehaviour
 
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -40,4 +40,3 @@ public class TakingDMG : MonoBehaviour
         }
     }
 }
-

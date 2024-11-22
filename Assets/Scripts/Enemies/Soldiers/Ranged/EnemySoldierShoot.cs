@@ -15,16 +15,17 @@ public class EnemySoldierShoot : MonoBehaviour
     public Enemies enemies;
     Parry parry;
     GameObject player;
+    EnemyRangerAttack enemyRangerAttack;
+
+    float rangeDmg;
+    float rangeSpeed;
 
     void Start()
     {
         //enemyScript = GetComponent<EnemySoldier>();
         //enemySoldierHP = GetComponent<EnemySoldierHP>();
         player = GameObject.FindWithTag(ObjectTags.Player.ToString());
-        GameObject enemy = GameObject.FindWithTag(ObjectTags.Enemy.ToString());
         playerMScript = player.GetComponent<Movement>();
-        enemyScript = enemy.GetComponent<EnemySoldier>();
-        enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
         parry = player.GetComponent<Parry>();
 
     }
@@ -41,9 +42,16 @@ public class EnemySoldierShoot : MonoBehaviour
         Destroy(gameObject, enemyScript.destroyProjectile);
     }
 
+    public void EnemyInitialization(GameObject enemy)
+    {
+        enemyScript = enemy.GetComponent<EnemySoldier>();
+        enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
+        enemyRangerAttack = enemy.GetComponent<EnemyRangerAttack>();
+    }
+
     void Projectile()
     {
-        transform.Translate(direction * enemyScript.enemyRangeSpeed * Time.deltaTime);
+            transform.Translate(direction * enemyScript.enemyRangeSpeed * Time.deltaTime);
     }
     void PlayerHit(GameObject Player)
     {
@@ -53,21 +61,23 @@ public class EnemySoldierShoot : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(ObjectTags.Player.ToString()) && parry.isParrying)
+        if (collision.CompareTag(ObjectTags.Player.ToString()))
         {
-            Destroy(gameObject);
-            return;
-        }
-        if (collision.CompareTag(ObjectTags.Player.ToString()) && !playerMScript.isRolling || !parry.isParrying)
-        {
-            //GetComponent<CircleCollider2D>().enabled = true;
-            PlayerHit(collision.gameObject);
-            Destroy(gameObject);
-            return;
-        }
-        if (collision.CompareTag(ObjectTags.Player.ToString()) && playerMScript.isRolling)
-        {
-            //GetComponent<CircleCollider2D>().enabled = false;
+            if (parry.isParrying)
+            {
+                Destroy(gameObject);
+            }
+            else if (!playerMScript.isRolling && !parry.isParrying)
+            {
+                //GetComponent<CircleCollider2D>().enabled = true;
+                PlayerHit(collision.gameObject);
+                Debug.Log(collision.name);
+                Destroy(gameObject);
+            }
+            else if (playerMScript.isRolling)
+            {
+                //GetComponent<CircleCollider2D>().enabled = false;
+            }
             return;
         }
     }

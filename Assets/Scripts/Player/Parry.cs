@@ -24,7 +24,7 @@ public class Parry : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(canParry);
+        //Debug.Log(canParry);
         parryBar = Mathf.Lerp(parryBar, parryBar + 1f, Time.deltaTime);
         if (parryBar >= 1f)
         {

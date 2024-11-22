@@ -34,7 +34,7 @@ public class EnemySoldierBullet : MonoBehaviour
 	void Update()
 	{
 		//Debug.Log(playerPosition.position);
-		if (Time.time > nextFire && wait && enemyRangerAttack.isShooting)
+		if (Time.time > nextFire && wait && enemyRangerAttack.soldierAttacks)
 		{
 			if (enemySoldierHP.currentSoldierHp > 0)
 			{
@@ -51,10 +51,11 @@ public class EnemySoldierBullet : MonoBehaviour
 	}
 
 	void Fire()
-	{
+	{	
 		Vector2 direction = (playerPosition.position - transform.position).normalized;
 		GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
 		EnemySoldierShoot bulletComponent = bullet.GetComponent<EnemySoldierShoot>();
+		bulletComponent.EnemyInitialization(this.gameObject);
 		if (bulletComponent != null)
 		{
 			bulletComponent.direction = direction;

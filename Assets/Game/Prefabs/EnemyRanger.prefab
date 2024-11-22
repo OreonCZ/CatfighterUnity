@@ -719,7 +719,6 @@ MonoBehaviour:
   soldierCanAttack: 1
   isTouchingPlayer: 0
   soldierAttacks: 0
-  isShooting: 0
 --- !u!1 &6600046252332425747
 GameObject:
   m_ObjectHideFlags: 0

@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endTransition: {fileID: 6763033638194087637, guid: 5cf3b12e6dc218c40af066bdd6280fbc,
     type: 3}
-  SceneTo: 4
+  SceneTo: 2
   DistanceToTeleport: 1
   sceneChangeIndex: 0
 --- !u!222 &7321689068411273140
