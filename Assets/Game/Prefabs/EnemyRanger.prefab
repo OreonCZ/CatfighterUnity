@@ -316,6 +316,9 @@ MonoBehaviour:
   isFollowing: 0
   radiusChange: 0
   animator: {fileID: 5652364690809297875}
+  enemyBulletAttack: {fileID: 0}
+  enemySoldierAttack: {fileID: 0}
+  enemyRangerAttack: {fileID: 0}
   agent: {fileID: 0}
 --- !u!195 &7784055621292080
 NavMeshAgent:
@@ -409,6 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySoldierAttack: {fileID: 0}
   enemyRangerAttack: {fileID: 0}
+  enemyBulletAttack: {fileID: 0}
   enemyHpBar: {fileID: 0}
   enemyHpSlider: {fileID: 0}
   currentSoldierHp: 0

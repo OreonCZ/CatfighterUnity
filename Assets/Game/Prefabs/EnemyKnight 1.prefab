@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySoldierAttack: {fileID: 213290475513651471}
   enemyRangerAttack: {fileID: 0}
+  enemyBulletAttack: {fileID: 0}
   enemyHpBar: {fileID: 0}
   enemyHpSlider: {fileID: 0}
   currentSoldierHp: 0
@@ -212,7 +213,7 @@ BoxCollider2D:
     m_Bits: 65536
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 40960
+    m_Bits: 8192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -254,7 +255,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 589824
@@ -292,6 +293,9 @@ MonoBehaviour:
   isFollowing: 0
   radiusChange: 0
   animator: {fileID: 2291485175748690641}
+  enemyBulletAttack: {fileID: 0}
+  enemySoldierAttack: {fileID: 0}
+  enemyRangerAttack: {fileID: 0}
   agent: {fileID: 0}
 --- !u!195 &7747183060067525209
 NavMeshAgent:
@@ -511,7 +515,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

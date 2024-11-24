@@ -18,6 +18,9 @@ public class EnemySoldierMoving : MonoBehaviour
     CircleCollider2D circleCollider;
     public float radiusChange = 1;
     public Animator animator;
+    [HideInInspector] public EnemyBulletAttack enemyBulletAttack;
+    [HideInInspector] public EnemySoldierAttack enemySoldierAttack;
+    [HideInInspector] public EnemyRangerAttack enemyRangerAttack;
 
     //[SerializeField] Transform target;
 
@@ -36,6 +39,8 @@ public class EnemySoldierMoving : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        enemySoldier.EnemyAttackDiff(enemySoldierAttack, enemyRangerAttack, enemyBulletAttack);
     }
 
     void MovementEnemy()
@@ -95,7 +100,15 @@ public class EnemySoldierMoving : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isFollowing && collision.CompareTag(ObjectTags.Player.ToString())){ 
+        if (collision.CompareTag(ObjectTags.Player.ToString())){ 
+            if("Fiend" == enemySoldier.catName)
+            {
+                EnemyBulletAttack enemyBulletAttacks = GetComponentInChildren<EnemyBulletAttack>();
+                enemyBulletAttacks.canShoot = false;
+                //enemyBulletAttack.canShoot = false;
+                Debug.Log("ejakfhnsishnvgkjsen");
+            }
+
             isFollowing = true;
             circleCollider.radius += radiusChange;
             //Debug.Log("Started following");
@@ -103,7 +116,13 @@ public class EnemySoldierMoving : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (isFollowing && collision.CompareTag(ObjectTags.Player.ToString())) {
+        if (collision.CompareTag(ObjectTags.Player.ToString())) {
+            if ("Fiend" == enemySoldier.catName)
+            {
+                EnemyBulletAttack enemyBulletAttacks = GetComponentInChildren<EnemyBulletAttack>();
+                enemyBulletAttacks.canShoot = true;
+            }
+
             isFollowing = false;
             animator.SetBool("Idle", true);
             circleCollider.radius -= radiusChange;

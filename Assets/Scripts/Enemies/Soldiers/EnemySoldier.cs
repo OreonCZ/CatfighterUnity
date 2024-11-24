@@ -33,11 +33,17 @@ public class EnemySoldier : MonoBehaviour
 
     private enum CatNames
     {
-        Knight, Ranger
+        Knight, Ranger, Fiend
     }
     public void EnemyNameCompare()
     {
         if (CatNames.Knight.ToString() == catName)
+        {
+            animator.SetBool("Idle", false);
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Fiend.ToString() == catName)
         {
             animator.SetBool("Idle", false);
             animator.SetBool("FightRight", false);
@@ -50,11 +56,16 @@ public class EnemySoldier : MonoBehaviour
         }
     }
 
-    public void EnemyAttackDiff(EnemySoldierAttack enemySoldierAttack, EnemyRangerAttack enemyRangerAttack)
+    public void EnemyAttackDiff(EnemySoldierAttack enemySoldierAttack, EnemyRangerAttack enemyRangerAttack, EnemyBulletAttack enemyBulletAttack)
     {
         if (CatNames.Knight.ToString() == catName)
         {
             enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+        }
+        if (CatNames.Fiend.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
         }
         if (CatNames.Ranger.ToString() == catName)
         {

@@ -13,7 +13,8 @@ public class EnemySoldierBullet : MonoBehaviour
 	//EnemyShoot enemyShoot;
 	EnemySoldier enemySoldier;
 	EnemySoldierHP enemySoldierHP;
-	EnemyRangerAttack enemyRangerAttack;
+
+	bool enemyShootBullet;
 
 	bool wait = false;
 
@@ -25,23 +26,44 @@ public class EnemySoldierBullet : MonoBehaviour
 
 		enemySoldier = GetComponent<EnemySoldier>();
 		enemySoldierHP = GetComponent<EnemySoldierHP>();
-		enemyRangerAttack = gameObject.transform.GetComponentInChildren<EnemyRangerAttack>();
+
+		//enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
 
 		StartCoroutine(WaitForTransition());
 	}
 
+	void DiffRangeEnemy()
+    {
+		if ("Fiend" == enemySoldier.catName)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemySoldierHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks && enemyBulletAttack.canShoot)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+
+		if ("Ranger" == enemySoldier.catName)
+		{
+			EnemyRangerAttack enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemySoldierHP.currentSoldierHp > 0 && enemyRangerAttack.soldierAttacks)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+	}
 	// Update is called once per frame
 	void Update()
 	{
-		//Debug.Log(playerPosition.position);
-		if (Time.time > nextFire && wait && enemyRangerAttack.soldierAttacks)
-		{
-			if (enemySoldierHP.currentSoldierHp > 0)
-			{
-				Fire();
-			}
-			nextFire = Time.time + 1f / enemySoldier.fireRate;
-		}
+		DiffRangeEnemy();
 	}
 
 	IEnumerator WaitForTransition()

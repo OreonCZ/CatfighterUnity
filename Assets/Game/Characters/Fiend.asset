@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc43bc1b0292b384d862460dabbc9f5b, type: 3}
   m_Name: Fiend
   m_EditorClassIdentifier: 
-  catName: Knight
+  catName: Fiend
   maxEnemyHp: 9
   enemyDamage: 1
-  enemySpeed: 2
+  enemySpeed: 2.5
   enemyAttackCooldown: 0.8
-  fireRate: 1
-  shootDamage: 1
-  fireSpeed: 1
+  fireRate: 0.7
+  shootDamage: 2
+  fireSpeed: 12
   destroyProjectile: 3

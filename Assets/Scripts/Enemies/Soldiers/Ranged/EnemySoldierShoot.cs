@@ -16,9 +16,8 @@ public class EnemySoldierShoot : MonoBehaviour
     Parry parry;
     GameObject player;
     EnemyRangerAttack enemyRangerAttack;
+    EnemyBulletAttack enemyBulletAttack;
 
-    float rangeDmg;
-    float rangeSpeed;
 
     void Start()
     {
@@ -27,6 +26,7 @@ public class EnemySoldierShoot : MonoBehaviour
         player = GameObject.FindWithTag(ObjectTags.Player.ToString());
         playerMScript = player.GetComponent<Movement>();
         parry = player.GetComponent<Parry>();
+        
 
     }
     void Update()
@@ -46,7 +46,14 @@ public class EnemySoldierShoot : MonoBehaviour
     {
         enemyScript = enemy.GetComponent<EnemySoldier>();
         enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
-        enemyRangerAttack = enemy.GetComponent<EnemyRangerAttack>();
+        if("Ranger" == enemyScript.catName)
+        {
+            enemyRangerAttack = enemy.GetComponent<EnemyRangerAttack>();
+        }
+        if ("Fiend" == enemyScript.catName)
+        {
+            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
+        }
     }
 
     void Projectile()

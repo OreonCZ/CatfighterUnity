@@ -9,6 +9,7 @@ public class EnemySoldierHP : MonoBehaviour
     EnemySoldier enemySoldier;
     [HideInInspector] public EnemySoldierAttack enemySoldierAttack;
     [HideInInspector] public EnemyRangerAttack enemyRangerAttack;
+    [HideInInspector] public EnemyBulletAttack enemyBulletAttack;
     [HideInInspector] public GameObject enemyHpBar;
     [HideInInspector] public Slider enemyHpSlider;
     [HideInInspector] public float currentSoldierHp;
@@ -29,7 +30,7 @@ public class EnemySoldierHP : MonoBehaviour
 
         currentSoldierHp = enemySoldier.maxEnemyHP;
 
-        enemySoldier.EnemyAttackDiff(enemySoldierAttack, enemyRangerAttack);
+        enemySoldier.EnemyAttackDiff(enemySoldierAttack, enemyRangerAttack, enemyBulletAttack);
     }
 
     // Update is called once per frame
@@ -61,10 +62,20 @@ public class EnemySoldierHP : MonoBehaviour
             enemySoldierAttack.soldierCanAttack = false;
             enemySoldierAttack.soldierAttacks = false;
         }
-        if("Ranger" == enemySoldier.catName)
+        if ("Fiend" == enemySoldier.catName)
+        {
+            enemySoldierAttack.soldierCanAttack = false;
+            enemySoldierAttack.soldierAttacks = false;
+        }
+        if ("Ranger" == enemySoldier.catName)
         {
             //enemyRangerAttack.soldierAttacks = false;
             //enemyRangerAttack.soldierCanAttack = false;
+        }
+        if ("Intruder" == enemySoldier.catName)
+        {
+            enemyRangerAttack.soldierAttacks = false;
+            enemyRangerAttack.soldierCanAttack = false;
         }
     }
 }
