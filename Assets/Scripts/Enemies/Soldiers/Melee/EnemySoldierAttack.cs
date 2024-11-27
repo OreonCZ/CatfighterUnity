@@ -5,17 +5,22 @@ using UnityEngine;
 
 public class EnemySoldierAttack : MonoBehaviour
 {
+    public GameObject enemy;
     GameObject player;
+    GameObject parentSoldierGameObject;
     EnemySoldierMoving parentSoldier;
     EnemySoldier parentSoldierStats;
     HpBar playerHpBar;
     Movement playerMovement;
     Parry playerParry;
+    SpriteRenderer spriteRenderer;
     public bool soldierCanAttack = true;
     [HideInInspector] public bool isTouchingPlayer = false;
     public bool soldierAttacks = false;
     private float chargeSoldierBar = 0f;
     Animator animator;
+
+    private Coroutine colorChangeCoroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +32,7 @@ public class EnemySoldierAttack : MonoBehaviour
         playerMovement = player.GetComponent<Movement>();
         playerParry = player.GetComponent<Parry>();
         animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
+        spriteRenderer = enemy.GetComponent<SpriteRenderer>();
         //animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
     }
 
@@ -103,3 +109,5 @@ public class EnemySoldierAttack : MonoBehaviour
         //Debug.Log(chargeSoldierBar);
     }
 }
+
+

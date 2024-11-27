@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7407985970177754505}
   - component: {fileID: 6339334499669816661}
   - component: {fileID: 1829485722419305511}
-  - component: {fileID: 2662709777455111786}
   - component: {fileID: 6760072288425522391}
   - component: {fileID: 3826412523356513709}
   - component: {fileID: 7747183060067525209}
@@ -198,51 +197,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0013237, y: -0.14113808}
   m_Size: {x: 0.60026836, y: 0.7898903}
   m_Direction: 0
---- !u!61 &2662709777455111786
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134848067140549715}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 65536
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 8192
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0043877363, y: -0.1931467}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.35161996, y: 0.5594425}
-  m_EdgeRadius: 0.1
 --- !u!58 &6760072288425522391
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -311,7 +265,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -444,7 +398,7 @@ Transform:
   m_GameObject: {fileID: 391512870382144492}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -537,7 +491,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.002341032, y: -0.018867493}
   serializedVersion: 2
-  m_Radius: 0.5838108
+  m_Radius: 0.4
 --- !u!114 &213290475513651471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de646293bd9e0da4480df2381067f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 134848067140549715}
   soldierCanAttack: 1
   isTouchingPlayer: 0
   soldierAttacks: 0

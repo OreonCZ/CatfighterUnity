@@ -74,8 +74,8 @@ public class EnemySoldierHP : MonoBehaviour
         }
         if ("Intruder" == enemySoldier.catName)
         {
-            enemyRangerAttack.soldierAttacks = false;
-            enemyRangerAttack.soldierCanAttack = false;
+            enemySoldierAttack.soldierAttacks = false;
+            enemySoldierAttack.soldierCanAttack = false;
         }
     }
 }

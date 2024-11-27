@@ -242,10 +242,11 @@ public class Movement : MonoBehaviour
     {
         canRoll = false;
         isRolling = true;
-        if (!ignore)
+        /*if (!ignore)
         {
             enemy.GetComponent<BoxCollider2D>().enabled = false;
         }
+        */
         currentRollTime = rollTime;
         while (currentRollTime > 0f)
         {
@@ -256,10 +257,11 @@ public class Movement : MonoBehaviour
         }
         yield return new WaitForSeconds(rollCooldown);
         rb.velocity = new Vector2(0f, 0f);
-        if (!ignore)
+       /*8if (!ignore)
         {
-            enemy.GetComponent<BoxCollider2D>().enabled = true;
+            //enemy.GetComponent<BoxCollider2D>().enabled = true;
         }
+       */
         canRoll = true;
         isRolling = false;
     }

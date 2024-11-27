@@ -54,6 +54,10 @@ public class EnemySoldierShoot : MonoBehaviour
         {
             enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
         }
+        if ("Intruder" == enemyScript.catName)
+        {
+            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
+        }
     }
 
     void Projectile()

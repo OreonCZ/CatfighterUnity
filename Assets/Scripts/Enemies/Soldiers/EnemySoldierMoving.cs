@@ -9,6 +9,7 @@ using UnityEngine.AI;
 public class EnemySoldierMoving : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
+    SpriteRenderer spriteRenderer;
     GameObject player;
     Vector3 directionToPlayer;
     EnemySoldier enemySoldier;
@@ -35,6 +36,8 @@ public class EnemySoldierMoving : MonoBehaviour
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         enemySprite = GetComponent<SpriteRenderer>();
         playerSprite = player.GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
 
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -122,7 +125,6 @@ public class EnemySoldierMoving : MonoBehaviour
                 EnemyBulletAttack enemyBulletAttacks = GetComponentInChildren<EnemyBulletAttack>();
                 enemyBulletAttacks.canShoot = true;
             }
-
             isFollowing = false;
             animator.SetBool("Idle", true);
             circleCollider.radius -= radiusChange;

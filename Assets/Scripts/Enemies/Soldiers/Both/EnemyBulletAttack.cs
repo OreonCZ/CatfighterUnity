@@ -18,6 +18,7 @@ public class EnemyBulletAttack : MonoBehaviour
     private float chargeSoldierBar = 0f;
     Animator animator;
 
+
     // Start is called before the first frame update
     void Start()
     {

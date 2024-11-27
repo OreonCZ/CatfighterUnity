@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 3101750396708464727}
   - component: {fileID: 2287165512261684712}
   - component: {fileID: 3030931551914193845}
-  - component: {fileID: 7545252174107381907}
   - component: {fileID: 1157933520874361866}
   - component: {fileID: 2423663184698603260}
   - component: {fileID: 7784055621292080}
@@ -221,51 +220,6 @@ MonoBehaviour:
   enemyDMG: 0
   destroyProjectile: 0
   fireRate: 0
---- !u!61 &7545252174107381907
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2706342523978547562}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 65536
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 32768
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0000009536743, y: -0.1875372}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5052204, y: 0.6325054}
-  m_EdgeRadius: 0
 --- !u!58 &1157933520874361866
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -278,10 +232,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 524288
+    m_Bits: 589824
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -354,7 +308,7 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 589824
+    m_Bits: 65536
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 36864
@@ -371,7 +325,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0013237, y: -0.1411381}

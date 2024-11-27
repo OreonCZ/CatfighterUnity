@@ -179,9 +179,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlowerFiend
       objectReference: {fileID: 0}
+    - target: {fileID: 213290475513651471, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
+        type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 6819458896778483242}
     - target: {fileID: 1294990190647642068, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829485722419305511, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2291485175748690641, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
@@ -189,6 +199,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4150bc4eda8f4ac49b47ca01e0651925, type: 2}
+    - target: {fileID: 2662709777455111786, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 12288
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439769629966158103, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3764708357494825342, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
         type: 3}
       propertyPath: m_Sprite
@@ -213,12 +233,12 @@ PrefabInstance:
     - target: {fileID: 6156562254029678519, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.943533
+      value: 9.23
       objectReference: {fileID: 0}
     - target: {fileID: 6156562254029678519, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.239603
+      value: 36.99
       objectReference: {fileID: 0}
     - target: {fileID: 6156562254029678519, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
         type: 3}
@@ -271,7 +291,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 18bab98f1cb2b6e4c96540a613ac2af1,
         type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 7729480470122326995, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2662709777455111786, guid: 07f131c7d69fa9a4a8522019cb88dc2c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6156562254029678519, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
@@ -312,3 +338,9 @@ MonoBehaviour:
     type: 3}
   nextFire: 0
   enemies: {fileID: 11400000, guid: 18bab98f1cb2b6e4c96540a613ac2af1, type: 2}
+--- !u!1 &6819458896778483242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 391512870382144492, guid: 07f131c7d69fa9a4a8522019cb88dc2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6615079070575418822}
+  m_PrefabAsset: {fileID: 0}
