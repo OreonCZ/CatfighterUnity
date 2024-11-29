@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 841324829745113017}
   - component: {fileID: 7634050392261786988}
   - component: {fileID: -4070595953073844742}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: roseFlower
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -188,6 +188,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   playerHit: 0
   enemies: {fileID: 11400000, guid: cd2651b71da48114db08924f3235ea5e, type: 2}
+  enemy: {fileID: 0}
 --- !u!198 &7634050392261786988
 ParticleSystem:
   m_ObjectHideFlags: 0

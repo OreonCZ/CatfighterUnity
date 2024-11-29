@@ -17,6 +17,7 @@ public class EnemySoldierShoot : MonoBehaviour
     GameObject player;
     EnemyRangerAttack enemyRangerAttack;
     EnemyBulletAttack enemyBulletAttack;
+    [HideInInspector] public GameObject enemy;
 
 
     void Start()
@@ -58,6 +59,14 @@ public class EnemySoldierShoot : MonoBehaviour
         {
             enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
         }
+        if ("Cultist" == enemyScript.catName)
+        {
+            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
+        }
+        if ("Ninja" == enemyScript.catName)
+        {
+            enemyRangerAttack = enemy.GetComponent<EnemyRangerAttack>();
+        }
     }
 
     void Projectile()
@@ -70,9 +79,14 @@ public class EnemySoldierShoot : MonoBehaviour
         enemyProjectileDMG.OnHitDamage(enemyScript.enemyRangeDMG);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void EnemyTriggerOutcomes(Collider2D collision)
     {
-        if (collision.CompareTag(ObjectTags.Player.ToString()))
+        if ("Cultist" == enemyScript.catName)
+        {
+            Destroy(gameObject);
+        }
+
+        else
         {
             if (parry.isParrying)
             {
@@ -89,8 +103,26 @@ public class EnemySoldierShoot : MonoBehaviour
             {
                 //GetComponent<CircleCollider2D>().enabled = false;
             }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(ObjectTags.Player.ToString()))
+        {
+            EnemyTriggerOutcomes(collision);
+            return;
+        }
+        if (collision.CompareTag(ObjectTags.Sword.ToString())){
+        
+            if ("Ninja" == enemyScript.catName)
+            {
+                Destroy(gameObject);
+            }
             return;
         }
     }
 }
+
+
 

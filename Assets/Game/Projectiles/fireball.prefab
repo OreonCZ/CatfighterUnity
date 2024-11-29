@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 303638757077117212}
   - component: {fileID: 5358549180147871855}
   - component: {fileID: 1947575865242988008}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: fireball
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -187,6 +187,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   playerHit: 0
   enemies: {fileID: 11400000, guid: 06f6e9c222bcd0c4093bca7e471cf662, type: 2}
+  enemy: {fileID: 0}
 --- !u!96 &1947575865242988008
 TrailRenderer:
   serializedVersion: 3

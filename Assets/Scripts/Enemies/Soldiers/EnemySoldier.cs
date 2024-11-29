@@ -33,7 +33,7 @@ public class EnemySoldier : MonoBehaviour
 
     private enum CatNames
     {
-        Knight, Ranger, Fiend, Intruder
+        Knight, Ranger, Fiend, Intruder, Cultist, Ninja
     }
     public void EnemyNameCompare()
     {
@@ -60,6 +60,17 @@ public class EnemySoldier : MonoBehaviour
             animator.SetBool("FightRight", false);
             animator.SetBool("FightLeft", false);
         }
+        if (CatNames.Cultist.ToString() == catName)
+        {
+            animator.SetBool("Idle", false);
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Ninja.ToString() == catName)
+        {
+            animator.SetBool("Idle", false);
+            animator.SetBool("Fight", false);
+        }
     }
 
     public void EnemyAttackDiff(EnemySoldierAttack enemySoldierAttack, EnemyRangerAttack enemyRangerAttack, EnemyBulletAttack enemyBulletAttack)
@@ -81,6 +92,15 @@ public class EnemySoldier : MonoBehaviour
         {
             enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
             enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+        }
+        if (CatNames.Cultist.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+        }
+        if (CatNames.Ninja.ToString() == catName)
+        {
+            enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
         }
     }
 

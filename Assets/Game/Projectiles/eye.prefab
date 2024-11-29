@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 5675106164467421488}
   - component: {fileID: 5174672278553621907}
   - component: {fileID: 624953794078432892}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: eye
-  m_TagString: Coin
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

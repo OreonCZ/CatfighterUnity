@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 841324829745113017}
   - component: {fileID: 1545117986216879075}
   - component: {fileID: 1507482891863948784}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: abyssFlower
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -188,6 +188,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   playerHit: 0
   enemies: {fileID: 11400000, guid: 18bab98f1cb2b6e4c96540a613ac2af1, type: 2}
+  enemy: {fileID: 0}
 --- !u!198 &1545117986216879075
 ParticleSystem:
   m_ObjectHideFlags: 0

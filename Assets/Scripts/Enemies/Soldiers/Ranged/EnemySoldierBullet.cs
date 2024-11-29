@@ -71,6 +71,31 @@ public class EnemySoldierBullet : MonoBehaviour
 				nextFire = Time.time + 1f / enemySoldier.fireRate;
 			}
 		}
+		if ("Cultist" == enemySoldier.catName)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemySoldierHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+		if ("Ninja" == enemySoldier.catName)
+		{
+			EnemyRangerAttack enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
+			if (Time.time > nextFire)
+			{
+				if (enemySoldierHP.currentSoldierHp > 0 && enemyRangerAttack.soldierAttacks)
+				{
+					Fire();
+					StartCoroutine(DoubleShoot());
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
 	}
 	// Update is called once per frame
 	void Update()
@@ -107,5 +132,11 @@ public class EnemySoldierBullet : MonoBehaviour
 				bulletComponent.direction = direction;
 			}
 		}
+	}
+
+	IEnumerator DoubleShoot()
+    {
+		yield return new WaitForSeconds(0.3f);
+		Fire();
 	}
 }
