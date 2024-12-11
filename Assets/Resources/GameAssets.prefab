@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8679532743967636569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6099319944144167529}
+  - component: {fileID: 1519906162275881301}
+  m_Layer: 0
+  m_Name: GameAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6099319944144167529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8679532743967636569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5747915, y: 0.544576, z: -2.2208683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1519906162275881301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8679532743967636569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be1084fba2399144864ffa02e5da0cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: -773154900, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
+  heart: {fileID: 1898349319, guid: 628f5a6ad8185d649be7827899316bec, type: 3}
+  milk: {fileID: 1371849673, guid: 91f30e83d35473247b370f7eb1cb68a1, type: 3}
+  speed: {fileID: -1056833824, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  fish: {fileID: 285370660, guid: 59da67333393e5b45ad6bade5227b34e, type: 3}
+  stamina: {fileID: 192468361, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
