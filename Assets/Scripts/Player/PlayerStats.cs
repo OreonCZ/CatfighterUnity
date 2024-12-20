@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.EnumTypes;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -12,22 +11,65 @@ public class PlayerStats : MonoBehaviour
     public float playerMaxStamina = 50f;
     public int currentMoney = 0;
 
+
     private void Awake()
     {
-        
+        Debug.Log(playerMaxHP);
+    }
+    private void Start()
+    {
+        LoadPlayer();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            ResetStats();
+        }
+        SavePlayerStats();
     }
 
-    public void SaveStats()
+    public void UpgradeHP(float amount) { playerMaxHP += amount; }
+    public void UpgradeDamage(float amount) { playerDamage += amount; }
+    public void UpgradeSpeed(float amount) { playerMovementSpeed += amount; }
+    public void UpgradeStamina(float amount) { playerMaxStamina += amount; }
+    public void IncreaseMoney(int amount) { currentMoney += amount;
+        Debug.Log("money hehe " + currentMoney);
+    }
+
+ 
+    public void SavePlayerStats()
     {
-        PlayerPrefs.SetFloat("playerMaxHP", playerMaxHP);
-        PlayerPrefs.SetFloat("playerDamage", playerDamage);
-        PlayerPrefs.SetInt("playerMilk", playerMilk);
-        PlayerPrefs.SetFloat("playerMovementSpeed", playerMovementSpeed);
-        PlayerPrefs.SetFloat("playerMaxStamina", playerMaxStamina);
-        PlayerPrefs.SetInt("currentMoney", currentMoney);
-        PlayerPrefs.Save();
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerStatsData data = SaveSystem.LoadPlayer();
+
+        playerMaxHP = data.playerMaxHP;
+        playerDamage = data.playerDamage;
+        playerMilk = data.playerMilk;
+        playerMovementSpeed = data.playerMovementSpeed;
+        playerMaxStamina = data.playerMaxStamina;
+        currentMoney = data.currentMoney;
+
+        //Vector3 position;
+        //position.x = data.playerPosition[0];
+        //position.y = data.playerPosition[1];
+        //position.z = data.playerPosition[2];
+        //transform.position = position;
+
+    }
+
+    public void ResetStats()
+    {
+        playerMaxHP = 9;
+        playerDamage = 1f;
+        playerMilk = 2;
+        playerMovementSpeed = 150f;
+        playerMaxStamina = 50f;
+        currentMoney = 0;
+        Debug.Log("Player stats reset to default values.");
     }
 }
-
-
-

@@ -86,7 +86,8 @@ public enum SceneIndex
     ArenaThree = 11,
     ArenaFour = 12,
     ArenaFive = 13,
-    ArenaSix = 14
+    ArenaSix = 14,
+    Shop = 15
 }
 
 

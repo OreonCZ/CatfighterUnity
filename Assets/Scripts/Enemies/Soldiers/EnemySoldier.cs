@@ -15,6 +15,7 @@ public class EnemySoldier : MonoBehaviour
     [HideInInspector] public float enemyDMG;
     [HideInInspector] public float destroyProjectile;
     [HideInInspector] public float fireRate;
+    [HideInInspector] public int catLvl;
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,6 +30,7 @@ public class EnemySoldier : MonoBehaviour
         enemyAttackCooldown = enemies.enemyAttackCooldown;
         destroyProjectile = enemies.destroyProjectile;
         fireRate = enemies.fireRate;
+        catLvl = enemies.catLevel;
     }
 
     private enum CatNames

@@ -21,3 +21,4 @@ MonoBehaviour:
   shootDamage: 2
   fireSpeed: 12
   destroyProjectile: 3
+  catLevel: 1

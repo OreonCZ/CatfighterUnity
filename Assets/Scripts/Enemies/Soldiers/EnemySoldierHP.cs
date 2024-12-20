@@ -16,6 +16,9 @@ public class EnemySoldierHP : MonoBehaviour
     EnemySoldierMoving enemySoldierMoving;
     Animator animator;
     public static bool isDefeated = false;
+    bool isKilled = false;
+    GameObject player;
+    PlayerStats playerStats;
 
     // Start is called before the first frame update
 
@@ -24,9 +27,11 @@ public class EnemySoldierHP : MonoBehaviour
         enemySoldier = GetComponent<EnemySoldier>();
         animator = GetComponent<Animator>();
         enemySoldierMoving = GetComponent<EnemySoldierMoving>();
-        Debug.Log(currentSoldierHp + " " + enemySoldier.maxEnemyHP);
+        //Debug.Log(currentSoldierHp + " " + enemySoldier.maxEnemyHP);
         enemyHpBar = transform.Find("EnemyBar").gameObject;
         enemyHpSlider = enemyHpBar.GetComponentInChildren<Slider>();
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        playerStats = player.GetComponent<PlayerStats>();
 
         currentSoldierHp = enemySoldier.maxEnemyHP;
 
@@ -36,18 +41,18 @@ public class EnemySoldierHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(currentSoldierHp + " " + enemySoldier.maxEnemyHP);
         if (enemyHpSlider != null)
         {
             enemyHpSlider.value = currentSoldierHp;
         }
-        //Debug.Log(currentSoldierHp);
         if (currentSoldierHp <= 0)
         {
             DiffCat();
+            isDefeated = true;
+            isKilled = true;
+
             enemySoldierMoving.agent.isStopped = true;
             enemySoldierMoving.isFollowing = false;
-            isDefeated = true;
             animator.SetBool("Ko", true);
             animator.SetBool("WalkingLeft", false);
             animator.SetBool("WalkingRight", false);
@@ -55,27 +60,37 @@ public class EnemySoldierHP : MonoBehaviour
             enemyHpBar.SetActive(false);
         }
     }
+
+    void GetMoneyOnce(int value)
+    {
+        if(!isKilled) playerStats.IncreaseMoney(value * enemySoldier.catLvl);
+    }
+
     private void DiffCat()
     {
-        if("Knight" == enemySoldier.catName)
+        if ("Knight" == enemySoldier.catName)
         {
             enemySoldierAttack.soldierCanAttack = false;
             enemySoldierAttack.soldierAttacks = false;
+            GetMoneyOnce(2);
         }
         if ("Fiend" == enemySoldier.catName)
         {
             enemySoldierAttack.soldierCanAttack = false;
             enemySoldierAttack.soldierAttacks = false;
+            GetMoneyOnce(4);
         }
         if ("Ranger" == enemySoldier.catName)
         {
             //enemyRangerAttack.soldierAttacks = false;
             //enemyRangerAttack.soldierCanAttack = false;
+            GetMoneyOnce(1);
         }
         if ("Intruder" == enemySoldier.catName)
         {
             enemySoldierAttack.soldierAttacks = false;
             enemySoldierAttack.soldierCanAttack = false;
+            GetMoneyOnce(5);
         }
     }
 }

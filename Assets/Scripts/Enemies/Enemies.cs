@@ -15,4 +15,5 @@ public class Enemies : ScriptableObject
     public float shootDamage;
     public float fireSpeed;
     public float destroyProjectile;
+    public int catLevel;
 }
