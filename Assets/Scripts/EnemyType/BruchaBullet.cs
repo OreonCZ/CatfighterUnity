@@ -12,7 +12,6 @@ public class BruchaBullet : MonoBehaviour
 	public Enemies enemies;
 	public BruchaShoot bruchaShoot;
 	public Enemy enemy;
-	public Brucha brucha;
 	bool wait;
 
 	// Use this for initialization
@@ -26,7 +25,7 @@ public class BruchaBullet : MonoBehaviour
 	{
 		if (Time.time > nextFire && wait)
 		{
-			if (enemy.currentEnemyHP > 0 && brucha.canShoot)
+			if (enemy.currentEnemyHP > 0)
 			{
 				Fire();
 			}

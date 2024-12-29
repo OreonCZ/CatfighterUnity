@@ -44,7 +44,6 @@ public class OscarShoot : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GetComponent<CircleCollider2D>().enabled = false;
             Destroy(gameObject);
             return;
         }

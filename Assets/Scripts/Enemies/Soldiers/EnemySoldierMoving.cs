@@ -111,7 +111,7 @@ public class EnemySoldierMoving : MonoBehaviour
                 //enemyBulletAttack.canShoot = false;
                 Debug.Log("ejakfhnsishnvgkjsen");
             }
-
+            animator.SetBool("Idle", false);
             isFollowing = true;
             circleCollider.radius += radiusChange;
             //Debug.Log("Started following");

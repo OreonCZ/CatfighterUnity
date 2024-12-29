@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Yuki : MonoBehaviour
 {
-    public Enemy enemy;
-    public EnemyMovement enemyMovement;
+    EnemySoldier enemy;
+    EnemyHP enemyHP;
+    EnemySoldierMoving enemyMovement;
     public bool yukiShoot = false;
     public bool canShoot = true;
     bool yukiTransform = false;
-    public Enemies enemies;
-    public Animator animator;
-    public YukiBulletScript yukiBulletScript;
+    public EnemySoldierBullet enemySoldierBullet;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemy = GetComponent<EnemySoldier>();
+        enemyHP = GetComponent<EnemyHP>();
+        enemyMovement = GetComponent<EnemySoldierMoving>();
+        animator = GetComponent<Animator>();
         
     }
 
@@ -28,7 +33,7 @@ public class Yuki : MonoBehaviour
 
     void YukiChange()
     {
-        if ( enemy.currentEnemyHP <= (enemies.maxEnemyHp / 2) && enemy.currentEnemyHP > 1)
+        if ( enemyHP.currentSoldierHp <= (enemy.maxEnemyHP / 2) && enemyHP.currentSoldierHp > 1)
         {
             enemy.destroyProjectile = 2f;
             enemy.enemyRangeSpeed = 8f;
@@ -36,13 +41,13 @@ public class Yuki : MonoBehaviour
             StartCoroutine(WaitYuki());
             StartCoroutine(YukiCooldown());
         }
-        else if(enemy.currentEnemyHP == 1)
+        else if( enemyHP.currentSoldierHp == 1)
         {
             enemy.enemyRangeSpeed = 10f;
             enemy.fireRate = 20f;
             StartCoroutine(YukiCooldown());
         }
-        else if (enemy.currentEnemyHP == 0)
+        else if ( enemyHP.currentSoldierHp == 0)
         {
             animator.SetBool("isReloading", false);
         }
@@ -51,9 +56,9 @@ public class Yuki : MonoBehaviour
     IEnumerator WaitYuki()
     {
         if (!yukiTransform) {
-        yukiBulletScript.wait = false;
+
         yield return new WaitForSeconds(1.5f);
-        yukiBulletScript.wait = true;
+
         yukiTransform = true;
         }
     }
@@ -61,19 +66,21 @@ public class Yuki : MonoBehaviour
     {
         if (yukiShoot)
         {
+            enemySoldierBullet.wait = true;
             canShoot = true;
             animator.SetBool("isReloading", false);
-            enemy.enemyMovementSpeed = 3f;
+            enemyMovement.isFollowing = true;
             yield return new WaitForSeconds(1.5f);
             yukiShoot = false;
         }
         else if (!yukiShoot)
         {
+            enemySoldierBullet.wait = false;
             canShoot = false;
             animator.SetBool("isReloading", true);
             animator.SetBool("WalkingLeft", false);
             animator.SetBool("WalkingRight", false);
-            enemy.enemyMovementSpeed = 0f;
+            enemyMovement.isFollowing = false;
             yield return new WaitForSeconds(1.5f);
             yukiShoot = true;
         }

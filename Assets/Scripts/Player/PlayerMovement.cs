@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     Milk milk;
     private float rollTime = 0.5f;
     private float rollCooldown = 0.3f;
-    private float rollSpeed = 5;
+    private float rollSpeed;
     public bool isRolling = false;
     private float rollStaminaDrain = 20;
     public bool canRoll = true;
@@ -54,6 +54,7 @@ public class Movement : MonoBehaviour
         slider.maxValue = maxStamina;
 
         enemy = GameObject.FindGameObjectWithTag(ObjectTags.Enemy.ToString());
+        rollSpeed = movementSpeed / 30;
     }
 
     // Update is called once per frame

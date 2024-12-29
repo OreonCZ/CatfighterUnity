@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  maxHp: 8
+  maxHp: 9
   currentHp: 0
   dedScreen: {fileID: 0}
   gameBar: {fileID: 0}
@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdb420b2e335f94eb196b003fe22030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHP: 8
+  playerMaxHP: 9
   playerDamage: 1
   playerMilk: 2
   playerMovementSpeed: 150

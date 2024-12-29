@@ -28,6 +28,7 @@ TagManager:
   - lobbyManager
   - gameUI
   - enemyHpBar
+  - BruchaVanish
   layers:
   - Default
   - TransparentFX

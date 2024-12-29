@@ -53,6 +53,10 @@ public class tileEffects : MonoBehaviour
             canDealPoison = true;
             playerMovement.movementSpeed = playerStats.playerMovementSpeed - slowDown;
         }
+
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.CompareTag(ObjectTags.Player.ToString()) && gameObject.CompareTag(ObjectTags.fartShroom.ToString()))
         {
             if (Random.Range(0, 10) < 2)
@@ -62,6 +66,8 @@ public class tileEffects : MonoBehaviour
             }
         }
     }
+
+
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(ObjectTags.Player.ToString()) && gameObject.CompareTag(ObjectTags.mud.ToString()))

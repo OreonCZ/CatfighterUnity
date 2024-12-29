@@ -29,6 +29,8 @@ public class Milk : MonoBehaviour
         hpBar = gameObject.GetComponent<HpBar>();
         playerStats = player.GetComponent<PlayerStats>();
         playerStats.playerMilk = numberOfMilk;
+        animator = GetComponent<Animator>();
+
 
         numberOfMilk = milkNumber;
     }

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Yuki
   m_EditorClassIdentifier: 
   catName: Yuki
-  maxEnemyHp: 8
-  enemyDamage: 1
+  maxEnemyHp: 30
+  enemyDamage: 2
   enemySpeed: 2.5
   enemyAttackCooldown: 0.5
   fireRate: 0.8
   shootDamage: 1
   fireSpeed: 7
-  destroyProjectile: 2
+  destroyProjectile: 3
   catLevel: 1

@@ -220,6 +220,7 @@ MonoBehaviour:
   enemyDMG: 0
   destroyProjectile: 0
   fireRate: 0
+  catLvl: 0
 --- !u!58 &1157933520874361866
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -367,7 +368,7 @@ MonoBehaviour:
   enemySoldierAttack: {fileID: 0}
   enemyRangerAttack: {fileID: 0}
   enemyBulletAttack: {fileID: 0}
-  enemyHpBar: {fileID: 0}
+  enemyHpBar: {fileID: 7055586465738149979}
   enemyHpSlider: {fileID: 0}
   currentSoldierHp: 0
 --- !u!114 &4350632278049118254

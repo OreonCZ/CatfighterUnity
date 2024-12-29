@@ -495,6 +495,9 @@ GameObject:
   - component: {fileID: 8256539112910021139}
   - component: {fileID: 6103344674979059769}
   - component: {fileID: 5178511405449984061}
+  - component: {fileID: 1114607336457208161}
+  - component: {fileID: 1436864902686603947}
+  - component: {fileID: 1337670098890344548}
   m_Layer: 5
   m_Name: CanvasPlayer
   m_TagString: Untagged
@@ -601,8 +604,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bb6e47b3fbeb04599d48ef949cb0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSlider: {fileID: 0}
+  audioSlider: {fileID: 4503766729952716807}
   audioMixer: {fileID: 24100000, guid: b69fe33bb876cc242a6a06fa7afd20b4, type: 2}
+--- !u!222 &1114607336457208161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918019617966042894}
+  m_CullTransparentMesh: 1
+--- !u!114 &1436864902686603947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918019617966042894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1337670098890344548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918019617966042894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7464c42a8beb94e8652460f471f1eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 7403012948809478607}
+  uiImage: {fileID: 1436864902686603947}
+  bloodyImage: {fileID: 21300000, guid: 5b0d393690d04854ba1164169da94803, type: 3}
 --- !u!1 &8981910194467164102
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,9 +782,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 8
+  m_MaxValue: 9
   m_WholeNumbers: 0
-  m_Value: 8
+  m_Value: 9
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

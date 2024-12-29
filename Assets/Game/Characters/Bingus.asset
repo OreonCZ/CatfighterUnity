@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Bingus
   m_EditorClassIdentifier: 
   catName: Bingus
-  maxEnemyHp: 12
-  enemyDamage: 1
-  enemySpeed: 2.5
+  maxEnemyHp: 40
+  enemyDamage: 2
+  enemySpeed: 15
   enemyAttackCooldown: 1
-  fireRate: 0.2
-  shootDamage: 1
-  fireSpeed: 12
+  fireRate: 0.5
+  shootDamage: 0
+  fireSpeed: 7
   destroyProjectile: 5
   catLevel: 1

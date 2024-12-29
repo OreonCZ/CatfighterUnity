@@ -33,9 +33,9 @@ public class EnemySoldier : MonoBehaviour
         catLvl = enemies.catLevel;
     }
 
-    private enum CatNames
+    public enum CatNames
     {
-        Knight, Ranger, Fiend, Intruder, Cultist, Ninja
+        Knight, Ranger, Fiend, Intruder, Cultist, Ninja, Kevin, Yuki, Bingus, Miscar, Oscar, Brucha
     }
     public void EnemyNameCompare()
     {
@@ -73,6 +73,36 @@ public class EnemySoldier : MonoBehaviour
             animator.SetBool("Idle", false);
             animator.SetBool("Fight", false);
         }
+        if (CatNames.Kevin.ToString() == catName)
+        {
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Yuki.ToString() == catName)
+        {
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Bingus.ToString() == catName)
+        {
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Miscar.ToString() == catName)
+        {
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Oscar.ToString() == catName)
+        {
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
+        if (CatNames.Brucha.ToString() == catName)
+        {
+            animator.SetBool("FightRight", false);
+            animator.SetBool("FightLeft", false);
+        }
     }
 
     public void EnemyAttackDiff(EnemySoldierAttack enemySoldierAttack, EnemyRangerAttack enemyRangerAttack, EnemyBulletAttack enemyBulletAttack)
@@ -104,11 +134,39 @@ public class EnemySoldier : MonoBehaviour
         {
             enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
         }
+        if (CatNames.Kevin.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+        }
+        if (CatNames.Yuki.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+        }
+        if (CatNames.Bingus.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+        }
+        if (CatNames.Miscar.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+        }
+        if (CatNames.Oscar.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+        }
+        if (CatNames.Brucha.ToString() == catName)
+        {
+            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
+            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

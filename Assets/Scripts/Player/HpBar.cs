@@ -18,12 +18,15 @@ public class HpBar : MonoBehaviour
     GameObject player;
     PlayerStats playerStats;
 
+
+    private void Awake()
+    {
+        SaveSystem.LoadPlayer();
+    }
     void Start()
     {
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         hpBorder = GameObject.FindGameObjectWithTag(ObjectTags.hpBorder.ToString());
-        //dedScreen = GameObject.FindGameObjectWithTag(ObjectTags.dedScreen.ToString());
-        //gameBar = GameObject.FindGameObjectWithTag(ObjectTags.gameUI.ToString());
 
         playerStats = player.GetComponent<PlayerStats>();
         slider = hpBorder.GetComponent<Slider>();
@@ -35,9 +38,13 @@ public class HpBar : MonoBehaviour
 
     void Update()
     {
-        slider.value = currentHp;
+        if (slider != null)
+        {
+            slider.value = currentHp;
+        }
+        
 
-        if(currentHp <= 0) {
+        if (currentHp <= 0) {
             dedScreen.SetActive(true);
             gameBar.SetActive(false);
             //enemyMovement.enemyCanMove = false;

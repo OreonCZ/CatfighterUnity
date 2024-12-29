@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class ChangeHead : MonoBehaviour
 {
@@ -9,26 +10,28 @@ public class ChangeHead : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
-    Slider slider;
     [SerializeField] GameObject slider2;
+    GameObject player;
+    HpBar hpBar;
 
     void Start()
     {
-        slider = slider2.GetComponent<Slider>();
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
+        hpBar = player.GetComponent<HpBar>();
     }
 
     void Update()
     {
-        if(slider.value > 5)
+        if(hpBar.currentHp > (hpBar.maxHp / 2))
         {
             head.sprite = sprite1;
         }
 
-       else if(slider.value <= 5 && slider.value >= 2)
+       else if(hpBar.currentHp > (hpBar.maxHp / 4) && hpBar.currentHp <= (hpBar.maxHp / 2))
         {
             head.sprite = sprite2;
         }
-        else if (slider.value <= 1)
+        else if (hpBar.currentHp <= (hpBar.maxHp / 4))
         {
             head.sprite = sprite3;
         }

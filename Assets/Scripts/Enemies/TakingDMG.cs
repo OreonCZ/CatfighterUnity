@@ -32,10 +32,23 @@ public class TakingDMG : MonoBehaviour
         {
             Debug.Log("enemy hit");
             EnemySoldierHP enemySoldierHp = collider.gameObject.GetComponent<EnemySoldierHP>();
+            EnemyHP enemyHP = collider.gameObject.GetComponent<EnemyHP>();
             if (enemySoldierHp != null)
             {
                 enemySoldierHp.currentSoldierHp -= fight.attackDamage;
+                Debug.Log(enemySoldierHp.currentSoldierHp);
                 swordRadius.SetActive(false);
+            }
+            if (enemyHP != null)
+            {
+                enemyHP.currentSoldierHp -= fight.attackDamage;
+                Debug.Log(enemyHP.currentSoldierHp);
+                swordRadius.SetActive(false);
+                if(enemyHP.currentSoldierHp <= 0 && enemyHP.isDefeated)
+                {
+                    enemyHP.isKilled = true;
+                }
+
             }
         }
     }

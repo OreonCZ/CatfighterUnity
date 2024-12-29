@@ -44,9 +44,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be1084fba2399144864ffa02e5da0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sword: {fileID: -773154900, guid: eefe4dc5c07abde4d83962c502c39f36, type: 3}
-  heart: {fileID: 1898349319, guid: 628f5a6ad8185d649be7827899316bec, type: 3}
-  milk: {fileID: 1371849673, guid: 91f30e83d35473247b370f7eb1cb68a1, type: 3}
-  speed: {fileID: -1056833824, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
-  fish: {fileID: 285370660, guid: 59da67333393e5b45ad6bade5227b34e, type: 3}
-  stamina: {fileID: 192468361, guid: 87b903a19e8e3884f8fbd6e134c0f43c, type: 3}
+  sword1: {fileID: 1872728180, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  sword2: {fileID: -479834309, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  sword3: {fileID: 1164704847, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  sword4: {fileID: 319126285, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  heart1: {fileID: 774285539, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  heart2: {fileID: -928990808, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  heart3: {fileID: -540783721, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  heart4: {fileID: 734645773, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  milk1: {fileID: 1371849673, guid: 91f30e83d35473247b370f7eb1cb68a1, type: 3}
+  milk2: {fileID: 1371849673, guid: 91f30e83d35473247b370f7eb1cb68a1, type: 3}
+  milk3: {fileID: 1371849673, guid: 91f30e83d35473247b370f7eb1cb68a1, type: 3}
+  milk4: {fileID: 1371849673, guid: 91f30e83d35473247b370f7eb1cb68a1, type: 3}
+  speed1: {fileID: 836770168, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  speed2: {fileID: 1843524020, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  speed3: {fileID: -515404607, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  speed4: {fileID: -1003646803, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  fish: {fileID: 1981089204, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  stamina1: {fileID: -625132693, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  stamina2: {fileID: 665367818, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  stamina3: {fileID: 129914809, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  stamina4: {fileID: -204883928, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  gear: {fileID: 1706614490, guid: 28817cd63cb2814419592df9eb27f320, type: 3}
+  ball: {fileID: -92189043, guid: 28817cd63cb2814419592df9eb27f320, type: 3}

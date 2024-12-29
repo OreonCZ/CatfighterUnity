@@ -144,6 +144,7 @@ MonoBehaviour:
   enemyDMG: 0
   destroyProjectile: 0
   fireRate: 0
+  catLvl: 0
 --- !u!114 &6339334499669816661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +160,7 @@ MonoBehaviour:
   enemySoldierAttack: {fileID: 213290475513651471}
   enemyRangerAttack: {fileID: 0}
   enemyBulletAttack: {fileID: 0}
-  enemyHpBar: {fileID: 0}
+  enemyHpBar: {fileID: 6369666565588202660}
   enemyHpSlider: {fileID: 0}
   currentSoldierHp: 0
 --- !u!70 &1829485722419305511

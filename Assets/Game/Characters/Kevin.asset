@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kevin
   m_EditorClassIdentifier: 
   catName: Kevin
-  maxEnemyHp: 10
+  maxEnemyHp: 15
   enemyDamage: 1
   enemySpeed: 2
   enemyAttackCooldown: 1

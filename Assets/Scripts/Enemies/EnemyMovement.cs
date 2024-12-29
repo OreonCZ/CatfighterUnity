@@ -27,29 +27,31 @@ public class EnemyMovement : MonoBehaviour
         localScale = transform.localScale;
         enemyObject.enemyMovementSpeed = enemy.enemySpeed;
     }
-    
+
     public void MovementEnemy()
     {
         directionToPlayer = (player.transform.position - transform.position).normalized;
         enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y) * enemyObject.enemyMovementSpeed;
 
-}
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-    if (enemyCanMove)
-    {
-        MovementEnemy();
-    }
+        if (enemyCanMove)
+        {
+            MovementEnemy();
+        }
     }
 
     private void LateUpdate()
     {
-        if (enemyCanMove) { 
-            if(enemyRb.velocity.x > 0)
+        if (enemyCanMove)
+        {
+            if (enemyRb.velocity.x > 0)
             {
-                if (!takingDmgPlayer.enemyTakeDmg) { 
-                MovingRight();
+                if (!takingDmgPlayer.enemyTakeDmg)
+                {
+                    MovingRight();
                 }
                 else if (takingDmgPlayer.enemyTakeDmg)
                 {

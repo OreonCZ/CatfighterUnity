@@ -10,7 +10,7 @@ public class EnemySoldierHP : MonoBehaviour
     [HideInInspector] public EnemySoldierAttack enemySoldierAttack;
     [HideInInspector] public EnemyRangerAttack enemyRangerAttack;
     [HideInInspector] public EnemyBulletAttack enemyBulletAttack;
-    [HideInInspector] public GameObject enemyHpBar;
+    public GameObject enemyHpBar;
     [HideInInspector] public Slider enemyHpSlider;
     [HideInInspector] public float currentSoldierHp;
     EnemySoldierMoving enemySoldierMoving;
@@ -28,7 +28,6 @@ public class EnemySoldierHP : MonoBehaviour
         animator = GetComponent<Animator>();
         enemySoldierMoving = GetComponent<EnemySoldierMoving>();
         //Debug.Log(currentSoldierHp + " " + enemySoldier.maxEnemyHP);
-        enemyHpBar = transform.Find("EnemyBar").gameObject;
         enemyHpSlider = enemyHpBar.GetComponentInChildren<Slider>();
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         playerStats = player.GetComponent<PlayerStats>();
@@ -91,6 +90,13 @@ public class EnemySoldierHP : MonoBehaviour
             enemySoldierAttack.soldierAttacks = false;
             enemySoldierAttack.soldierCanAttack = false;
             GetMoneyOnce(5);
+        }
+        if ("Cultist" == enemySoldier.catName)
+        {
+            enemySoldierAttack.soldierAttacks = false;
+            enemySoldierAttack.soldierCanAttack = false;
+            GetMoneyOnce(5);
+            Destroy(gameObject, 0.7f);
         }
     }
 }

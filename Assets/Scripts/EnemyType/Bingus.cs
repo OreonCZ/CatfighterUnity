@@ -4,42 +4,31 @@ using UnityEngine;
 
 public class Bingus : MonoBehaviour
 {
-    public Enemy enemy;
-    public EnemyMovement enemyMovement;
-    public SpriteRenderer spriteRenderer;
-    TakingDmgPlayer takingDMGPlayer;
-    public GameObject bingus;
+    EnemyHP enemyHP;
+    public Enemies enemies;
+    public GameObject speedUp;
+    CircleCollider2D circleCollider;
+    EnemySoldier enemySoldier;
+
     // Start is called before the first frame update
     void Start()
     {
-        takingDMGPlayer = gameObject.GetComponent<TakingDmgPlayer>();
+        enemyHP = GetComponent<EnemyHP>();
+        circleCollider = speedUp.GetComponent<CircleCollider2D>();
+        enemySoldier = GetComponent<EnemySoldier>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (enemy.currentEnemyHP <= 6 && enemy.currentEnemyHP > 1)
+        if(enemies.maxEnemyHp * 0.1f < enemyHP.currentSoldierHp && enemies.maxEnemyHp / 2 >= enemyHP.currentSoldierHp)
         {
-            if (!takingDMGPlayer.enemyTakeDmg)
-            {
-                enemy.enemyMovementSpeed = 3f;
-                spriteRenderer.color = new Color(1f, 1f, 1f, 0.01f);
-                enemy.bingusSecond = true;
-                enemy.enemyRangeSpeed = 18f;
-            }
-            else
-            {
-                spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f, 1f);
-            }
+            enemySoldier.enemyRangeSpeed = 14f;
         }
-        else if(enemy.currentEnemyHP == 1)
+        else if(enemyHP.currentSoldierHp <= enemies.maxEnemyHp * 0.1f)
         {
-            enemy.enemyDMG = 8;
-            spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f, 0f);
-        }
-        else if (enemy.currentEnemyHP <= 0)
-        {
-            spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f, 1f);
+            enemySoldier.enemyDMG = 2f;
+            enemySoldier.fireRate = 1f;
+            circleCollider.radius = 0;
         }
     }
 }
