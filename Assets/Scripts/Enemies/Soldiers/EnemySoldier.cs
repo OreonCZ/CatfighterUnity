@@ -16,6 +16,9 @@ public class EnemySoldier : MonoBehaviour
     [HideInInspector] public float destroyProjectile;
     [HideInInspector] public float fireRate;
     [HideInInspector] public int catLvl;
+    [HideInInspector] public bool isBoss;
+    [HideInInspector] public bool isRanger;
+    [HideInInspector] public bool isMelee;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,134 +34,41 @@ public class EnemySoldier : MonoBehaviour
         destroyProjectile = enemies.destroyProjectile;
         fireRate = enemies.fireRate;
         catLvl = enemies.catLevel;
+        isBoss = enemies.isBoss;
+        isRanger = enemies.isRanger;
+        isMelee = enemies.isMelee;
     }
 
     public enum CatNames
     {
-        Knight, Ranger, Fiend, Intruder, Cultist, Ninja, Kevin, Yuki, Bingus, Miscar, Oscar, Brucha
+        Knight, Ranger, Fiend, Intruder, Cultist, Ninja, Kevin, Yuki, Bingus, Miscar, Oscar, Brucha, FBingus
     }
     public void EnemyNameCompare()
     {
-        if (CatNames.Knight.ToString() == catName)
+        if (!enemies.isRanger)
         {
             animator.SetBool("Idle", false);
             animator.SetBool("FightRight", false);
             animator.SetBool("FightLeft", false);
         }
-        if (CatNames.Fiend.ToString() == catName)
-        {
-            animator.SetBool("Idle", false);
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Ranger.ToString() == catName)
+        else
         {
             animator.SetBool("Idle", false);
             animator.SetBool("Fight", false);
-        }
-        if (CatNames.Intruder.ToString() == catName)
-        {
-            animator.SetBool("Idle", false);
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Cultist.ToString() == catName)
-        {
-            animator.SetBool("Idle", false);
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Ninja.ToString() == catName)
-        {
-            animator.SetBool("Idle", false);
-            animator.SetBool("Fight", false);
-        }
-        if (CatNames.Kevin.ToString() == catName)
-        {
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Yuki.ToString() == catName)
-        {
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Bingus.ToString() == catName)
-        {
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Miscar.ToString() == catName)
-        {
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Oscar.ToString() == catName)
-        {
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
-        }
-        if (CatNames.Brucha.ToString() == catName)
-        {
-            animator.SetBool("FightRight", false);
-            animator.SetBool("FightLeft", false);
         }
     }
 
     public void EnemyAttackDiff(EnemySoldierAttack enemySoldierAttack, EnemyRangerAttack enemyRangerAttack, EnemyBulletAttack enemyBulletAttack)
     {
-        if (CatNames.Knight.ToString() == catName)
+        if (enemies.isMelee)
         {
             enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
         }
-        if (CatNames.Fiend.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
-        }
-        if (CatNames.Ranger.ToString() == catName)
+        else if (!enemies.isMelee && enemies.isRanger)
         {
             enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
         }
-        if (CatNames.Intruder.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
-        }
-        if (CatNames.Cultist.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
-        }
-        if (CatNames.Ninja.ToString() == catName)
-        {
-            enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
-        }
-        if (CatNames.Kevin.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-        }
-        if (CatNames.Yuki.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
-        }
-        if (CatNames.Bingus.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
-        }
-        if (CatNames.Miscar.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
-        }
-        if (CatNames.Oscar.ToString() == catName)
-        {
-            enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
-            enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
-        }
-        if (CatNames.Brucha.ToString() == catName)
+        else
         {
             enemySoldierAttack = GetComponentInChildren<EnemySoldierAttack>();
             enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();

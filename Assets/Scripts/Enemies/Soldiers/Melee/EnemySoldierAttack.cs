@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemySoldierAttack : MonoBehaviour
 {
     public GameObject enemy;
+    EnemyHP enemyHP;
     GameObject player;
     GameObject parentSoldierGameObject;
     EnemySoldierMoving parentSoldier;
@@ -19,6 +20,7 @@ public class EnemySoldierAttack : MonoBehaviour
     public bool soldierAttacks = false;
     private float chargeSoldierBar = 0f;
     Animator animator;
+    Brucha brucha;
 
     private Coroutine colorChangeCoroutine;
 
@@ -33,6 +35,8 @@ public class EnemySoldierAttack : MonoBehaviour
         playerParry = player.GetComponent<Parry>();
         animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
         spriteRenderer = enemy.GetComponent<SpriteRenderer>();
+        enemyHP = enemy.GetComponent<EnemyHP>();
+        brucha = enemy.GetComponent<Brucha>();
         //animator = gameObject.transform.parent.gameObject.GetComponent<Animator>();
     }
 
@@ -57,6 +61,10 @@ public class EnemySoldierAttack : MonoBehaviour
             if (!playerParry.isParrying)
             {
                 playerHpBar.currentHp -= parentSoldierStats.enemyDMG;
+                if(parentSoldierStats.catName == "Brucha" && brucha.transformBrucha)
+                {
+                    enemyHP.currentSoldierHp += (parentSoldierStats.enemyDMG / 4);
+                }
                 Debug.Log("au");
             }
         }

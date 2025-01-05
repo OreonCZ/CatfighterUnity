@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -135,7 +135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -177,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -198,7 +198,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -219,7 +219,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -240,7 +240,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -261,7 +261,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -282,7 +282,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -303,7 +303,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 432
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -324,7 +324,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -345,7 +345,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 528
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -366,7 +366,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 576
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -387,7 +387,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 624
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -408,7 +408,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 672
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -429,7 +429,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 720
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -450,7 +450,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -471,7 +471,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 816
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -492,7 +492,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 864
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -513,7 +513,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 912
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -534,7 +534,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 960
-        y: 48
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -555,7 +555,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -576,7 +576,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -597,7 +597,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -618,7 +618,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -639,7 +639,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -660,7 +660,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -681,7 +681,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -702,7 +702,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -723,7 +723,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -744,7 +744,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 432
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -765,7 +765,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -786,7 +786,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 528
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -807,7 +807,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 576
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -828,7 +828,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 624
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -849,7 +849,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 672
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -870,7 +870,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 720
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -891,7 +891,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -912,7 +912,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 816
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -933,7 +933,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 864
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -954,7 +954,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 912
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -975,7 +975,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 960
-        y: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -987,6 +987,447 @@ TextureImporter:
       bones: []
       spriteID: 194dea5ccd60d7e44b9660892c74a981
       internalID: 533513639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6dfdd0b2249f0489c478edf6da1de1
+      internalID: -1921552655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ba6f446b0e0ba4786466a6f30fbb91
+      internalID: -1449172390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a04e8c006cdfe4b92c808870a2ceaf
+      internalID: 904573336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_45
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8895a2441a185409b912188a0b5734
+      internalID: -103691068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f147022fdb0de0c4997334bb46d6a380
+      internalID: -370256409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_47
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acca91f3d9c2d1e4e81d247caba93e6c
+      internalID: 684476803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_48
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f961c84eac4c2e843bd2c9fa6ca2267d
+      internalID: -1756082184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_49
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1b422c6ff1d484f8980c1233f90463
+      internalID: 1217142268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc72abcf34dbbb4d906d2933f3efdcf
+      internalID: -696656201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_51
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df740f217a4b90549b809e6a7f4b9b2e
+      internalID: 1288055716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_52
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d929ed79ba70b43beb64e06a2c904b
+      internalID: 1586355252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_53
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eca1364b3cd8c043984175f2c532491
+      internalID: 1934330933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_54
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11359864ec2281948a04a74c8f33518b
+      internalID: -141986133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_55
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d078d978464590d47998f0ecb46a8d08
+      internalID: -721954131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_56
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30b334e6d25f904c914d910f8ac27b8
+      internalID: -913629958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_57
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0377cebee310fec4099170f3f5243da4
+      internalID: -1164984975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_58
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8a027ff997e934098667e2b4c5ace7
+      internalID: 927162827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_59
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a799617c2041e249aa2bc23fea61711
+      internalID: 2035254238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_60
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8734a3ed5d1174543ab0fba1b1e26127
+      internalID: -1706471719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_61
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cd7d5acb1402240a31d3e5ee83b2b5
+      internalID: -1771369187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBingusBoss_62
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9307102284b70334096ad38d8f2f96a9
+      internalID: -1454403843
       vertices: []
       indices: 
       edges: []
@@ -1039,8 +1480,29 @@ TextureImporter:
       CorruptedBingusBoss_4: 1041849520
       CorruptedBingusBoss_40: -938447254
       CorruptedBingusBoss_41: 533513639
+      CorruptedBingusBoss_42: -1921552655
+      CorruptedBingusBoss_43: -1449172390
+      CorruptedBingusBoss_44: 904573336
+      CorruptedBingusBoss_45: -103691068
+      CorruptedBingusBoss_46: -370256409
+      CorruptedBingusBoss_47: 684476803
+      CorruptedBingusBoss_48: -1756082184
+      CorruptedBingusBoss_49: 1217142268
       CorruptedBingusBoss_5: -1857915843
+      CorruptedBingusBoss_50: -696656201
+      CorruptedBingusBoss_51: 1288055716
+      CorruptedBingusBoss_52: 1586355252
+      CorruptedBingusBoss_53: 1934330933
+      CorruptedBingusBoss_54: -141986133
+      CorruptedBingusBoss_55: -721954131
+      CorruptedBingusBoss_56: -913629958
+      CorruptedBingusBoss_57: -1164984975
+      CorruptedBingusBoss_58: 927162827
+      CorruptedBingusBoss_59: 2035254238
       CorruptedBingusBoss_6: -1098460091
+      CorruptedBingusBoss_60: -1706471719
+      CorruptedBingusBoss_61: -1771369187
+      CorruptedBingusBoss_62: -1454403843
       CorruptedBingusBoss_7: 810752860
       CorruptedBingusBoss_8: 1603253563
       CorruptedBingusBoss_9: -1694011158

@@ -29,6 +29,7 @@ public class Movement : MonoBehaviour
     GameObject sprintBar;
     bool ignore = false;
 
+
     GameObject player;
     PlayerStats playerStats;
     Parry parry;
@@ -60,26 +61,16 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //enemy check
-        if (!enemy)
-        {
-            ignore = true;
-        }
-        else if (enemy)
-        {
-            ignore = false;
-        }
 
-        slider.value = currentStamina;
-        if (!isRolling) {
-            isSprinting = Input.GetKey(KeyCode.LeftShift);
-        }
-        isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
+            slider.value = currentStamina;
+            if (!isRolling)
+            {
+                isSprinting = Input.GetKey(KeyCode.LeftShift);
+            }
+            isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
 
-
-        AnimationChanger();
-        Moving();
-
+            AnimationChanger();
+            Moving();
     }
     void Moving()
     {

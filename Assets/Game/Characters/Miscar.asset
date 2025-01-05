@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Miscar
   m_EditorClassIdentifier: 
   catName: Miscar
-  maxEnemyHp: 60
-  enemyDamage: 2
+  maxEnemyHp: 80
+  enemyDamage: 2.8
   enemySpeed: 1
   enemyAttackCooldown: 1
   fireRate: 0.5
-  shootDamage: 2.5
+  shootDamage: 2.8
   fireSpeed: 100
   destroyProjectile: 26
   catLevel: 1
+  isBoss: 1
+  isRanger: 0

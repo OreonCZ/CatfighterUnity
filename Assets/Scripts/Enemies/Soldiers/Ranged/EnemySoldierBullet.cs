@@ -13,6 +13,7 @@ public class EnemySoldierBullet : MonoBehaviour
 	//EnemyShoot enemyShoot;
 	EnemySoldier enemySoldier;
 	EnemySoldierHP enemySoldierHP;
+	flowerHP flowerHP;
 	EnemyHP enemyHP;
 	GameObject oscarArea;
 	private int spawnCount = 1;
@@ -29,6 +30,7 @@ public class EnemySoldierBullet : MonoBehaviour
 
 		enemySoldier = GetComponent<EnemySoldier>();
 		enemySoldierHP = GetComponent<EnemySoldierHP>();
+		flowerHP = GetComponent<flowerHP>();
 		enemyHP = GetComponent<EnemyHP>();
 		oscarArea = GameObject.Find("CoinSpawnArea");
 
@@ -40,6 +42,81 @@ public class EnemySoldierBullet : MonoBehaviour
 
 	void DiffRangeEnemy()
     {
+		/*if (enemies.isRanger)
+		{
+			EnemyRangerAttack enemyRangerAttack = GetComponentInChildren<EnemyRangerAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemySoldierHP.currentSoldierHp > 0 && enemyRangerAttack.soldierAttacks)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+		else if (!enemies.isMelee && !enemies.teleporingEnemy)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemies.isBoss)
+				{
+					if (enemyHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+					{
+						Fire();
+					}
+				}
+				else
+				{
+					if (enemySoldierHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+					{
+						Fire();
+					}
+				}
+
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+
+
+		else if (enemies.teleporingEnemy)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemies.isBoss)
+				{
+					if (enemyHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+					{
+						Fire();
+					}
+				}
+				else
+				{
+					if (enemySoldierHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+					{
+						Fire();
+					}
+
+					nextFire = Time.time + 1f / enemySoldier.fireRate;
+				}
+			}
+		}
+
+
+		else
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemySoldierHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+		*/
 		if ("Fiend" == enemySoldier.catName)
 		{
 			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
@@ -156,6 +233,30 @@ public class EnemySoldierBullet : MonoBehaviour
 			if (Time.time > nextFire && wait)
 			{
 				if (enemyHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+		if ("FBingus" == enemySoldier.catName)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemyHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
+		if ("Flower" == enemySoldier.catName)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (flowerHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
 				{
 					Fire();
 				}

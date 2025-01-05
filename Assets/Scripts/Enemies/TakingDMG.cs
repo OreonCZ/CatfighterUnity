@@ -28,11 +28,12 @@ public class TakingDMG : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag(ObjectTags.Enemy.ToString()))
+        if (collider.CompareTag(ObjectTags.Enemy.ToString()) || collider.CompareTag(ObjectTags.Fiend.ToString()) || collider.CompareTag(ObjectTags.flower.ToString()))
         {
             Debug.Log("enemy hit");
             EnemySoldierHP enemySoldierHp = collider.gameObject.GetComponent<EnemySoldierHP>();
             EnemyHP enemyHP = collider.gameObject.GetComponent<EnemyHP>();
+            flowerHP flowerHP = collider.gameObject.GetComponent<flowerHP>();
             if (enemySoldierHp != null)
             {
                 enemySoldierHp.currentSoldierHp -= fight.attackDamage;
@@ -48,6 +49,12 @@ public class TakingDMG : MonoBehaviour
                 {
                     enemyHP.isKilled = true;
                 }
+
+            }
+            if (flowerHP != null)
+            {
+                flowerHP.currentSoldierHp -= fight.attackDamage;
+                swordRadius.SetActive(false);
 
             }
         }

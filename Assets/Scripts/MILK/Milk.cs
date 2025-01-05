@@ -11,10 +11,9 @@ public class Milk : MonoBehaviour
     Movement playerMovement;
     public SoundEffects sf;
     public AudioClip drinkMilk;
-    public int healMilk = 2;
-    public int milkNumber;
-    public int numberOfMilk;
-    public int emptyMilk = 0;
+    float healMilk;
+    public float numberOfMilk;
+    float emptyMilk = 0;
     public bool canDrink = true;
 
     GameObject player;
@@ -28,34 +27,38 @@ public class Milk : MonoBehaviour
         playerMovement = gameObject.GetComponent<Movement>();
         hpBar = gameObject.GetComponent<HpBar>();
         playerStats = player.GetComponent<PlayerStats>();
-        playerStats.playerMilk = numberOfMilk;
         animator = GetComponent<Animator>();
+        
 
-
-        numberOfMilk = milkNumber;
+        numberOfMilk = playerStats.playerMilk;
+        healMilk = (playerStats.playerMaxHP / 4f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !playerMovement.isWalking && emptyMilk < milkNumber && canDrink && !playerMovement.isRolling)
+        if (Input.GetKeyDown(KeyCode.E) && !playerMovement.isWalking && canDrink && !playerMovement.isRolling)
         {
-            StartCoroutine(DrinkCooldown());
-            Drink();
+            if(emptyMilk < playerStats.playerMilk)
+            {
+                StartCoroutine(DrinkCooldown());
+                Drink();
+            }
         }
     }
 
     void Drink() {
-        if (hpBar.currentHp < hpBar.maxHp)
+        if (hpBar.currentHp < playerStats.playerMaxHP && (hpBar.currentHp + healMilk) < playerStats.playerMaxHP)
         {
             hpBar.currentHp += healMilk;
             sf.audio.clip = drinkMilk;
             sf.audio.Play();
             animator.SetTrigger("Drink");
-            Debug.Log("Aktualni zivoty: " + hpBar.currentHp);
-            emptyMilk++;
+            //Debug.Log("Aktualni zivoty: " + hpBar.currentHp);
+            emptyMilk+=1f;
             Debug.Log("Vypito mlika: " + emptyMilk);
             numberOfMilk -= 1;
+            Debug.Log("emptu milk " + emptyMilk);
         }
     }
     IEnumerator DrinkCooldown()

@@ -73,6 +73,9 @@ public class Parry : MonoBehaviour
 
     IEnumerator ParrySpark(float seconds)
     {
+        if (playerMovement.currentStamina < catStats.playerMaxStamina && (playerMovement.currentStamina + catStats.playerMaxStamina / 4) < catStats.playerMaxStamina) {
+            playerMovement.currentStamina += catStats.playerMaxStamina / 4;
+        };
         playerMovement.canWalk = true;
         playerMovement.movementSpeed = catStats.playerMovementSpeed;
         catAnimations.SetBool("ParryWait", false);

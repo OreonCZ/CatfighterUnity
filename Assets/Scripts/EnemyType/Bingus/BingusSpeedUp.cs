@@ -13,6 +13,7 @@ public class BingusSpeedUp : MonoBehaviour
     public ParticleSystem particleSpawn;
     public GameObject particle;
     EnemyHP enemyHP;
+    public bool bingusInArea;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,7 @@ public class BingusSpeedUp : MonoBehaviour
     {
         if (collision.CompareTag(ObjectTags.Player.ToString()))
         {
+            bingusInArea = true;
             trail.SetActive(false);
             spriteRenderer.color = new Color32(255, 255, 255, 255);
             enemySoldier.enemyMovementSpeed = 2.5f;
@@ -45,7 +47,12 @@ public class BingusSpeedUp : MonoBehaviour
     {
         if (collision.CompareTag(ObjectTags.Player.ToString()))
         {
-            spriteRenderer.color = new Color32(10, 10, 10, 250);
+            bingusInArea = false;
+            if (enemySoldier.catName == "Bingus")
+            {
+                spriteRenderer.color = new Color32(10, 10, 10, 250);
+            }
+            else spriteRenderer.color = new Color32(255, 255, 255, 255);
             trail.SetActive(true);
             enemySoldier.enemyMovementSpeed = enemies.enemySpeed;
         }

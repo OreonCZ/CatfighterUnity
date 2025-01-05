@@ -209,22 +209,22 @@ public class ShopUI : MonoBehaviour
         if (itemType == Items.ItemType.milk_1)
         {
             playerStats.UpgradeNumberOfMilk(Items.GetItemVariable(itemType));
-            Debug.Log("Player hp upgraded!");
+            Debug.Log("Player milk upgraded!");
         }
         if (itemType == Items.ItemType.milk_2)
         {
             playerStats.UpgradeNumberOfMilk(Items.GetItemVariable(itemType));
-            Debug.Log("Player hp upgraded!");
+            Debug.Log("Player milk upgraded!");
         }
         if (itemType == Items.ItemType.milk_3)
         {
             playerStats.UpgradeNumberOfMilk(Items.GetItemVariable(itemType));
-            Debug.Log("Player hp upgraded!");
+            Debug.Log("Player milk upgraded!");
         }
         if (itemType == Items.ItemType.milk_4)
         {
             playerStats.UpgradeNumberOfMilk(Items.GetItemVariable(itemType));
-            Debug.Log("Player hp upgraded!");
+            Debug.Log("Player milk upgraded!");
         }
         //MILK
 
@@ -253,22 +253,22 @@ public class ShopUI : MonoBehaviour
         if (itemType == Items.ItemType.stamina_1)
         {
             playerStats.UpgradeStamina(Items.GetItemVariable(itemType));
-            Debug.Log("Player speed upgraded!");
+            Debug.Log("Player stamina upgraded!");
         }
         if (itemType == Items.ItemType.stamina_2)
         {
             playerStats.UpgradeStamina(Items.GetItemVariable(itemType));
-            Debug.Log("Player speed upgraded!");
+            Debug.Log("Player stamina upgraded!");
         }
         if (itemType == Items.ItemType.stamina_3)
         {
             playerStats.UpgradeStamina(Items.GetItemVariable(itemType));
-            Debug.Log("Player speed upgraded!");
+            Debug.Log("Player stamina upgraded!");
         }
         if (itemType == Items.ItemType.stamina_4)
         {
             playerStats.UpgradeStamina(Items.GetItemVariable(itemType));
-            Debug.Log("Player speed upgraded!");
+            Debug.Log("Player stamina upgraded!");
         }
         //STAMINA
 

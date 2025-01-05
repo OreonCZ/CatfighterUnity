@@ -15,12 +15,13 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         LoadPlayer();
-        Debug.Log(playerMaxHP);
+        //Debug.Log(playerMaxHP);
     }
     private void Start()
     {
         //LoadPlayer();
-        Debug.Log(playerMaxHP);
+       // Debug.Log(playerMaxHP);
+        //Debug.Log("Mliko "+ playerMilk);
     }
     private void Update()
     {

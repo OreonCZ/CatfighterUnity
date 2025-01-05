@@ -9,11 +9,14 @@ public class MilkUI : MonoBehaviour
     public GameObject player;
     public Text numberOfMilk;
     string currentMilkString;
+    PlayerStats playerStats;
 
     // Start is called before the first frame update
     void Start()
     {
         milk = player.GetComponent<Milk>();
+        playerStats = player.GetComponent<PlayerStats>();
+
     }
 
     // Update is called once per frame

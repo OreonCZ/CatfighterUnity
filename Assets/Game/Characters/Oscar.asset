@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Oscar
   m_EditorClassIdentifier: 
   catName: Oscar
-  maxEnemyHp: 64
-  enemyDamage: 2.5
+  maxEnemyHp: 100
+  enemyDamage: 2.9
   enemySpeed: 1.5
   enemyAttackCooldown: 1
   fireRate: 1.1
-  shootDamage: 1.5
+  shootDamage: 3.3
   fireSpeed: 0
   destroyProjectile: 10
   catLevel: 1
+  isBoss: 1
+  isRanger: 0

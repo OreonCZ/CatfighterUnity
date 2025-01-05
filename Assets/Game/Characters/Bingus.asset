@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bingus
   m_EditorClassIdentifier: 
   catName: Bingus
-  maxEnemyHp: 40
-  enemyDamage: 2
+  maxEnemyHp: 60
+  enemyDamage: 2.5
   enemySpeed: 15
   enemyAttackCooldown: 1
   fireRate: 0.5
@@ -22,3 +22,7 @@ MonoBehaviour:
   fireSpeed: 7
   destroyProjectile: 5
   catLevel: 1
+  isBoss: 1
+  isRanger: 0
+  isMelee: 0
+  teleporingEnemy: 1

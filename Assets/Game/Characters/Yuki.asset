@@ -22,3 +22,5 @@ MonoBehaviour:
   fireSpeed: 7
   destroyProjectile: 3
   catLevel: 1
+  isBoss: 1
+  isRanger: 0

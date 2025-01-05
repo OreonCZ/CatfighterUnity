@@ -11,6 +11,7 @@ public class EnemySoldierShoot : MonoBehaviour
     public bool playerHit;
     EnemySoldier enemyScript;
     EnemySoldierHP enemySoldierHP;
+    flowerHP flowerHP;
     EnemyHP enemyHP;
     Movement playerMScript;
     public Enemies enemies;
@@ -20,6 +21,7 @@ public class EnemySoldierShoot : MonoBehaviour
     EnemyBulletAttack enemyBulletAttack;
     [HideInInspector] public GameObject enemy;
     public bool bruchaBulletTouched;
+    PlayerStats playerStats;
 
 
     void Start()
@@ -29,7 +31,7 @@ public class EnemySoldierShoot : MonoBehaviour
         player = GameObject.FindWithTag(ObjectTags.Player.ToString());
         playerMScript = player.GetComponent<Movement>();
         parry = player.GetComponent<Parry>();
-        
+        playerStats = player.GetComponent<PlayerStats>();
 
     }
     void Update()
@@ -39,7 +41,7 @@ public class EnemySoldierShoot : MonoBehaviour
 
     void DiffEnemyRanger()
     {
-        if(enemyScript.catName == "Yuki" || enemyScript.catName == "Bingus" || enemyScript.catName == "Miscar" || enemyScript.catName == "Oscar" || enemyScript.catName == "Brucha")
+        if(enemies.isBoss && !enemies.isMelee)
         {
             if (enemyHP.currentSoldierHp > 0)
             {
@@ -52,7 +54,7 @@ public class EnemySoldierShoot : MonoBehaviour
             Destroy(gameObject, enemyScript.destroyProjectile);
         }
 
-        else
+        else if(!enemies.isBoss && !enemies.isMelee && !enemies.isTurret)
         {
             if (enemySoldierHP.currentSoldierHp > 0)
             {
@@ -64,60 +66,42 @@ public class EnemySoldierShoot : MonoBehaviour
             }
             Destroy(gameObject, enemyScript.destroyProjectile);
         }
+        else if(enemies.isTurret)
+        {
+            if (flowerHP.currentSoldierHp > 0)
+            {
+                Projectile();
+            }
+            if (flowerHP.currentSoldierHp <= 0)
+            {
+                Destroy(gameObject);
+            }
+            Destroy(gameObject, enemyScript.destroyProjectile);
+        }
     }
 
     public void EnemyInitialization(GameObject enemy)
     {
         enemyScript = enemy.GetComponent<EnemySoldier>();
-        if("Ranger" == enemyScript.catName)
+        if (enemies.isRanger)
         {
             enemyRangerAttack = enemy.GetComponent<EnemyRangerAttack>();
             enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
         }
-        if ("Fiend" == enemyScript.catName)
-        {
-            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
-            enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
-        }
-        if ("Intruder" == enemyScript.catName)
-        {
-            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
-            enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
-        }
-        if ("Cultist" == enemyScript.catName)
-        {
-            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
-            enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
-        }
-        if ("Ninja" == enemyScript.catName)
-        {
-            enemyRangerAttack = enemy.GetComponent<EnemyRangerAttack>();
-            enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
-        }
-        if ("Yuki" == enemyScript.catName)
-        {
-            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
-            enemyHP = enemy.GetComponent<EnemyHP>(); 
-        }
-        if ("Bingus" == enemyScript.catName)
+        else if (enemies.isBoss && !enemies.isMelee)
         {
             enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
             enemyHP = enemy.GetComponent<EnemyHP>();
         }
-        if ("Miscar" == enemyScript.catName)
+        else if(enemies.isTurret)
         {
             enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
-            enemyHP = enemy.GetComponent<EnemyHP>();
+            flowerHP = enemy.GetComponent<flowerHP>();
         }
-        if ("Oscar" == enemyScript.catName)
+        else
         {
             enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
-            enemyHP = enemy.GetComponent<EnemyHP>();
-        }
-        if ("Brucha" == enemyScript.catName)
-        {
-            enemyBulletAttack = enemy.GetComponent<EnemyBulletAttack>();
-            enemyHP = enemy.GetComponent<EnemyHP>();
+            enemySoldierHP = enemy.GetComponent<EnemySoldierHP>();
         }
     }
 
@@ -132,12 +116,13 @@ public class EnemySoldierShoot : MonoBehaviour
     }
 
     IEnumerator BruchaParry()
-    {
+    { 
         Debug.Log("BruchaParry started");
-        bruchaBulletTouched = true;
+        Brucha.bulletTouchedPlayer = true;
         yield return new WaitForSeconds(1f);
-        bruchaBulletTouched = false;
+        Brucha.bulletTouchedPlayer = false;
         Debug.Log("BruchaParry ended");
+        Destroy(gameObject);
     }
 
     void EnemyTriggerOutcomes(Collider2D collision)
@@ -148,13 +133,8 @@ public class EnemySoldierShoot : MonoBehaviour
         }
         else if ("Brucha" == enemyScript.catName)
         {
-            if (bruchaBulletTouched)
-            {
-                Debug.Log("BruchaParry already active. Skipping...");
-                return;
-            }
+            //if(!playerMScript.isRolling && !parry.isParrying) PlayerHit(collision.gameObject);
             StartCoroutine(BruchaParry());
-            Destroy(gameObject);
         }
 
         else

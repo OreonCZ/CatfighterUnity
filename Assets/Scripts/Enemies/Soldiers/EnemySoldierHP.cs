@@ -35,6 +35,7 @@ public class EnemySoldierHP : MonoBehaviour
         currentSoldierHp = enemySoldier.maxEnemyHP;
 
         enemySoldier.EnemyAttackDiff(enemySoldierAttack, enemyRangerAttack, enemyBulletAttack);
+        enemyHpSlider.maxValue = enemySoldier.maxEnemyHP;
     }
 
     // Update is called once per frame

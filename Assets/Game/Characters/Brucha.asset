@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catName: Brucha
   maxEnemyHp: 70
-  enemyDamage: 1
-  enemySpeed: 3
+  enemyDamage: 2.6
+  enemySpeed: 3.2
   enemyAttackCooldown: 0.5
   fireRate: 0.5
-  shootDamage: 1
-  fireSpeed: 18
+  shootDamage: 0.1
+  fireSpeed: 40
   destroyProjectile: 5
   catLevel: 1
+  isBoss: 1
+  isRanger: 0

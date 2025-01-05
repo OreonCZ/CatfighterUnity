@@ -281,6 +281,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: General Miscar
       objectReference: {fileID: 0}
+    - target: {fileID: 5486235522378474206, guid: a5d74844108e41346a1afd45c29e79ac,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486235522378474206, guid: a5d74844108e41346a1afd45c29e79ac,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486235522378474206, guid: a5d74844108e41346a1afd45c29e79ac,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8017903812584677539, guid: a5d74844108e41346a1afd45c29e79ac,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -302,7 +317,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7919780172995491986, guid: a5d74844108e41346a1afd45c29e79ac, type: 3}
+    - {fileID: 1403977121005155565, guid: a5d74844108e41346a1afd45c29e79ac, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5d74844108e41346a1afd45c29e79ac, type: 3}

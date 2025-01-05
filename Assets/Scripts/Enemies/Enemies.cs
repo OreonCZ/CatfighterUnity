@@ -16,4 +16,9 @@ public class Enemies : ScriptableObject
     public float fireSpeed;
     public float destroyProjectile;
     public int catLevel;
+    public bool isBoss;
+    public bool isRanger;
+    public bool isMelee;
+    public bool teleporingEnemy;
+    public bool isTurret;
 }
