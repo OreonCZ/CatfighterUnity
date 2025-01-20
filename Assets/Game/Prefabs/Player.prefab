@@ -550,7 +550,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65536
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 462848
@@ -620,9 +620,7 @@ MonoBehaviour:
   fightSound: 0
   animator: {fileID: 8726315815935203446}
   canAttack: 1
-  slider: {fileID: 0}
   movement: {fileID: 5740038521071732008}
-  sounds: {fileID: 0}
   attackDown: {fileID: 4696988639944483108}
   attackUp: {fileID: 860358175579651801}
   attackLeft: {fileID: 984610036075784271}
@@ -640,12 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5244852be38df2d4088356e6cab39f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sf: {fileID: 0}
   drinkMilk: {fileID: 8300000, guid: 26e6eb8c652333c448101fc58a006537, type: 3}
-  healMilk: 2
-  milkNumber: 2
   numberOfMilk: 2
-  emptyMilk: 0
   canDrink: 1
 --- !u!114 &463176302745743351
 MonoBehaviour:
@@ -662,8 +656,6 @@ MonoBehaviour:
   slider: {fileID: 0}
   maxHp: 9
   currentHp: 0
-  dedScreen: {fileID: 0}
-  gameBar: {fileID: 0}
   isDed: 0
 --- !u!114 &3534551078075339187
 MonoBehaviour:

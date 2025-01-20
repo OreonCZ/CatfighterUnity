@@ -263,6 +263,18 @@ public class EnemySoldierBullet : MonoBehaviour
 				nextFire = Time.time + 1f / enemySoldier.fireRate;
 			}
 		}
+		if ("Luna" == enemySoldier.catName)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			if (Time.time > nextFire && wait)
+			{
+				if (enemyHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
 	}
 	// Update is called once per frame
 	void Update()
@@ -291,10 +303,10 @@ public class EnemySoldierBullet : MonoBehaviour
 				bulletComponent.enemy = gameObject;
 			}
 		}
-		else if ("Oscar" == enemySoldier.catName)
+		else if ("Oscar" == enemySoldier.catName || "Luna" == enemySoldier.catName)
         {
 			CircleCollider2D collider = oscarArea.GetComponent<CircleCollider2D>();
-			for (int i = 0; i < spawnCount; i++)
+			for (int i = 0; i < enemySoldier.fireRate; i++)
 			{
 				Vector2 center = collider.bounds.center;
 				float radius = collider.radius * oscarArea.transform.localScale.x;

@@ -9,12 +9,13 @@ public class Milk : MonoBehaviour
     HpBar hpBar;
     Animator animator;
     Movement playerMovement;
-    public SoundEffects sf;
+    SoundEffects sf;
     public AudioClip drinkMilk;
     float healMilk;
     public float numberOfMilk;
     float emptyMilk = 0;
     public bool canDrink = true;
+    GameObject camera;
 
     GameObject player;
     PlayerStats playerStats;
@@ -28,7 +29,8 @@ public class Milk : MonoBehaviour
         hpBar = gameObject.GetComponent<HpBar>();
         playerStats = player.GetComponent<PlayerStats>();
         animator = GetComponent<Animator>();
-        
+        camera = GameObject.FindGameObjectWithTag(ObjectTags.MainCamera.ToString());
+        sf = camera.GetComponent<SoundEffects>();
 
         numberOfMilk = playerStats.playerMilk;
         healMilk = (playerStats.playerMaxHP / 4f);

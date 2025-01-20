@@ -9,8 +9,8 @@ public class HpBar : MonoBehaviour
     [HideInInspector] public Slider slider;
     public float maxHp;
     public float currentHp;
-    public GameObject dedScreen;
-    public GameObject gameBar;
+    GameObject dedScreen;
+    GameObject gameBar;
     GameObject hpBorder;
     //public GameObject enemy;
     public bool isDed = false;
@@ -27,6 +27,9 @@ public class HpBar : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         hpBorder = GameObject.FindGameObjectWithTag(ObjectTags.hpBorder.ToString());
+        dedScreen = GameObject.FindGameObjectWithTag(ObjectTags.dedScreen.ToString());
+        dedScreen.SetActive(false);
+        gameBar = GameObject.FindGameObjectWithTag(ObjectTags.gameUI.ToString());
 
         playerStats = player.GetComponent<PlayerStats>();
         slider = hpBorder.GetComponent<Slider>();

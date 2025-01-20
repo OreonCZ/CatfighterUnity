@@ -97,7 +97,7 @@ public class FBingus : MonoBehaviour
     {
         if (enemyHP.currentSoldierHp > 0)
         {
-            if (enemyHP.currentSoldierHp <= (enemySoldier.maxEnemyHP / 3))
+            if (enemyHP.currentSoldierHp <= (enemySoldier.maxEnemyHP / 2))
             {
                 bingusBossName = "Bingus, the Flower Abomination";
                 bingusName.text = bingusBossName;
@@ -179,7 +179,7 @@ public class FBingus : MonoBehaviour
             bingusCollider.size = new Vector2(1.4f, 1f); 
             enemySoldierBullet.wait = true;
             enemySoldierMoving.isFollowing = true;
-            enemyHP.currentSoldierHp = enemySoldier.maxEnemyHP;
+            //enemyHP.currentSoldierHp = enemySoldier.maxEnemyHP;
             enemySoldier.enemyRangeSpeed = 10f;
             enemySoldier.enemyMovementSpeed = 2f;
             enemySoldier.enemyDMG = (enemies.enemyDamage - 1f);

@@ -32,6 +32,9 @@ TagManager:
   - Fiend
   - Flowers
   - flower
+  - LunaChange
+  - LunaAOE
+  - Music
   layers:
   - Default
   - TransparentFX

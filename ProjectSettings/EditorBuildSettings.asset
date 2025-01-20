@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: b7abc3be2eb5985448036bb026df2b54
+  - enabled: 1
+    path: Assets/Scenes/CultBoss.unity
+    guid: cbc8ebb5293f0044d9419c3aa1fe939e
+  - enabled: 1
+    path: Assets/Scenes/FlowerBoss.unity
+    guid: bb032dd126ad73a489dc716fe37cecb8
   m_configObjects: {}

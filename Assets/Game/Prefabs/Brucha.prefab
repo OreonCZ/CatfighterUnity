@@ -5128,7 +5128,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5301,7 +5301,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7264151, g: 0, b: 0, a: 0.68235296}
+      maxColor: {r: 0.7264151, g: 0, b: 0, a: 0.27058825}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9984,6 +9984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513622162158326294, guid: 955047f4b68c532459e20b32b80c4034,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8893342833556944326, guid: 955047f4b68c532459e20b32b80c4034,
         type: 3}

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6692119514102778447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 119097659225355550, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_Name
+      value: Lucik
+      objectReference: {fileID: 0}
+    - target: {fileID: 299262381155378226, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: enemies
+      value: 
+      objectReference: {fileID: 11400000, guid: ee39711e30d2ada469ad11172f13a8eb,
+        type: 2}
+    - target: {fileID: 299262381155378226, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284715388755856284, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e86ec7555d0ac3643a6f6c0ae0843bca, type: 2}
+    - target: {fileID: 3766948160876193843, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1844443846, guid: d871c498ce9686444b819f3f35c790e6,
+        type: 3}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -111.59079
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -58.52602
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127303332122734330, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401242501639539908, guid: 0ed7f58e74526a7499d4e7c17fb7adc0,
+        type: 3}
+      propertyPath: enemies
+      value: 
+      objectReference: {fileID: 11400000, guid: ee39711e30d2ada469ad11172f13a8eb,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 3014061448335025226, guid: 0ed7f58e74526a7499d4e7c17fb7adc0, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 2377716923453833618, guid: 0ed7f58e74526a7499d4e7c17fb7adc0, type: 3}
+    - {fileID: 6839678658350589952, guid: 0ed7f58e74526a7499d4e7c17fb7adc0, type: 3}
+    - {fileID: 943788661246735105, guid: 0ed7f58e74526a7499d4e7c17fb7adc0, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ed7f58e74526a7499d4e7c17fb7adc0, type: 3}

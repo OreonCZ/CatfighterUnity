@@ -5,12 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class DedScreen : MonoBehaviour
 {
+    public int back;
+    Scene scene;
+
+    private void Start()
+    {
+        scene = SceneManager.GetActiveScene();
+    }
+
     public void Respawn()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneBuildIndex: 1);
+        SceneManager.LoadScene(sceneBuildIndex: scene.buildIndex);
     }
     public void MainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneBuildIndex: 0);
+        SceneManager.LoadScene(sceneBuildIndex: back);
     }
 }

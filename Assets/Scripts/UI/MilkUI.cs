@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class MilkUI : MonoBehaviour
 {
-    public Milk milk;
-    public GameObject player;
+    Milk milk;
+    GameObject player;
     public Text numberOfMilk;
     string currentMilkString;
     PlayerStats playerStats;
@@ -14,8 +15,10 @@ public class MilkUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString());
         milk = player.GetComponent<Milk>();
         playerStats = player.GetComponent<PlayerStats>();
+        
 
     }
 

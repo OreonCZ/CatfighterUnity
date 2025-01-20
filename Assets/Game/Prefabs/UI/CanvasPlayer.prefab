@@ -499,8 +499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c415f6b0cd47441b01d0c8d1404c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  milk: {fileID: 0}
-  player: {fileID: 0}
   numberOfMilk: {fileID: 1855975009588078065}
 --- !u!1 &4665956087709166547
 GameObject:
@@ -670,7 +668,7 @@ GameObject:
   - component: {fileID: 1337670098890344548}
   m_Layer: 5
   m_Name: CanvasPlayer
-  m_TagString: Untagged
+  m_TagString: gameUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +709,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 6154113280509221565, guid: 421e1716df179a449bc3284bd7692fc3,
+    type: 3}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

@@ -9,6 +9,6 @@ namespace Assets.Scripts.EnumTypes
     public enum ObjectTags
     {
         Enemy, Player, Sword, MainCamera, isHit, EnemyAttackTrigger, hpbar, sceneSwitch, endTransition, mud, poison, fartShroom, KnightCollider, staminaBorder, hpBorder,
-        lobbyManager, dedScreen, gameUI, enemyHpBar, Bullet, Coin, BruchaVanish, Fiend, Flowers, flower
+        lobbyManager, dedScreen, gameUI, enemyHpBar, Bullet, Coin, BruchaVanish, Fiend, Flowers, flower, LunaChange, LunaAOE, Music
     }
 }

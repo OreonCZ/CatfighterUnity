@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc43bc1b0292b384d862460dabbc9f5b, type: 3}
+  m_Name: FlowerBingus
+  m_EditorClassIdentifier: 
+  catName: FBingus
+  maxEnemyHp: 95
+  enemyDamage: 4.8
+  enemySpeed: 40
+  enemyAttackCooldown: 0.7
+  fireRate: 0.5
+  shootDamage: 2.7
+  fireSpeed: 9
+  destroyProjectile: 5
+  catLevel: 1
+  isBoss: 1
+  isRanger: 0
+  isMelee: 0
+  teleporingEnemy: 0
+  isTurret: 0

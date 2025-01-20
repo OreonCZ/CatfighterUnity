@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.EnumTypes;
 
 public class PauseGame : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class PauseGame : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject pauseMenuFirst;
     public GameObject pauseMenuSecond;
-    public GameObject gameMenu;
-    public GameObject bruchaSkill;
+    GameObject gameMenu;
     public SceneTransition sceneTransition;
     Parry parry;
 
@@ -24,6 +24,7 @@ public class PauseGame : MonoBehaviour
         playerMovement = player.GetComponent<Movement>();
         parry = player.GetComponent<Parry>();
         canPause = true;
+        gameMenu = GameObject.FindGameObjectWithTag(ObjectTags.gameUI.ToString());
     }
 
     void Update()

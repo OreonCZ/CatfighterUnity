@@ -6,7 +6,7 @@ using Assets.Scripts.EnumTypes;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
+    Transform player;
     public float zoomOutStart = 40f;
     public float zoomOutEnd = 50f;
     public float zoomOffset = 4;
@@ -17,6 +17,7 @@ public class CameraFollow : MonoBehaviour
     private Camera camera;
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag(ObjectTags.Player.ToString()).GetComponent<Transform>();
         activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         camera = GetComponent<Camera>();
         Debug.Log(activeScene.name);

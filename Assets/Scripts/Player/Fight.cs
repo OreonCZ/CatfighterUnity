@@ -11,9 +11,10 @@ public class Fight : MonoBehaviour
     public Animator animator;
     float swordDelay = 0.5f;
     public bool canAttack = true;
-    public Slider slider;
+    //public Slider slider;
     public Movement movement;
-    public SoundEffects sounds;
+    GameObject camera;
+    SoundEffects sounds;
     float swordStaminaDrain;
     float slowDown = 2f;
     public GameObject attackDown;
@@ -31,6 +32,8 @@ public class Fight : MonoBehaviour
         playerStats = player.GetComponent<PlayerStats>();
         attackDamage = playerStats.playerDamage;
         swordStaminaDrain = (playerStats.playerMaxStamina / 4);
+        camera = GameObject.FindGameObjectWithTag(ObjectTags.MainCamera.ToString());
+        sounds = camera.GetComponent<SoundEffects>();
     }
     // Update is called once per frame
     void Update()

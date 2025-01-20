@@ -167,8 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c415f6b0cd47441b01d0c8d1404c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  milk: {fileID: 0}
-  player: {fileID: 0}
   numberOfMilk: {fileID: 5486235522378474206}
 --- !u!1 &4683866870871049142
 GameObject:
@@ -257,6 +255,7 @@ GameObject:
   - component: {fileID: 7987713242755864386}
   - component: {fileID: 5060485625755699005}
   - component: {fileID: 5490401762401636883}
+  - component: {fileID: 6038525689092976490}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -366,18 +365,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 6038525689092976490}
+        m_TargetAssemblyTypeName: DedScreen, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6038525689092976490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4821468652254310369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4e8ab9fd5b3e04cbed493fb8abcc45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  back: 2
 --- !u!1 &6084845577119105081
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +934,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5207259728741345787, guid: 3e62b3b3d16164d4f9ea0f51855a58de,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6459933269254505456, guid: 3e62b3b3d16164d4f9ea0f51855a58de,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1040,6 +1057,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1688768373723706007, guid: 3e62b3b3d16164d4f9ea0f51855a58de, type: 3}
+    - {fileID: 4491097684859660204, guid: 3e62b3b3d16164d4f9ea0f51855a58de, type: 3}
+    - {fileID: 4665956087709166547, guid: 3e62b3b3d16164d4f9ea0f51855a58de, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8010137561562935373, guid: 3e62b3b3d16164d4f9ea0f51855a58de,
         type: 3}

@@ -55,7 +55,7 @@ public class EnemySoldierMoving : MonoBehaviour
         //directionToPlayer = (player.transform.position - transform.position);
         //enemyRb.velocity = new Vector2(directionToPlayer.x, directionToPlayer.y);
 
-        if(enemySoldier.catName == "FBingus")
+        if(enemySoldier.catName == "FBingus" || enemySoldier.catName == "Luna")
         {
             Vector3 targetPosition = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
             agent.SetDestination(targetPosition);

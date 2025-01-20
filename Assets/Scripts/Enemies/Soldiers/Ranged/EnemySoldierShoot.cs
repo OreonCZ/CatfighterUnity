@@ -107,7 +107,12 @@ public class EnemySoldierShoot : MonoBehaviour
 
     void Projectile()
     {
+        if (enemies.catName == "Oscar" || enemies.catName == "Luna"){
+            return;
+        }
+        else {
             transform.Translate(direction * enemyScript.enemyRangeSpeed * Time.deltaTime);
+        } 
     }
     void PlayerHit(GameObject Player)
     {
@@ -125,16 +130,25 @@ public class EnemySoldierShoot : MonoBehaviour
         Destroy(gameObject);
     }
 
+    IEnumerator DestoyAfterTime()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+    }
+
     void EnemyTriggerOutcomes(Collider2D collision)
     {
         if ("Cultist" == enemyScript.catName || "Oscar" == enemyScript.catName)
         {
             Destroy(gameObject);
         }
-        else if ("Brucha" == enemyScript.catName)
+        else if ("Luna" == enemyScript.catName)
         {
-            //if(!playerMScript.isRolling && !parry.isParrying) PlayerHit(collision.gameObject);
-            StartCoroutine(BruchaParry());
+            if (!playerMScript.isRolling)
+            {
+                PlayerHit(collision.gameObject);
+                Destroy(gameObject);
+            }
         }
 
         else
@@ -157,7 +171,7 @@ public class EnemySoldierShoot : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag(ObjectTags.Player.ToString()))
         {
@@ -171,6 +185,16 @@ public class EnemySoldierShoot : MonoBehaviour
                 Destroy(gameObject);
             }
             return;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(ObjectTags.Player.ToString()))
+        {
+            if ("Brucha" == enemyScript.catName)
+            {
+                StartCoroutine(BruchaParry());
+            }
         }
     }
 }

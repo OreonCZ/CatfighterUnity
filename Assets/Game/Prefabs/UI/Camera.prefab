@@ -111,12 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd72e53317935e041a1561b5534e0748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
+  audio: {fileID: 994979023215388500, guid: 7bdc38343139edc49a13d9bfbdb8130f, type: 3}
   swordSwing: {fileID: 8300000, guid: 0efd525e581aeda438c363d3178f1dd5, type: 3}
   drinkMilk: {fileID: 8300000, guid: 26e6eb8c652333c448101fc58a006537, type: 3}
-  fight: {fileID: 0}
-  milk: {fileID: 0}
-  playerMovement: {fileID: 0}
 --- !u!114 &9168027946566493176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358483e99e77c064fb06a6bbe2182e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   zoomOutStart: 45
   zoomOutEnd: 50
   zoomOffset: 3

@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using Assets.Scripts.EnumTypes;
 
 public class AudioSettings : MonoBehaviour
 {
+    [HideInInspector] public GameObject music;
     public Slider audioSlider;
     public AudioMixer audioMixer;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("audioVolume"))
-        {
-            LoadVolume();
-        }
-        else
-        {
-            SetAudioVolume();
-        }
+        music = GameObject.FindGameObjectWithTag(ObjectTags.Music.ToString());
+        VolumeManager();
     }
 
     // Update is called once per frame
@@ -30,6 +26,7 @@ public class AudioSettings : MonoBehaviour
             PlayerPrefs.DeleteKey("audioVolume");
         }
     }
+
 
     public void SetAudioVolume()
     {
@@ -42,5 +39,17 @@ public class AudioSettings : MonoBehaviour
     {
         audioSlider.value = PlayerPrefs.GetFloat("audioVolume");
         SetAudioVolume();
+    }
+
+    void VolumeManager()
+    {
+        if (PlayerPrefs.HasKey("audioVolume"))
+        {
+            LoadVolume();
+        }
+        else
+        {
+            SetAudioVolume();
+        }
     }
 }
