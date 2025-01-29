@@ -35,6 +35,8 @@ TagManager:
   - LunaChange
   - LunaAOE
   - Music
+  - Ray
+  - LucikAoe
   layers:
   - Default
   - TransparentFX

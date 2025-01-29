@@ -275,6 +275,19 @@ public class EnemySoldierBullet : MonoBehaviour
 				nextFire = Time.time + 1f / enemySoldier.fireRate;
 			}
 		}
+		if ("Lucik" == enemySoldier.catName)
+		{
+			EnemyBulletAttack enemyBulletAttack = GetComponentInChildren<EnemyBulletAttack>();
+			Lucik lucik = gameObject.GetComponent<Lucik>();
+			if (Time.time > nextFire)
+			{
+				if (enemyHP.currentSoldierHp > 0 && enemyBulletAttack.soldierAttacks && lucik.isLucikShooting)
+				{
+					Fire();
+				}
+				nextFire = Time.time + 1f / enemySoldier.fireRate;
+			}
+		}
 	}
 	// Update is called once per frame
 	void Update()

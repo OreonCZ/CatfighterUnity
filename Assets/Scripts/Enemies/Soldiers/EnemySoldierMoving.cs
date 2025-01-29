@@ -64,7 +64,7 @@ public class EnemySoldierMoving : MonoBehaviour
 
         agent.isStopped = false;
 
-        if(agent.velocity.x > 0)
+        if(agent.velocity.x >= 0)
         {
             animator.SetBool("WalkingRight", true);
             animator.SetBool("WalkingLeft", false);

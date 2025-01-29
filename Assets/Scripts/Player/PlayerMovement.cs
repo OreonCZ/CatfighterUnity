@@ -29,6 +29,9 @@ public class Movement : MonoBehaviour
     GameObject sprintBar;
     bool ignore = false;
 
+    public bool walking = true;
+
+    Dictionary<KeyCode, Vector2> controls = new Dictionary<KeyCode, Vector2>();
 
     GameObject player;
     PlayerStats playerStats;
@@ -56,12 +59,16 @@ public class Movement : MonoBehaviour
 
         enemy = GameObject.FindGameObjectWithTag(ObjectTags.Enemy.ToString());
         rollSpeed = movementSpeed / 30;
+
+        controls[KeyCode.W] = Vector2.up;
+        controls[KeyCode.S] = Vector2.down;
+        controls[KeyCode.A] = Vector2.left;
+        controls[KeyCode.D] = Vector2.right;
     }
 
     // Update is called once per frame
     void Update()
     {
-
             slider.value = currentStamina;
             if (!isRolling)
             {
@@ -69,19 +76,27 @@ public class Movement : MonoBehaviour
             }
             isWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S);
 
-            AnimationChanger();
-            Moving();
+        if (walking) Moving();
+        AnimationChanger();
+            
     }
+
     void Moving()
     {
         //movement
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-        Vector2 moveInput = new Vector2(moveX, moveY).normalized;
+        Vector2 moveInput = Vector2.zero;
+
+        foreach (var control in controls)
+        {
+            if (Input.GetKey(control.Key))
+            {
+                moveInput += control.Value;
+            }
+        }
+        moveInput = moveInput.normalized;
         rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
 
         //sprint
-
         if (slider.value < slider.maxValue)
         {
             sprintBar.SetActive(true);
@@ -179,7 +194,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-
     //animation changer
     void AnimationChanger()
     {
@@ -222,6 +236,33 @@ public class Movement : MonoBehaviour
         }
         }
     }
+    public void RandomizeControls()
+    {
+        List<KeyCode> keys = new List<KeyCode>(controls.Keys);
+        List<Vector2> directions = new List<Vector2>(controls.Values);
+
+        for (int i = directions.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
+            Vector2 temp = directions[i];
+            directions[i] = directions[randomIndex];
+            directions[randomIndex] = temp;
+        }
+
+        for (int i = 0; i < keys.Count; i++)
+        {
+            controls[keys[i]] = directions[i];
+        }
+    }
+
+    public void ResetControls()
+    {
+        controls[KeyCode.W] = Vector2.up;
+        controls[KeyCode.S] = Vector2.down;
+        controls[KeyCode.A] = Vector2.left;
+        controls[KeyCode.D] = Vector2.right;
+    }
+
     void stopMoving()
     {
         animator.SetBool("WalkingRight", false);

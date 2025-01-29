@@ -6,6 +6,7 @@ using Assets.Scripts.EnumTypes;
 
 public class Brucha : MonoBehaviour
 {
+    public GameObject transformUI;
     EnemySoldier enemySoldier;
     EnemySoldierMoving enemySoldierMoving;
     EnemyHP enemyHP;
@@ -99,6 +100,7 @@ public class Brucha : MonoBehaviour
     {
         if (!transformBrucha)
         {
+            transformUI.SetActive(true);
             particleBrucha.Play();
             animator.SetBool("isTransforming", true);
             animator.SetTrigger("isTransform");
@@ -117,6 +119,7 @@ public class Brucha : MonoBehaviour
             transformBrucha = true;
             animator.SetBool("isTransforming", false);
             enemyHP.currentSoldierHp = enemySoldier.maxEnemyHP;
+            transformUI.SetActive(false);
         }
     }
 

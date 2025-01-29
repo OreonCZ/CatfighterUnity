@@ -16,6 +16,6 @@ public class EnemyProjectileDMG : MonoBehaviour
     {
         hpbar.currentHp -= damage;
         hpbar.slider.value -= damage;
-        Debug.Log("hp: " + hpbar.currentHp);
+        //Debug.Log("hp: " + hpbar.currentHp);
     }
 }

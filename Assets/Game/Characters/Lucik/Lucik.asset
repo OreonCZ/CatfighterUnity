@@ -17,10 +17,10 @@ MonoBehaviour:
   enemyDamage: 2
   enemySpeed: 1
   enemyAttackCooldown: 1
-  fireRate: 0
-  shootDamage: 0
-  fireSpeed: 0
-  destroyProjectile: 0
+  fireRate: 50
+  shootDamage: 0.02
+  fireSpeed: 1
+  destroyProjectile: 5
   catLevel: 0
   isBoss: 1
   isRanger: 0

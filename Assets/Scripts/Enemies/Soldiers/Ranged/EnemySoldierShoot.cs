@@ -118,6 +118,11 @@ public class EnemySoldierShoot : MonoBehaviour
     {
         EnemyProjectileDMG enemyProjectileDMG = Player.GetComponent<EnemyProjectileDMG>();
         enemyProjectileDMG.OnHitDamage(enemyScript.enemyRangeDMG);
+        if ("Lucik" == enemyScript.catName)
+        {
+            Lucik lucik = GameObject.Find("Lucik").GetComponent<Lucik>();
+            lucik.barValue += enemyScript.enemyRangeDMG;
+        }
     }
 
     IEnumerator BruchaParry()
@@ -150,7 +155,6 @@ public class EnemySoldierShoot : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
         else
         {
             if (parry.isParrying)

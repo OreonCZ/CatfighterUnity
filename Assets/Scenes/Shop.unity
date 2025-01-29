@@ -595,11 +595,11 @@ GameObject:
   - component: {fileID: 341418812}
   m_Layer: 5
   m_Name: GameOver
-  m_TagString: Untagged
+  m_TagString: dedScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &341418812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4e8ab9fd5b3e04cbed493fb8abcc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  back: 0
 --- !u!114 &341418813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,6 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bb6e47b3fbeb04599d48ef949cb0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 0}
   audioSlider: {fileID: 340596429}
   audioMixer: {fileID: 24100000, guid: b69fe33bb876cc242a6a06fa7afd20b4, type: 2}
 --- !u!114 &990069175

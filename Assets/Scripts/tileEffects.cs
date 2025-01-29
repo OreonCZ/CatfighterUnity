@@ -65,7 +65,12 @@ public class tileEffects : MonoBehaviour
                 animator.SetTrigger("isTouched");
             }
         }
+        if (collision.CompareTag(ObjectTags.Player.ToString()) && gameObject.CompareTag(ObjectTags.LucikAoe.ToString()))
+        {
+            if(!playerMovement.isRolling) playerMovement.walking = false;
+        }
     }
+
 
 
     void OnTriggerExit2D(Collider2D collision)
