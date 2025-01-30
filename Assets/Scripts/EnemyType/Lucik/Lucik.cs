@@ -93,7 +93,7 @@ public class Lucik : MonoBehaviour
         lineRenderer = turret.GetComponentInChildren<LineRenderer>();
         spin = turret.GetComponent<Spin>();
         
-        lucikSlider.maxValue = 12f;
+        lucikSlider.maxValue = 10f;
         barValue = 0f;
 
         cameraDefaultScale = mainCamera.transform.localScale;
@@ -297,12 +297,7 @@ public class Lucik : MonoBehaviour
             enemySoldierMoving.isFollowing = false;
             enemySoldier.enemyRangeSpeed = 30f;
 
-            yield return new WaitForSeconds(3.25f);
-            foreach (GameObject obj in changedTiles)
-            {
-                Tilemap tilemap = obj.GetComponent<Tilemap>();
-                tilemap.color = new Color32(255, 255, 255, 160);
-            }
+            yield return new WaitForSeconds(4.8f);
 
             maxRays = 6;
 
@@ -318,6 +313,7 @@ public class Lucik : MonoBehaviour
             fight.canAttack = true;
             playerMovement.canWalk = true;
             firstTransition.SetActive(true);
+            barValue = lucikSlider.maxValue;
 
         }
     }

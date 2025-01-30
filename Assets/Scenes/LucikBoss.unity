@@ -1331,7 +1331,7 @@ GameObject:
   - component: {fileID: 207984513}
   - component: {fileID: 207984512}
   m_Layer: 0
-  m_Name: LunaAnimation
+  m_Name: LucikAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1347,7 +1347,7 @@ Animator:
   m_GameObject: {fileID: 207984511}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb568150b2f79e74292e5edb73f31ca3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 162bbd6e2ab2bb64cbdf93627598d7f3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac704f74c91048c4988fff5237e2c074, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8426709754420ce46bff3a07568b80e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
