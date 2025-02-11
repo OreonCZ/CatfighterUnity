@@ -59,4 +59,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FlowerBoss.unity
     guid: bb032dd126ad73a489dc716fe37cecb8
+  - enabled: 1
+    path: Assets/Scenes/LucikBoss.unity
+    guid: 9f509ecdd74f72f4eadb32f4a405b530
+  - enabled: 1
+    path: Assets/Scenes/Box.unity
+    guid: a5d313f5a8ef2c0448853328ed144868
   m_configObjects: {}

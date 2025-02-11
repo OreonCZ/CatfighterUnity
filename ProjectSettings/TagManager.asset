@@ -37,6 +37,9 @@ TagManager:
   - Music
   - Ray
   - LucikAoe
+  - Shop
+  - Box
+  - Church
   layers:
   - Default
   - TransparentFX

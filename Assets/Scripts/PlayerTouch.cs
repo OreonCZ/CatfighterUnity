@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class PlayerTouch : MonoBehaviour
 {
     GameObject actButton;
+    public GameObject endTransition;
     // Start is called before the first frame update
     private void Awake()
     {
-        actButton = GameObject.Find("buttonF");
+        actButton = gameObject.transform.GetChild(0).gameObject;
     }
 
     void Start()
@@ -24,18 +25,32 @@ public class PlayerTouch : MonoBehaviour
         
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    IEnumerator DiffBuildings(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        if(gameObject.CompareTag(ObjectTags.Shop.ToString()))
+        {
+            SceneManager.LoadScene(sceneBuildIndex: 15);
+        }
+        if(gameObject.CompareTag(ObjectTags.Box.ToString()))
+        {
+            SceneManager.LoadScene(sceneBuildIndex: 19);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(ObjectTags.Player.ToString()))
         {
             actButton.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
-                SceneManager.LoadScene(sceneBuildIndex: 15);
+                endTransition.SetActive(true);
+                StartCoroutine(DiffBuildings(1f));
             }
         }
     }
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(ObjectTags.Player.ToString()))
         {
